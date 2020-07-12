@@ -36,7 +36,7 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     var chosenStoryDuration = ""
     var chosenAudioName = ""
     var chosenAudioType = ""
-    var chosenNextAudioTitle = ""
+//    var chosenNextAudioTitle = ""
     
 //    Struck Çekme
     var selectedCategoriesLabel = ""
@@ -127,7 +127,7 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+                
         chosenAudioTitle = songs[indexPath.row].title
         chosenAudioName = songs[indexPath.row].audioName
         chosenBackgroundImage = songs[indexPath.row].backgroundImageName
@@ -135,7 +135,6 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         chosenAudioType = songs[indexPath.row].audioType
         chosenAudioSubTitle = songs[indexPath.row].audioSubtitle
         
-//        chosenNextAudioTitle = songs[indexPath.row + 1].title
         
         
         performSegue(withIdentifier: "toStoryDetailViewController", sender: nil)
@@ -155,8 +154,6 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
             destinationVC.selectedStoryDuration = chosenStoryDuration
             destinationVC.selectedAudioType = chosenAudioType
             destinationVC.selectedAudioSubtitle = chosenAudioSubTitle
-            
-//            destinationVC.nextAudioTitle = chosenNextAudioTitle
             
         }
     }

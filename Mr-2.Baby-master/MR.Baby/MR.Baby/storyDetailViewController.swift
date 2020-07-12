@@ -10,8 +10,7 @@ import UIKit
 import AVFoundation
 
 class storyDetailViewController: UIViewController {
-    
-    
+        
 //    IBOutler ler
     @IBOutlet weak var audioTitleLabel: UILabel!
     @IBOutlet weak var storyDetailSubtitleLabel: UILabel!
@@ -34,7 +33,7 @@ class storyDetailViewController: UIViewController {
     var selectedStoryDuration = ""
     var selectedAudioType = ""
     
-//    var nextAudioTitle = ""
+    var nextAudioTitle = ""
     
 //    Simge Çevirme
     var audioPlayer: AVAudioPlayer?
@@ -55,6 +54,12 @@ class storyDetailViewController: UIViewController {
 //        ArrayForward = [selectedAudioTitle, selectedAudioSubtitle, selectedAudioName, selectedBackgroundImage, selectedStoryDuration, selectedAudioType]
         
 
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if view.subviews.count == 1 {
+            setInterface()
+        }
     }
         
     func setInterface(){
@@ -125,8 +130,7 @@ class storyDetailViewController: UIViewController {
 
     
     @IBAction func forwardButtonClicked(_ sender: Any) {
-        
-        
+
 
     }
     
@@ -138,6 +142,7 @@ class storyDetailViewController: UIViewController {
     
     
     @IBAction func sliderTime(_ sender: Any) {
+        
     }
     
     
@@ -150,13 +155,13 @@ class storyDetailViewController: UIViewController {
         
         if toggleStateFavorites == 1 {
             toggleStateFavorites = 2
-            favorutiesButton.setImage(UIImage(named: "heart.fill1"), for: UIControl.State.normal)
+            favorutiesButton.setImage(UIImage(systemName: "heart.fill"), for: UIControl.State.normal)
             
 
             
         } else {
             toggleStateFavorites = 1
-            favorutiesButton.setImage(UIImage(named: "heartRed1"), for: UIControl.State.normal)
+            favorutiesButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
 
         }
 

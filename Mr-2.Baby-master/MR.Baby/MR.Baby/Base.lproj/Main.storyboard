@@ -189,7 +189,7 @@
         <!-- -->
         <scene sceneID="EQI-Oi-2em">
             <objects>
-                <viewController id="yY0-wX-xkw" customClass="storyDetailViewController" customModule="MR_Baby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="audioPlayer" id="yY0-wX-xkw" customClass="storyDetailViewController" customModule="MR_Baby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MbU-r5-31J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title=" " image="heartRed1"/>
+                                <state key="normal" title=" " image="heart" catalog="system"/>
                                 <connections>
                                     <action selector="favoritesButtonClicked:" destination="yY0-wX-xkw" eventType="touchUpInside" id="o31-YP-R1D"/>
                                 </connections>
@@ -294,7 +294,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ql-nd-bF2">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ql-nd-bF2">
                                 <rect key="frame" x="85" y="643" width="244" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="1XQ-6j-PIO"/>
@@ -382,7 +382,7 @@
         <image name="backward.end.alt.fill" catalog="system" width="64" height="32"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="forward.end.alt.fill" catalog="system" width="64" height="32"/>
-        <image name="heartRed1" width="256" height="256"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
         <image name="pause_button_Icon" width="83" height="83"/>
     </resources>
 </document>
