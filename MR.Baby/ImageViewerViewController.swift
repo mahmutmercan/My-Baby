@@ -41,17 +41,20 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
 //    Struck Çekme
     var selectedCategoriesLabel = ""
     var selectedLandmarkName = ""
+//    var selectedCategory = ""
+    var selectedCategorySongs: [Song]! = []
+
     
     var toggleStatePlay = 1
 
 
-    var songs: [Song] = [
-        Song(title: "BirdSound 01", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"),
-        Song(title: "BirdSound 02", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail2", duration: "02:28", audioName: "birdSound2", audioType: "mp3"),
-        Song(title: "BirdSound 03", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail3", duration: "05:19", audioName: "birdSound3", audioType: "mp3"),
-        Song(title: "BirdSound 04", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail4", duration: "04:14", audioName: "birdSound4", audioType: "mp3"),
-        Song(title: "BirdSound 05", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail5", duration: "05:05", audioName: "birdSound5", audioType: "mp3"),
-        Song(title: "BirdSound 06", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "14:32", audioName: "birdSound", audioType: "mp3")]
+//    var songs: [Song] = [
+//        Song(title: "BirdSound 01", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"),
+//        Song(title: "BirdSound 02", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail2", duration: "02:28", audioName: "birdSound2", audioType: "mp3"),
+//        Song(title: "BirdSound 03", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail3", duration: "05:19", audioName: "birdSound3", audioType: "mp3"),
+//        Song(title: "BirdSound 04", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail4", duration: "04:14", audioName: "birdSound4", audioType: "mp3"),
+//        Song(title: "BirdSound 05", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail5", duration: "05:05", audioName: "birdSound5", audioType: "mp3"),
+//        Song(title: "BirdSound 06", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "14:32", audioName: "birdSound", audioType: "mp3")]
     
 //    --------------------------------------------------------------------------------------
     
@@ -60,7 +63,8 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         
         categoriesLabel.text = selectedCategoriesLabel
         storyListTitleLabel.text = selectedLandmarkName
-
+        
+        
         // Do any additional setup after loading the view.
         storyTableView.delegate = self
         storyTableView.dataSource = self
@@ -85,21 +89,21 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     @IBAction func playSoundsButtonTapped(_ sender: Any) {
-        
+                
         if chosenAudioTitle == "" {
-            chosenAudioTitle = songs[0].title
-            chosenAudioName = songs[0].audioName
-            chosenBackgroundImage = songs[0].backgroundImageName
-            chosenStoryDuration = songs[0].duration
-            chosenAudioType = songs[0].audioType
-            chosenAudioSubTitle = songs[0].audioSubtitle
+            chosenAudioTitle = selectedCategorySongs[0].title
+            chosenAudioName = selectedCategorySongs[0].audioName
+            chosenBackgroundImage = selectedCategorySongs[0].backgroundImageName
+            chosenStoryDuration = selectedCategorySongs[0].duration
+            chosenAudioType = selectedCategorySongs[0].audioType
+            chosenAudioSubTitle = selectedCategorySongs[0].audioSubtitle
                 performSegue(withIdentifier: "toStoryDetailViewController", sender: Any?.self)
 
-            
+
         } else {
             performSegue(withIdentifier: "toStoryDetailViewController", sender: Any?.self)
 
-            
+
         }
 
 
@@ -111,8 +115,8 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoryListCell", for: indexPath)
-        cell.textLabel?.text = songs[indexPath.item].title
-        cell.detailTextLabel?.text = songs[indexPath.item].duration
+        cell.textLabel?.text = selectedCategorySongs[indexPath.item].title
+        cell.detailTextLabel?.text = selectedCategorySongs[indexPath.item].duration
         return cell
     }
     
@@ -120,7 +124,8 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songs.count
+//        return songs.count
+        return selectedCategorySongs.count
     }
     
 //    --------------------------------------------------------------------------------------
@@ -128,12 +133,12 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
                 
-        chosenAudioTitle = songs[indexPath.row].title
-        chosenAudioName = songs[indexPath.row].audioName
-        chosenBackgroundImage = songs[indexPath.row].backgroundImageName
-        chosenStoryDuration = songs[indexPath.row].duration
-        chosenAudioType = songs[indexPath.row].audioType
-        chosenAudioSubTitle = songs[indexPath.row].audioSubtitle
+        chosenAudioTitle = selectedCategorySongs[indexPath.row].title
+        chosenAudioName = selectedCategorySongs[indexPath.row].audioName
+        chosenBackgroundImage = selectedCategorySongs[indexPath.row].backgroundImageName
+        chosenStoryDuration = selectedCategorySongs[indexPath.row].duration
+        chosenAudioType = selectedCategorySongs[indexPath.row].audioType
+        chosenAudioSubTitle = selectedCategorySongs[indexPath.row].audioSubtitle
         
         
         
@@ -170,3 +175,5 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
 
     
 }
+
+
