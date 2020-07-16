@@ -15,6 +15,7 @@ struct Song {
     let duration: String
     let audioName: String
     let audioType: String
+    let audioPosition: Int
     
 }
 
@@ -43,9 +44,9 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     var selectedLandmarkName = ""
 //    var selectedCategory = ""
     var selectedCategorySongs: [Song]! = []
-
-    
     var toggleStatePlay = 1
+    
+//    var songs = [Song]()
 
 
 //    var songs: [Song] = [
@@ -69,11 +70,20 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         storyTableView.delegate = self
         storyTableView.dataSource = self
 
+//        configureSongs()
         setupImageView()
     
     }
+//    func configureSongs() {
+//        songs.append(Song(title: "BirdSound 01", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"))
+//        songs.append(Song(title: "BirdSound 02", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"))
+//        songs.append(Song(title: "BirdSound 03", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"))
+//
+//
+//    }
     
 //    --------------------------------------------------------------------------------------
+    
 
     
     private func setupImageView() {
@@ -115,6 +125,7 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoryListCell", for: indexPath)
+        
         cell.textLabel?.text = selectedCategorySongs[indexPath.item].title
         cell.detailTextLabel?.text = selectedCategorySongs[indexPath.item].duration
         return cell
@@ -132,6 +143,14 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let position = selectedCategorySongs[indexPath.row].audioPosition
+        guard let mvc = storyboard?.instantiateViewController(identifier: "audioPlayer") as? storyDetailViewController else {
+            return
+        }
+        mvc.songs = selectedCategorySongs
+        mvc.position = position
+//        present(mvc, animated: true)
                 
         chosenAudioTitle = selectedCategorySongs[indexPath.row].title
         chosenAudioName = selectedCategorySongs[indexPath.row].audioName
@@ -139,6 +158,7 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         chosenStoryDuration = selectedCategorySongs[indexPath.row].duration
         chosenAudioType = selectedCategorySongs[indexPath.row].audioType
         chosenAudioSubTitle = selectedCategorySongs[indexPath.row].audioSubtitle
+        
         
         
         
@@ -159,6 +179,7 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
             destinationVC.selectedStoryDuration = chosenStoryDuration
             destinationVC.selectedAudioType = chosenAudioType
             destinationVC.selectedAudioSubtitle = chosenAudioSubTitle
+            destinationVC.selectedCategorySongs1 = selectedCategorySongs
             
         }
     }

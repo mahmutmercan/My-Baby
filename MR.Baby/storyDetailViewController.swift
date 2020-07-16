@@ -10,6 +10,9 @@ import UIKit
 import AVFoundation
 
 class storyDetailViewController: UIViewController {
+    
+    public var position: Int = 0
+    public var songs: [Song] = []
         
 //    IBOutler ler
     @IBOutlet weak var audioTitleLabel: UILabel!
@@ -32,6 +35,8 @@ class storyDetailViewController: UIViewController {
     var selectedBackgroundImage = ""
     var selectedStoryDuration = ""
     var selectedAudioType = ""
+    var selectedCategorySongs1: [Song]! = []
+
     
     var nextAudioTitle = ""
     
@@ -40,64 +45,87 @@ class storyDetailViewController: UIViewController {
     var toggleState = 1
     var toggleStateFavorites = 1
     var toggleStateForward = 1
-    
-//    var ArrayForward = [String]()
-    
-        
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setInterface()
         setTargets()
-//        ArrayForward = [selectedAudioTitle, selectedAudioSubtitle, selectedAudioName, selectedBackgroundImage, selectedStoryDuration, selectedAudioType]
-        
 
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        if view.subviews.count == 1 {
+        if view.subviews.count == 0 {
             setInterface()
         }
     }
         
     func setInterface(){
+        
         audioTitleLabel.text = selectedAudioTitle
         storyDetailSubtitleLabel.text = selectedAudioSubtitle
         audioBackgroundImage.image = UIImage(named: "\(selectedBackgroundImage)")
         timeEndLabel.text = selectedStoryDuration
-                
-        let selectedMusic = 1
+        sliderTime1.addTarget(self, action: #selector(sliderTime), for: UIControl.Event.valueChanged)
 
-        switch selectedMusic {
-        case 1:
-            let pathToSound = Bundle.main.path(forResource: "\(selectedAudioName)", ofType: "\(selectedAudioType)")!
-            let url = URL(fileURLWithPath: pathToSound)
-
-            do{
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer?.play()
-                
-                var audioSession = AVAudioSession.sharedInstance()
-                do {
-                    try audioSession.setCategory(AVAudioSession.Category.playback)
-
-                }
-                catch {
-                    
-                }
-
-            } catch {
-
+//        let song = songs[position]
+        let urlString = Bundle.main.path(forResource: "\(selectedAudioName)", ofType: "\(selectedAudioType)")
+        do {
+            try AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            
+            guard let urlString = urlString else {
+                return
             }
-        default:
-            return
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(string: urlString)!)
+            guard let player = audioPlayer else {
+                return
+            }
+//            player.currentTime = 0
+            player.play()
+        } catch {
+            print("error pccurred")
         }
+        
+        
+                
+//        let selectedMusic = 1
+//
+//        switch selectedMusic {
+//        case 1:
+//            let pathToSound = Bundle.main.path(forResource: "\(selectedAudioName)", ofType: "\(selectedAudioType)")!
+//            let url = URL(fileURLWithPath: pathToSound)
+//
+//            do{
+//                audioPlayer = try AVAudioPlayer(contentsOf: url)
+//                audioPlayer?.play()
+//
+//                var audioSession = AVAudioSession.sharedInstance()
+//                do {
+//                    try audioSession.setCategory(AVAudioSession.Category.playback)
+//
+//                }
+//                catch {
+//
+//                }
+//
+//            } catch {
+//
+//            }
+//        default:
+//            return
+//        }
 
             
             
         }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let player = audioPlayer {
+            player.stop()
+        }
+    }
+    
     
     
     func setTargets(){
@@ -106,22 +134,34 @@ class storyDetailViewController: UIViewController {
     
     
     @IBAction func playStopButtonClicked(_ sender: UIButton) {
-                
-        if toggleState == 1 {
+        if audioPlayer?.isPlaying == true {
             audioPlayer?.pause()
-            toggleState = 2
             playPauseButton.setImage(UIImage(named: "play_button_Icon"), for:
                 UIControl.State.normal)
-
 
             
         } else {
             audioPlayer?.play()
-            toggleState = 1
             playPauseButton.setImage(UIImage(named: "pause_button_Icon"), for: UIControl.State.normal)
 
-
+            
         }
+                
+//        if toggleState == 1 {
+//            audioPlayer?.pause()
+//            toggleState = 2
+//            playPauseButton.setImage(UIImage(named: "play_button_Icon"), for:
+//                UIControl.State.normal)
+//
+//
+//
+//        } else {
+//            audioPlayer?.play()
+//            toggleState = 1
+//            playPauseButton.setImage(UIImage(named: "pause_button_Icon"), for: UIControl.State.normal)
+//
+//
+//        }
       
         
     }
@@ -130,6 +170,16 @@ class storyDetailViewController: UIViewController {
 
     
     @IBAction func forwardButtonClicked(_ sender: Any) {
+        if position < (songs.count - 1) {
+            position = position + 1
+            audioPlayer?.stop()
+            for subview in view.subviews {
+                subview.removeFromSuperview()
+            }
+            setInterface()
+            
+        }
+
 
 
     }
@@ -138,10 +188,21 @@ class storyDetailViewController: UIViewController {
 
     
     @IBAction func backwardButtonClicked(_ sender: Any) {
+        if position > 0 {
+            position = position - 1
+            audioPlayer?.stop()
+            for subview in view.subviews {
+                subview.removeFromSuperview()
+            }
+            setInterface()
+            
+        }
     }
     
     
     @IBAction func sliderTime(_ sender: Any) {
+//        let value = sliderTime1.value
+//        audioPlayer?.currentTime = value
         
     }
     

@@ -203,11 +203,11 @@
 			children = (
 				A33DDD4C24B0861700BEF2A9 /* AppDelegate.swift */,
 				A33DDD4E24B0861700BEF2A9 /* SceneDelegate.swift */,
-				A33DDD5024B0861700BEF2A9 /* ViewController.swift */,
 				A33DDD5224B0861700BEF2A9 /* Main.storyboard */,
 				A33DDD5524B0861B00BEF2A9 /* Assets.xcassets */,
 				A33DDD5724B0861B00BEF2A9 /* LaunchScreen.storyboard */,
 				A33DDD5A24B0861B00BEF2A9 /* Info.plist */,
+				A33DDD5024B0861700BEF2A9 /* ViewController.swift */,
 				A33DDD6024B0890300BEF2A9 /* ItemCollectionViewCell.swift */,
 				A33DDD6124B0890300BEF2A9 /* ItemCollectionViewCell.xib */,
 				A33DDD6424B09CD700BEF2A9 /* ImageViewerViewController.swift */,
