@@ -25,7 +25,10 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     func setupCell(){
         imageView.layer.cornerRadius = 12.0
-        coverImageOverlay.isHidden = true
+        coverImageOverlay.alpha = 0.3
+        coverImageOverlay.contentMode = .scaleToFill
+        coverImageOverlay.layer.cornerRadius = 12.0
+//        coverImageOverlay.isHidden = true
     }
 
 }

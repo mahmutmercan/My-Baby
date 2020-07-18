@@ -44,6 +44,7 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     var selectedLandmarkName = ""
 //    var selectedCategory = ""
     var selectedCategorySongs: [Song]! = []
+    var myposition: Int = 0
     var toggleStatePlay = 1
     
 //    var songs = [Song]()
@@ -144,20 +145,21 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let position = selectedCategorySongs[indexPath.row].audioPosition
+        let position = indexPath.row
+        myposition = position
         guard let mvc = storyboard?.instantiateViewController(identifier: "audioPlayer") as? storyDetailViewController else {
             return
         }
         mvc.songs = selectedCategorySongs
         mvc.position = position
 //        present(mvc, animated: true)
-                
-        chosenAudioTitle = selectedCategorySongs[indexPath.row].title
-        chosenAudioName = selectedCategorySongs[indexPath.row].audioName
-        chosenBackgroundImage = selectedCategorySongs[indexPath.row].backgroundImageName
-        chosenStoryDuration = selectedCategorySongs[indexPath.row].duration
-        chosenAudioType = selectedCategorySongs[indexPath.row].audioType
-        chosenAudioSubTitle = selectedCategorySongs[indexPath.row].audioSubtitle
+//
+//        chosenAudioTitle = selectedCategorySongs[indexPath.row].title
+//        chosenAudioName = selectedCategorySongs[indexPath.row].audioName
+//        chosenBackgroundImage = selectedCategorySongs[indexPath.row].backgroundImageName
+//        chosenStoryDuration = selectedCategorySongs[indexPath.row].duration
+//        chosenAudioType = selectedCategorySongs[indexPath.row].audioType
+//        chosenAudioSubTitle = selectedCategorySongs[indexPath.row].audioSubtitle
         
         
         
@@ -173,18 +175,20 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         if segue.identifier == "toStoryDetailViewController" {
             let destinationVC = segue.destination as! storyDetailViewController
             
-            destinationVC.selectedAudioTitle = chosenAudioTitle
-            destinationVC.selectedAudioName = chosenAudioName
-            destinationVC.selectedBackgroundImage = chosenBackgroundImage
-            destinationVC.selectedStoryDuration = chosenStoryDuration
-            destinationVC.selectedAudioType = chosenAudioType
-            destinationVC.selectedAudioSubtitle = chosenAudioSubTitle
-            destinationVC.selectedCategorySongs1 = selectedCategorySongs
+            destinationVC.songs = selectedCategorySongs
+            destinationVC.position = myposition
+            
+//            destinationVC.selectedAudioTitle = chosenAudioTitle
+//            destinationVC.selectedAudioName = chosenAudioName
+//            destinationVC.selectedBackgroundImage = chosenBackgroundImage
+//            destinationVC.selectedStoryDuration = chosenStoryDuration
+//            destinationVC.selectedAudioType = chosenAudioType
+//            destinationVC.selectedAudioSubtitle = chosenAudioSubTitle
+//            destinationVC.selectedCategorySongs1 = selectedCategorySongs
             
         }
     }
     
-//    --------------------------------------------------------------------------------------
 
     
     @IBAction func backTapped(_ sender: Any) {
