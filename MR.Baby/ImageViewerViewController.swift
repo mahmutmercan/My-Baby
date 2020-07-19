@@ -200,5 +200,3 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
 
     
 }
-
-

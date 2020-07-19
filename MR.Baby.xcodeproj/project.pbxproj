@@ -23,6 +23,7 @@
 		A33DDD6524B09CD700BEF2A9 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6424B09CD700BEF2A9 /* ImageViewerViewController.swift */; };
 		A33DDD6724B0B3EC00BEF2A9 /* storyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */; };
 		A33DDD6B24B0F06D00BEF2A9 /* babySound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A33DDD6A24B0F06D00BEF2A9 /* babySound1.wav */; };
+		A382C22224C45C7D00A40F76 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C22124C45C7D00A40F76 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		A33DDD6424B09CD700BEF2A9 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyDetailViewController.swift; sourceTree = "<group>"; };
 		A33DDD6A24B0F06D00BEF2A9 /* babySound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = babySound1.wav; sourceTree = "<group>"; };
+		A382C22124C45C7D00A40F76 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,9 +214,18 @@
 				A33DDD6124B0890300BEF2A9 /* ItemCollectionViewCell.xib */,
 				A33DDD6424B09CD700BEF2A9 /* ImageViewerViewController.swift */,
 				A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */,
+				A382C22024C45C6800A40F76 /* Utilities */,
 				A300A03624B712B400CB563E /* Sounds */,
 			);
 			path = MR.Baby;
+			sourceTree = "<group>";
+		};
+		A382C22024C45C6800A40F76 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A382C22124C45C7D00A40F76 /* Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +308,7 @@
 			files = (
 				A33DDD5124B0861700BEF2A9 /* ViewController.swift in Sources */,
 				A33DDD6724B0B3EC00BEF2A9 /* storyDetailViewController.swift in Sources */,
+				A382C22224C45C7D00A40F76 /* Utilities.swift in Sources */,
 				A33DDD6224B0890300BEF2A9 /* ItemCollectionViewCell.swift in Sources */,
 				A33DDD4D24B0861700BEF2A9 /* AppDelegate.swift in Sources */,
 				A33DDD6524B09CD700BEF2A9 /* ImageViewerViewController.swift in Sources */,
