@@ -29,7 +29,6 @@ class storyDetailViewController: UIViewController {
     
     @IBOutlet weak var overlayShadow: UIImageView?
     
-    @IBOutlet weak var overlayShadowTopToBottom: UIImageView?
     
     //    Struck Çekme
     var selectedAudioTitle = ""
@@ -51,7 +50,7 @@ class storyDetailViewController: UIViewController {
     
     
     
-//    MARK: Timer vars
+    //    MARK: Timer vars
     var audioTimer: Timer?
     var audioTime: Int = 0
     var timeLabel: String?
@@ -64,7 +63,7 @@ class storyDetailViewController: UIViewController {
         setInterface()
         audioPlayerConfigure()
         setTargets()
-    
+        
         
     }
     override func viewDidLayoutSubviews() {
@@ -81,13 +80,14 @@ class storyDetailViewController: UIViewController {
             player.stop()
         }
     }
-
-
-
+    
+    
+    
     
     //    MARK: SetInterface
     
     func setInterface(){
+        setHeaderInterface()
         
         backwardButton.tintColor = UIColor.white
         forwardButton.tintColor = UIColor.white
@@ -95,13 +95,44 @@ class storyDetailViewController: UIViewController {
         
         overlayShadow?.image = UIImage(named: "overlayShadow")
         overlayShadow?.contentMode = .scaleToFill
-        overlayShadow?.alpha = 0.3
+        overlayShadow?.alpha = 0.5
         
-        overlayShadowTopToBottom?.image = UIImage(named: "overlayShadow")
-        overlayShadowTopToBottom?.contentMode = .scaleToFill
-        overlayShadowTopToBottom?.alpha = 0.05
+
         
+    }
+    
+    func setHeaderInterface(){
+        backButonInitialUI()
+        favoriteButonInitialUI()
+        forwardAndBackwardButtonsUI()
+    }
+    
+    func backButonInitialUI(){
+        backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        backButton.tintColor = .black
+        backButton.alpha = 0.8
+        backButton.backgroundColor = .white
+        backButton.layer.cornerRadius = 8.0
+    }
+    
+    func favoriteButonInitialUI(){
+        favorutiesButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+        favorutiesButton.tintColor = .red
+        favorutiesButton.alpha = 0.8
+        favorutiesButton.backgroundColor = .white
+        favorutiesButton.layer.cornerRadius = 8.0
+    }
+    
+    func forwardAndBackwardButtonsUI(){
+        forwardButton.tintColor = .black
+        forwardButton.alpha = 1
+        forwardButton.backgroundColor = UIColor.white.withAlphaComponent(0.1)
+        forwardButton.layer.cornerRadius = forwardButton.frame.height / 2
         
+        backwardButton.tintColor = .black
+        backwardButton.alpha = 1
+        backwardButton.backgroundColor = UIColor.white.withAlphaComponent(0.1)
+        backwardButton.layer.cornerRadius = forwardButton.frame.height / 2
     }
     
     
@@ -124,8 +155,8 @@ class storyDetailViewController: UIViewController {
         audioBackgroundImage?.image = UIImage(named: "\(song.backgroundImageName)")
         timeEndLabel?.text = song.duration
         sliderTime1?.addTarget(self, action: #selector(sliderTime), for: UIControl.Event.valueChanged)
-
-       
+        
+        
         
         do {
             try AVAudioSession.sharedInstance().setMode(.default)
@@ -146,42 +177,42 @@ class storyDetailViewController: UIViewController {
         
     }
     
-        
+    
     //    MARK: SetTimer
+    
+    @objc func timerController() {
+        audioTime += 1
         
-        @objc func timerController() {
-            audioTime += 1
-            
-            timeLabel = String(getTimeFromSeconds(seconds: audioTime))
-            minutesLabel = String(getTimeFromMinutes(minutes: audioTime))
-            timeStartLabel?.text = String(minutesLabel ?? "")
-            
-            if timeStartLabel?.text == timeEndLabel?.text {
-                       forwardButtonClicked(self)
-                   }
-
-            print(timeLabel)
-            print(minutesLabel)
-            print(audioTime)
-            
+        timeLabel = String(getTimeFromSeconds(seconds: audioTime))
+        minutesLabel = String(getTimeFromMinutes(minutes: audioTime))
+        timeStartLabel?.text = String(minutesLabel ?? "")
+        
+        if timeStartLabel?.text == timeEndLabel?.text {
+            forwardButtonClicked(self)
         }
         
-        func startTimer() {
-            audioTimer = Timer.scheduledTimer(timeInterval: 1.0,
-                                 target: self,
-                                 selector: #selector(timerController),
-                                 userInfo: nil, repeats: true)
-            
-        }
+        print(timeLabel)
+        print(minutesLabel)
+        print(audioTime)
         
-        func resetTimer(){
-            audioTimer?.invalidate()
-            audioTimer = nil
-            audioTime = 0
-        }
+    }
+    
+    func startTimer() {
+        audioTimer = Timer.scheduledTimer(timeInterval: 1.0,
+                                          target: self,
+                                          selector: #selector(timerController),
+                                          userInfo: nil, repeats: true)
         
-        
-        
+    }
+    
+    func resetTimer(){
+        audioTimer?.invalidate()
+        audioTimer = nil
+        audioTime = 0
+    }
+    
+    
+    
     
     
     

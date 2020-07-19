@@ -15,7 +15,6 @@ struct Song {
     let duration: String
     let audioName: String
     let audioType: String
-    let audioPosition: Int
     
 }
 
@@ -73,6 +72,7 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
 
 //        configureSongs()
         setupImageView()
+        backButonInitialUI()
     
     }
 //    func configureSongs() {
@@ -195,8 +195,12 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
-    
-//    --------------------------------------------------------------------------------------
-
+    func backButonInitialUI(){
+           backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+           backButton.tintColor = .black
+           backButton.alpha = 0.8
+           backButton.backgroundColor = .white
+           backButton.layer.cornerRadius = 8.0
+       }
     
 }
