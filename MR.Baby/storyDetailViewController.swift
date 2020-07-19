@@ -49,10 +49,13 @@ class storyDetailViewController: UIViewController {
     var toggleStateFavorites = 1
     var toggleStateForward = 1
     
+    var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setInterface()
+        audioPlayerConfigure()
         setTargets()
         
     }
@@ -60,6 +63,7 @@ class storyDetailViewController: UIViewController {
         super.viewDidLayoutSubviews()
         if view.subviews.count == 0 {
             setInterface()
+            audioPlayerConfigure()
         }
     }
     
@@ -70,12 +74,34 @@ class storyDetailViewController: UIViewController {
         }
     }
     
+    //    MARK: SetInterface
     
     func setInterface(){
-        let song = songs[position]
-        print(song.title)
-//        let urlString = Bundle.main.path(forResource: "\(song.audioName)", ofType: "\(song.audioType)")
         
+        backwardButton.tintColor = UIColor.white
+        forwardButton.tintColor = UIColor.white
+        
+        
+        overlayShadow?.image = UIImage(named: "overlayShadow")
+        overlayShadow?.contentMode = .scaleToFill
+        overlayShadow?.alpha = 0.3
+        
+        overlayShadowTopToBottom?.image = UIImage(named: "overlayShadow")
+        overlayShadowTopToBottom?.contentMode = .scaleToFill
+        overlayShadowTopToBottom?.alpha = 0.05
+        
+        
+    }
+    
+    func setTargets(){
+        backButton.addTarget(self, action: #selector(backButtonTapped(_:)), for: .touchUpInside)
+    }
+    
+    func audioPlayerConfigure(){
+        
+        
+        
+        let song = songs[position]
         let urlString = Bundle.main.path(forResource: song.audioName, ofType: song.audioType)
         
         audioTitleLabel?.text = song.title
@@ -83,15 +109,7 @@ class storyDetailViewController: UIViewController {
         audioBackgroundImage?.image = UIImage(named: "\(song.backgroundImageName)")
         timeEndLabel?.text = song.duration
         sliderTime1?.addTarget(self, action: #selector(sliderTime), for: UIControl.Event.valueChanged)
-
-        overlayShadow?.image = UIImage(named: "overlayShadow")
-        overlayShadow?.contentMode = .scaleToFill
-        overlayShadow?.alpha = 0.4
-        
-        overlayShadowTopToBottom?.image = UIImage(named: "overlayShadow")
-        overlayShadowTopToBottom?.contentMode = .scaleToFill
-        overlayShadowTopToBottom?.alpha = 0.4
-        
+        timeStartLabel.text = song.duration
         
         do {
             try AVAudioSession.sharedInstance().setMode(.default)
@@ -110,29 +128,22 @@ class storyDetailViewController: UIViewController {
             print("error pccurred")
         }
         
-        
-        
-    }
-    
-    func setTargets(){
-        
     }
     
     
     @IBAction func playStopButtonClicked(_ sender: UIButton) {
         if audioPlayer?.isPlaying == true {
             audioPlayer?.pause()
-            playPauseButton.setImage(UIImage(named: "play_button_Icon"), for:
-                UIControl.State.normal)
-            
+            playPauseButton.setImage(UIImage(named: "play_button_Icon"),
+                                     for: UIControl.State.normal)
             
         } else {
             audioPlayer?.play()
-            playPauseButton.setImage(UIImage(named: "pause_button_Icon"), for: UIControl.State.normal)
-            
+            playPauseButton.setImage(UIImage(named: "pause_button_Icon"),
+                                     for: UIControl.State.normal)
             
         }
-  
+        
         
         
     }
@@ -143,14 +154,12 @@ class storyDetailViewController: UIViewController {
         if position < (songs.count - 1) {
             position = position + 1
             audioPlayer?.stop()
-            for subview in view.subviews {
-                subview.removeFromSuperview()
-            }
-            setInterface()
+            audioPlayerConfigure()
+        } else {
+            position = 0
+            audioPlayer?.stop()
+            audioPlayerConfigure()
         }
-        
-        
-        
     }
     
     
@@ -159,11 +168,7 @@ class storyDetailViewController: UIViewController {
         if position > 0 {
             position = position - 1
             audioPlayer?.stop()
-            for subview in view.subviews {
-                subview.removeFromSuperview()
-            }
-            setInterface()
-            
+            audioPlayerConfigure()
         }
     }
     
@@ -173,11 +178,6 @@ class storyDetailViewController: UIViewController {
         //        audioPlayer?.currentTime = value
         
     }
-    
-    
-    
-    
-    //    --------------------------------------------------------------------------------------
     
     
     @IBAction func favoritesButtonClicked(_ sender: Any) {
@@ -194,18 +194,14 @@ class storyDetailViewController: UIViewController {
             
         }
         
-        
-        
     }
     
-    //    --------------------------------------------------------------------------------------
     
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
     
-    //    --------------------------------------------------------------------------------------
     
     
     
