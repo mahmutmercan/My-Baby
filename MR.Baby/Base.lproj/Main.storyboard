@@ -304,7 +304,7 @@
                                     <constraint firstAttribute="height" constant="16" id="PTm-WO-ftN"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="sliderTime:" destination="yY0-wX-xkw" eventType="valueChanged" id="g1D-sd-C9p"/>
+                                    <action selector="changeAudioTimeWithSender:" destination="yY0-wX-xkw" eventType="valueChanged" id="Fv5-tx-WIQ"/>
                                 </connections>
                             </slider>
                         </subviews>
@@ -353,7 +353,7 @@
                         <outlet property="forwardButton" destination="die-yK-fA0" id="4Eg-Vp-H8t"/>
                         <outlet property="overlayShadow" destination="iEo-XN-d9X" id="wGY-XT-vfy"/>
                         <outlet property="playPauseButton" destination="dGQ-2D-Ee5" id="IDF-4f-ZL3"/>
-                        <outlet property="sliderTime1" destination="9Ql-nd-bF2" id="ibr-Mb-sqd"/>
+                        <outlet property="slider" destination="9Ql-nd-bF2" id="zDb-Yl-r1S"/>
                         <outlet property="storyDetailSubtitleLabel" destination="nID-ei-GSe" id="WhH-yJ-ifO"/>
                         <outlet property="timeEndLabel" destination="RAK-PQ-bxi" id="w5d-py-KYj"/>
                         <outlet property="timeStartLabel" destination="up0-Rx-bFA" id="XV2-0o-9UU"/>

@@ -27,6 +27,7 @@ class storyDetailViewController: UIViewController {
     @IBOutlet weak var forwardButton: UIButton!
     @IBOutlet weak var backwardButton: UIButton!
     
+    @IBOutlet weak var slider: UISlider?
     @IBOutlet weak var overlayShadow: UIImageView?
     
     
@@ -64,6 +65,9 @@ class storyDetailViewController: UIViewController {
         audioPlayerConfigure()
         setTargets()
         
+        self.slider?.minimumValue = 0.0
+        self.slider!.maximumValue = Float(audioPlayer!.duration)
+
         
     }
     override func viewDidLayoutSubviews() {
@@ -144,8 +148,8 @@ class storyDetailViewController: UIViewController {
     func audioPlayerConfigure(){
         resetTimer()
         startTimer()
-        print(timeLabel)
-        print(audioTime)
+//        print(timeLabel)
+//        print(audioTime)
         
         let song = songs[position]
         let urlString = Bundle.main.path(forResource: song.audioName, ofType: song.audioType)
@@ -154,7 +158,7 @@ class storyDetailViewController: UIViewController {
         storyDetailSubtitleLabel?.text = song.audioSubtitle
         audioBackgroundImage?.image = UIImage(named: "\(song.backgroundImageName)")
         timeEndLabel?.text = song.duration
-        sliderTime1?.addTarget(self, action: #selector(sliderTime), for: UIControl.Event.valueChanged)
+//        sliderTime1?.addTarget(self, action: #selector(sliderTime), for: UIControl.Event.valueChanged)
         
         
         
@@ -174,7 +178,7 @@ class storyDetailViewController: UIViewController {
         } catch {
             print("error pccurred")
         }
-        
+                
     }
     
     
@@ -191,9 +195,9 @@ class storyDetailViewController: UIViewController {
             forwardButtonClicked(self)
         }
         
-        print(timeLabel)
-        print(minutesLabel)
-        print(audioTime)
+//        print(timeLabel)
+//        print(minutesLabel)
+//        print(audioTime)
         
     }
     
@@ -202,6 +206,12 @@ class storyDetailViewController: UIViewController {
                                           target: self,
                                           selector: #selector(timerController),
                                           userInfo: nil, repeats: true)
+        var updateSliderTimer: Timer?
+        
+        updateSliderTimer = Timer.scheduledTimer(timeInterval: 0.1,
+        target: self,
+        selector: #selector(updateSlider),
+        userInfo: nil, repeats: true)
         
     }
     
@@ -256,15 +266,6 @@ class storyDetailViewController: UIViewController {
             audioPlayerConfigure()
         }
     }
-    
-    
-    @IBAction func sliderTime(_ sender: Any) {
-        //        let value = sliderTime1.value
-        //        audioPlayer?.currentTime = value
-        
-    }
-    
-    
     @IBAction func favoritesButtonClicked(_ sender: Any) {
         
         if toggleStateFavorites == 1 {
@@ -285,6 +286,20 @@ class storyDetailViewController: UIViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func changeAudioTime(sender: AnyObject){
+        audioPlayer?.stop()
+        audioPlayer?.currentTime =  TimeInterval(slider!.value)
+        audioTime = Int(slider!.value)
+        minutesLabel = String(getTimeFromMinutes(minutes: audioTime))
+        timeStartLabel?.text = String(minutesLabel ?? "")
+        audioPlayer?.prepareToPlay()
+        audioPlayer?.play()
+    }
+    
+    @objc func updateSlider() {
+        slider?.value = Float(audioPlayer!.currentTime)
     }
     
 }
