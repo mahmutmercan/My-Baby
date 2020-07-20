@@ -23,7 +23,6 @@ class storyDetailViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var favorutiesButton: UIButton!
-    @IBOutlet weak var sliderTime1: UISlider?
     @IBOutlet weak var forwardButton: UIButton!
     @IBOutlet weak var backwardButton: UIButton!
     
@@ -64,12 +63,10 @@ class storyDetailViewController: UIViewController {
         setInterface()
         audioPlayerConfigure()
         setTargets()
-        
-        self.slider?.minimumValue = 0.0
-        self.slider!.maximumValue = Float(audioPlayer!.duration)
-
-        
+        sliderConfigure()
     }
+    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if view.subviews.count == 0 {
@@ -84,144 +81,6 @@ class storyDetailViewController: UIViewController {
             player.stop()
         }
     }
-    
-    
-    
-    
-    //    MARK: SetInterface
-    
-    func setInterface(){
-        setHeaderInterface()
-        
-        backwardButton.tintColor = UIColor.white
-        forwardButton.tintColor = UIColor.white
-        
-        
-        overlayShadow?.image = UIImage(named: "overlayShadow")
-        overlayShadow?.contentMode = .scaleToFill
-        overlayShadow?.alpha = 0.5
-        
-
-        
-    }
-    
-    func setHeaderInterface(){
-        backButonInitialUI()
-        favoriteButonInitialUI()
-        forwardAndBackwardButtonsUI()
-    }
-    
-    func backButonInitialUI(){
-        backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        backButton.tintColor = .black
-        backButton.alpha = 0.8
-        backButton.backgroundColor = .white
-        backButton.layer.cornerRadius = 8.0
-    }
-    
-    func favoriteButonInitialUI(){
-        favorutiesButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
-        favorutiesButton.tintColor = .red
-        favorutiesButton.alpha = 0.8
-        favorutiesButton.backgroundColor = .white
-        favorutiesButton.layer.cornerRadius = 8.0
-    }
-    
-    func forwardAndBackwardButtonsUI(){
-        forwardButton.tintColor = .black
-        forwardButton.alpha = 1
-        forwardButton.backgroundColor = UIColor.white.withAlphaComponent(0.1)
-        forwardButton.layer.cornerRadius = forwardButton.frame.height / 2
-        
-        backwardButton.tintColor = .black
-        backwardButton.alpha = 1
-        backwardButton.backgroundColor = UIColor.white.withAlphaComponent(0.1)
-        backwardButton.layer.cornerRadius = forwardButton.frame.height / 2
-    }
-    
-    
-    
-    func setTargets(){
-        backButton.addTarget(self, action: #selector(backButtonTapped(_:)), for: .touchUpInside)
-    }
-    
-    func audioPlayerConfigure(){
-        resetTimer()
-        startTimer()
-//        print(timeLabel)
-//        print(audioTime)
-        
-        let song = songs[position]
-        let urlString = Bundle.main.path(forResource: song.audioName, ofType: song.audioType)
-        
-        audioTitleLabel?.text = song.title
-        storyDetailSubtitleLabel?.text = song.audioSubtitle
-        audioBackgroundImage?.image = UIImage(named: "\(song.backgroundImageName)")
-        timeEndLabel?.text = song.duration
-//        sliderTime1?.addTarget(self, action: #selector(sliderTime), for: UIControl.Event.valueChanged)
-        
-        
-        
-        do {
-            try AVAudioSession.sharedInstance().setMode(.default)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            
-            guard let urlString = urlString else {
-                return
-            }
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(string: urlString)!)
-            guard let player = audioPlayer else {
-                return
-            }
-            //            player.currentTime = 0
-            player.play()
-        } catch {
-            print("error pccurred")
-        }
-                
-    }
-    
-    
-    //    MARK: SetTimer
-    
-    @objc func timerController() {
-        audioTime += 1
-        
-        timeLabel = String(getTimeFromSeconds(seconds: audioTime))
-        minutesLabel = String(getTimeFromMinutes(minutes: audioTime))
-        timeStartLabel?.text = String(minutesLabel ?? "")
-        
-        if timeStartLabel?.text == timeEndLabel?.text {
-            forwardButtonClicked(self)
-        }
-        
-//        print(timeLabel)
-//        print(minutesLabel)
-//        print(audioTime)
-        
-    }
-    
-    func startTimer() {
-        audioTimer = Timer.scheduledTimer(timeInterval: 1.0,
-                                          target: self,
-                                          selector: #selector(timerController),
-                                          userInfo: nil, repeats: true)
-        var updateSliderTimer: Timer?
-        
-        updateSliderTimer = Timer.scheduledTimer(timeInterval: 0.1,
-        target: self,
-        selector: #selector(updateSlider),
-        userInfo: nil, repeats: true)
-        
-    }
-    
-    func resetTimer(){
-        audioTimer?.invalidate()
-        audioTimer = nil
-        audioTime = 0
-    }
-    
-    
     
     
     
@@ -301,5 +160,139 @@ class storyDetailViewController: UIViewController {
     @objc func updateSlider() {
         slider?.value = Float(audioPlayer!.currentTime)
     }
+    
+    //    MARK: SetTimer
+    
+    @objc func timerController() {
+        audioTime += 1
+        
+        timeLabel = String(getTimeFromSeconds(seconds: audioTime))
+        minutesLabel = String(getTimeFromMinutes(minutes: audioTime))
+        timeStartLabel?.text = String(minutesLabel ?? "")
+        
+        if timeStartLabel?.text == timeEndLabel?.text {
+            forwardButtonClicked(self)
+        }
+        
+    }
+    
+    
+}
+
+
+extension storyDetailViewController{
+    //    MARK: Funcs are here
+    
+    func sliderConfigure(){
+        self.slider?.minimumValue = 0.0
+        self.slider!.maximumValue = Float(audioPlayer!.duration)
+    }
+    
+    func startTimer() {
+        audioTimer = Timer.scheduledTimer(timeInterval: 1.0,
+                                          target: self,
+                                          selector: #selector(timerController),
+                                          userInfo: nil, repeats: true)
+        var updateSliderTimer: Timer?
+        
+        updateSliderTimer = Timer.scheduledTimer(timeInterval: 0.1,
+                                                 target: self,
+                                                 selector: #selector(updateSlider),
+                                                 userInfo: nil, repeats: true)
+        
+    }
+    
+    func resetTimer(){
+        audioTimer?.invalidate()
+        audioTimer = nil
+        audioTime = 0
+    }
+    
+    //    MARK: SetInterface
+    
+    func setInterface(){
+        setHeaderInterface()
+        
+        backwardButton.tintColor = UIColor.white
+        forwardButton.tintColor = UIColor.white
+        
+        
+        overlayShadow?.image = UIImage(named: "overlayShadow")
+        overlayShadow?.contentMode = .scaleToFill
+        overlayShadow?.alpha = 0.5
+        
+    }
+    
+    func setHeaderInterface(){
+        backButonInitialUI()
+        favoriteButonInitialUI()
+        forwardAndBackwardButtonsUI()
+    }
+    
+    func backButonInitialUI(){
+        backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        backButton.tintColor = .black
+        backButton.alpha = 0.8
+        backButton.backgroundColor = .white
+        backButton.layer.cornerRadius = 8.0
+    }
+    
+    func favoriteButonInitialUI(){
+        favorutiesButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+        favorutiesButton.tintColor = .red
+        favorutiesButton.alpha = 0.8
+        favorutiesButton.backgroundColor = .white
+        favorutiesButton.layer.cornerRadius = 8.0
+    }
+    
+    func forwardAndBackwardButtonsUI(){
+        forwardButton.tintColor = .black
+        forwardButton.alpha = 1
+        forwardButton.backgroundColor = UIColor.white.withAlphaComponent(0.1)
+        forwardButton.layer.cornerRadius = forwardButton.frame.height / 2
+        
+        backwardButton.tintColor = .black
+        backwardButton.alpha = 1
+        backwardButton.backgroundColor = UIColor.white.withAlphaComponent(0.1)
+        backwardButton.layer.cornerRadius = forwardButton.frame.height / 2
+    }
+    
+    func setTargets(){
+        backButton.addTarget(self, action: #selector(backButtonTapped(_:)), for: .touchUpInside)
+    }
+    
+    func audioPlayerConfigure(){
+        resetTimer()
+        startTimer()
+        
+        
+        let song = songs[position]
+        let urlString = Bundle.main.path(forResource: song.audioName, ofType: song.audioType)
+        
+        audioTitleLabel?.text = song.title
+        storyDetailSubtitleLabel?.text = song.audioSubtitle
+        audioBackgroundImage?.image = UIImage(named: "\(song.backgroundImageName)")
+        timeEndLabel?.text = song.duration
+        
+        
+        do {
+            try AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            
+            guard let urlString = urlString else {
+                return
+            }
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(string: urlString)!)
+            guard let player = audioPlayer else {
+                return
+            }
+            //            player.currentTime = 0
+            player.play()
+        } catch {
+            print("error pccurred")
+        }
+        
+    }
+    
     
 }
