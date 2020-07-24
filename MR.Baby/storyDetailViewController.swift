@@ -28,6 +28,8 @@ class storyDetailViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider?
     @IBOutlet weak var overlayShadow: UIImageView?
+    @IBOutlet weak var brandName: UILabel!
+    
     
     
     //    Struck Çekme
@@ -212,7 +214,9 @@ extension storyDetailViewController{
     
     func setInterface(){
         setHeaderInterface()
-        
+        sliderInterface()
+        brandNameInterface()
+         
         backwardButton.tintColor = UIColor.white
         forwardButton.tintColor = UIColor.white
         
@@ -221,6 +225,14 @@ extension storyDetailViewController{
         overlayShadow?.contentMode = .scaleToFill
         overlayShadow?.alpha = 0.5
         
+    }
+    
+    
+    func brandNameInterface(){
+        brandName.text = String("  ") + String("Mr.Baby sunar") + String("  ")
+        brandName.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        brandName.clipsToBounds = true
+        brandName.layer.cornerRadius = 14.0
     }
     
     func setHeaderInterface(){
@@ -294,5 +306,11 @@ extension storyDetailViewController{
         
     }
     
+    func sliderInterface(){
+        slider?.maximumTrackTintColor = UIColor.white.withAlphaComponent(0.6)
+        slider?.minimumTrackTintColor = UIColor(named: "costumMatGreen")
+        slider?.thumbTintColor = UIColor(named: "costumGreen")
+    }
     
 }
+

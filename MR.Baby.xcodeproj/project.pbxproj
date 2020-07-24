@@ -24,6 +24,7 @@
 		A33DDD6724B0B3EC00BEF2A9 /* storyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */; };
 		A33DDD6B24B0F06D00BEF2A9 /* babySound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A33DDD6A24B0F06D00BEF2A9 /* babySound1.wav */; };
 		A382C22224C45C7D00A40F76 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C22124C45C7D00A40F76 /* Utilities.swift */; };
+		A3D39ABF24C59A9300C538A7 /* SliderCostumHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyDetailViewController.swift; sourceTree = "<group>"; };
 		A33DDD6A24B0F06D00BEF2A9 /* babySound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = babySound1.wav; sourceTree = "<group>"; };
 		A382C22124C45C7D00A40F76 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCostumHeight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 		A33DDD4B24B0861700BEF2A9 /* MR.Baby */ = {
 			isa = PBXGroup;
 			children = (
+				A3D39ABC24C59A4F00C538A7 /* ReuseableViews */,
 				A33DDD4C24B0861700BEF2A9 /* AppDelegate.swift */,
 				A33DDD4E24B0861700BEF2A9 /* SceneDelegate.swift */,
 				A33DDD5224B0861700BEF2A9 /* Main.storyboard */,
@@ -226,6 +229,22 @@
 				A382C22124C45C7D00A40F76 /* Utilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A3D39ABC24C59A4F00C538A7 /* ReuseableViews */ = {
+			isa = PBXGroup;
+			children = (
+				A3D39ABD24C59A6400C538A7 /* Views */,
+			);
+			path = ReuseableViews;
+			sourceTree = "<group>";
+		};
+		A3D39ABD24C59A6400C538A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +327,7 @@
 			files = (
 				A33DDD5124B0861700BEF2A9 /* ViewController.swift in Sources */,
 				A33DDD6724B0B3EC00BEF2A9 /* storyDetailViewController.swift in Sources */,
+				A3D39ABF24C59A9300C538A7 /* SliderCostumHeight.swift in Sources */,
 				A382C22224C45C7D00A40F76 /* Utilities.swift in Sources */,
 				A33DDD6224B0890300BEF2A9 /* ItemCollectionViewCell.swift in Sources */,
 				A33DDD4D24B0861700BEF2A9 /* AppDelegate.swift in Sources */,

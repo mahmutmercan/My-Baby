@@ -27,6 +27,8 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var storyTableView: UITableView!
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var detailOverlayShadow: UIImageView!
+    
     var imageName: String!
     
 //    Struck Gönderme
@@ -46,19 +48,6 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     var myposition: Int = 0
     var toggleStatePlay = 1
     
-//    var songs = [Song]()
-
-
-//    var songs: [Song] = [
-//        Song(title: "BirdSound 01", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"),
-//        Song(title: "BirdSound 02", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail2", duration: "02:28", audioName: "birdSound2", audioType: "mp3"),
-//        Song(title: "BirdSound 03", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail3", duration: "05:19", audioName: "birdSound3", audioType: "mp3"),
-//        Song(title: "BirdSound 04", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail4", duration: "04:14", audioName: "birdSound4", audioType: "mp3"),
-//        Song(title: "BirdSound 05", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail5", duration: "05:05", audioName: "birdSound5", audioType: "mp3"),
-//        Song(title: "BirdSound 06", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "14:32", audioName: "birdSound", audioType: "mp3")]
-    
-//    --------------------------------------------------------------------------------------
-    
     override func viewDidLoad() {
     super.viewDidLoad()
         
@@ -75,17 +64,6 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         backButonInitialUI()
     
     }
-//    func configureSongs() {
-//        songs.append(Song(title: "BirdSound 01", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"))
-//        songs.append(Song(title: "BirdSound 02", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"))
-//        songs.append(Song(title: "BirdSound 03", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"))
-//
-//
-//    }
-    
-//    --------------------------------------------------------------------------------------
-    
-
     
     private func setupImageView() {
         guard let name = imageName else { return }
@@ -93,6 +71,11 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         if let image = UIImage(named: name) {
             imageView.image = image
         }
+        
+        detailOverlayShadow?.image = UIImage(named: "overlayShadow")
+        detailOverlayShadow?.contentMode = .scaleToFill
+        detailOverlayShadow?.alpha = 0.3
+
     }
     
 //    --------------------------------------------------------------------------------------
@@ -129,7 +112,13 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         
         cell.textLabel?.text = selectedCategorySongs[indexPath.item].title
         cell.detailTextLabel?.text = selectedCategorySongs[indexPath.item].duration
+        
+        cell.detailTextLabel?.textColor = UIColor.darkGray
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 56
     }
     
 //    --------------------------------------------------------------------------------------
