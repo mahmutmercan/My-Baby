@@ -22,8 +22,17 @@
 		A33DDD6324B0890300BEF2A9 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33DDD6124B0890300BEF2A9 /* ItemCollectionViewCell.xib */; };
 		A33DDD6524B09CD700BEF2A9 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6424B09CD700BEF2A9 /* ImageViewerViewController.swift */; };
 		A33DDD6724B0B3EC00BEF2A9 /* storyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */; };
-		A33DDD6B24B0F06D00BEF2A9 /* babySound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A33DDD6A24B0F06D00BEF2A9 /* babySound1.wav */; };
 		A382C22224C45C7D00A40F76 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C22124C45C7D00A40F76 /* Utilities.swift */; };
+		A3C7CFF824CDAF8F00C1FB6A /* hairdryer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF724CDAF8F00C1FB6A /* hairdryer.mp3 */; };
+		A3C7CFFA24CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF924CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 */; };
+		A3C7CFFC24CDAFB200C1FB6A /* musicbox1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFB24CDAFB200C1FB6A /* musicbox1.mp3 */; };
+		A3C7CFFE24CDAFC400C1FB6A /* watersound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFD24CDAFC400C1FB6A /* watersound.mp3 */; };
+		A3C7D00024CDAFD100C1FB6A /* wave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFF24CDAFD100C1FB6A /* wave.mp3 */; };
+		A3C7D00924CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00424CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 */; };
+		A3C7D00A24CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00524CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 */; };
+		A3C7D00D24CDB90700C1FB6A /* Chopin-Nocturneop.9No.2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00B24CDB90600C1FB6A /* Chopin-Nocturneop.9No.2.mp3 */; };
+		A3C7D01024CDB9B700C1FB6A /* Beethoven-FurElise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00F24CDB9B700C1FB6A /* Beethoven-FurElise.mp3 */; };
+		A3C7D01224CDC19D00C1FB6A /* Mozart-40-senfoni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01124CDC19D00C1FB6A /* Mozart-40-senfoni.mp3 */; };
 		A3D39ABF24C59A9300C538A7 /* SliderCostumHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +54,17 @@
 		A33DDD6124B0890300BEF2A9 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		A33DDD6424B09CD700BEF2A9 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyDetailViewController.swift; sourceTree = "<group>"; };
-		A33DDD6A24B0F06D00BEF2A9 /* babySound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = babySound1.wav; sourceTree = "<group>"; };
 		A382C22124C45C7D00A40F76 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		A3C7CFF724CDAF8F00C1FB6A /* hairdryer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hairdryer.mp3; sourceTree = "<group>"; };
+		A3C7CFF924CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3"; sourceTree = "<group>"; };
+		A3C7CFFB24CDAFB200C1FB6A /* musicbox1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicbox1.mp3; sourceTree = "<group>"; };
+		A3C7CFFD24CDAFC400C1FB6A /* watersound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = watersound.mp3; sourceTree = "<group>"; };
+		A3C7CFFF24CDAFD100C1FB6A /* wave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wave.mp3; sourceTree = "<group>"; };
+		A3C7D00424CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "EdvardGrieg-Peer-gynt-morning-mood.mp3"; sourceTree = "<group>"; };
+		A3C7D00524CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Vivaldi-The-four-seasons-winter.mp3"; sourceTree = "<group>"; };
+		A3C7D00B24CDB90600C1FB6A /* Chopin-Nocturneop.9No.2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Chopin-Nocturneop.9No.2.mp3"; sourceTree = "<group>"; };
+		A3C7D00F24CDB9B700C1FB6A /* Beethoven-FurElise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beethoven-FurElise.mp3"; sourceTree = "<group>"; };
+		A3C7D01124CDC19D00C1FB6A /* Mozart-40-senfoni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Mozart-40-senfoni.mp3"; path = "../../../../../Downloads/Mozart-40-senfoni.mp3"; sourceTree = "<group>"; };
 		A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCostumHeight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +129,7 @@
 		A3081A8D24BA1463005118B4 /* categoryMusicbox */ = {
 			isa = PBXGroup;
 			children = (
+				A3C7CFFB24CDAFB200C1FB6A /* musicbox1.mp3 */,
 			);
 			path = categoryMusicbox;
 			sourceTree = "<group>";
@@ -125,7 +144,7 @@
 		A3081A8F24BA1468005118B4 /* categoryLullaby1 */ = {
 			isa = PBXGroup;
 			children = (
-				A33DDD6A24B0F06D00BEF2A9 /* babySound1.wav */,
+				A3C7CFF924CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 */,
 			);
 			path = categoryLullaby1;
 			sourceTree = "<group>";
@@ -140,6 +159,7 @@
 		A3081A9124BA146E005118B4 /* categoryHairdryer */ = {
 			isa = PBXGroup;
 			children = (
+				A3C7CFF724CDAF8F00C1FB6A /* hairdryer.mp3 */,
 			);
 			path = categoryHairdryer;
 			sourceTree = "<group>";
@@ -161,6 +181,11 @@
 		A3081A9424BA1477005118B4 /* categoryClassicmusic */ = {
 			isa = PBXGroup;
 			children = (
+				A3C7D00F24CDB9B700C1FB6A /* Beethoven-FurElise.mp3 */,
+				A3C7D00B24CDB90600C1FB6A /* Chopin-Nocturneop.9No.2.mp3 */,
+				A3C7D00424CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 */,
+				A3C7D01124CDC19D00C1FB6A /* Mozart-40-senfoni.mp3 */,
+				A3C7D00524CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 */,
 			);
 			path = categoryClassicmusic;
 			sourceTree = "<group>";
@@ -175,6 +200,7 @@
 		A3081A9624BA14E1005118B4 /* categoryWave */ = {
 			isa = PBXGroup;
 			children = (
+				A3C7CFFF24CDAFD100C1FB6A /* wave.mp3 */,
 			);
 			path = categoryWave;
 			sourceTree = "<group>";
@@ -182,6 +208,7 @@
 		A3081A9724BA14E5005118B4 /* categoryWater */ = {
 			isa = PBXGroup;
 			children = (
+				A3C7CFFD24CDAFC400C1FB6A /* watersound.mp3 */,
 			);
 			path = categoryWater;
 			sourceTree = "<group>";
@@ -305,15 +332,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C7CFFC24CDAFB200C1FB6A /* musicbox1.mp3 in Resources */,
+				A3C7D00024CDAFD100C1FB6A /* wave.mp3 in Resources */,
+				A3C7CFFE24CDAFC400C1FB6A /* watersound.mp3 in Resources */,
 				A33DDD5924B0861B00BEF2A9 /* LaunchScreen.storyboard in Resources */,
 				A3081A8924B9E3C8005118B4 /* birdSound.mp3 in Resources */,
+				A3C7D01224CDC19D00C1FB6A /* Mozart-40-senfoni.mp3 in Resources */,
 				A3081A9D24BA1C0E005118B4 /* birdSound4.mp3 in Resources */,
+				A3C7CFF824CDAF8F00C1FB6A /* hairdryer.mp3 in Resources */,
 				A3081A9F24BA1C0E005118B4 /* birdSound5.mp3 in Resources */,
+				A3C7CFFA24CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 in Resources */,
 				A33DDD6324B0890300BEF2A9 /* ItemCollectionViewCell.xib in Resources */,
 				A3081A9E24BA1C0E005118B4 /* birdSound3.mp3 in Resources */,
+				A3C7D00A24CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 in Resources */,
+				A3C7D00924CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 in Resources */,
 				A3081A9924BA17B3005118B4 /* birdSound2.mp3 in Resources */,
 				A33DDD5624B0861B00BEF2A9 /* Assets.xcassets in Resources */,
-				A33DDD6B24B0F06D00BEF2A9 /* babySound1.wav in Resources */,
+				A3C7D00D24CDB90700C1FB6A /* Chopin-Nocturneop.9No.2.mp3 in Resources */,
+				A3C7D01024CDB9B700C1FB6A /* Beethoven-FurElise.mp3 in Resources */,
 				A33DDD5424B0861700BEF2A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -71,8 +71,8 @@
                                     <constraint firstAttribute="height" constant="300" id="Khy-9t-P1U"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iMn-FT-qP3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="308"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iMn-FT-qP3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YXh-JT-BfT">
                                 <rect key="frame" x="0.0" y="358" width="414" height="504"/>
@@ -148,22 +148,22 @@
                         <constraints>
                             <constraint firstItem="r9P-J2-OPM" firstAttribute="trailing" secondItem="Ylg-70-g0H" secondAttribute="trailing" constant="16" id="08C-sn-pCN"/>
                             <constraint firstItem="0fT-ym-aHB" firstAttribute="leading" secondItem="r9P-J2-OPM" secondAttribute="leading" id="1xx-e7-8Ea"/>
-                            <constraint firstItem="r9P-J2-OPM" firstAttribute="trailing" secondItem="iMn-FT-qP3" secondAttribute="trailing" id="6sk-pv-ULM"/>
                             <constraint firstItem="Ja4-hd-K0m" firstAttribute="leading" secondItem="r9P-J2-OPM" secondAttribute="leading" constant="16" id="CU2-Cb-X8y"/>
                             <constraint firstItem="YXh-JT-BfT" firstAttribute="trailing" secondItem="r9P-J2-OPM" secondAttribute="trailing" id="MEM-FI-X3q"/>
                             <constraint firstItem="YXh-JT-BfT" firstAttribute="bottom" secondItem="r9P-J2-OPM" secondAttribute="bottom" id="Ovo-Mf-7hy"/>
                             <constraint firstItem="JqI-9U-2Nm" firstAttribute="leading" secondItem="r9P-J2-OPM" secondAttribute="leading" constant="16" id="PLu-oo-Qu9"/>
                             <constraint firstItem="JqI-9U-2Nm" firstAttribute="top" secondItem="0fT-ym-aHB" secondAttribute="bottom" constant="8" id="TFF-7y-p4U"/>
+                            <constraint firstItem="iMn-FT-qP3" firstAttribute="leading" secondItem="0fT-ym-aHB" secondAttribute="leading" id="TUn-XD-1b9"/>
                             <constraint firstItem="0fT-ym-aHB" firstAttribute="top" secondItem="RH2-3v-s4U" secondAttribute="top" id="ULZ-Sx-ndb"/>
-                            <constraint firstItem="iMn-FT-qP3" firstAttribute="top" secondItem="r9P-J2-OPM" secondAttribute="top" id="YTg-Ug-MXJ"/>
-                            <constraint firstItem="JqI-9U-2Nm" firstAttribute="top" secondItem="iMn-FT-qP3" secondAttribute="bottom" id="YrD-FS-6ut"/>
+                            <constraint firstItem="iMn-FT-qP3" firstAttribute="bottom" secondItem="0fT-ym-aHB" secondAttribute="bottom" id="Vfb-Vx-4Hv"/>
                             <constraint firstItem="Ja4-hd-K0m" firstAttribute="top" secondItem="r9P-J2-OPM" secondAttribute="top" constant="8" id="ZmN-08-EcE"/>
-                            <constraint firstItem="iMn-FT-qP3" firstAttribute="leading" secondItem="r9P-J2-OPM" secondAttribute="leading" id="bQW-po-Udi"/>
                             <constraint firstItem="0fT-ym-aHB" firstAttribute="trailing" secondItem="r9P-J2-OPM" secondAttribute="trailing" id="cee-EE-Y5e"/>
                             <constraint firstItem="eSr-nQ-8Rt" firstAttribute="leading" secondItem="RH2-3v-s4U" secondAttribute="leadingMargin" constant="16" id="e76-CN-2QR"/>
                             <constraint firstItem="YXh-JT-BfT" firstAttribute="top" secondItem="Ylg-70-g0H" secondAttribute="bottom" constant="18" id="efj-06-UPA"/>
                             <constraint firstItem="YXh-JT-BfT" firstAttribute="leading" secondItem="r9P-J2-OPM" secondAttribute="leading" id="mcP-gx-fc0"/>
+                            <constraint firstItem="iMn-FT-qP3" firstAttribute="trailing" secondItem="0fT-ym-aHB" secondAttribute="trailing" id="oyl-nz-ECU"/>
                             <constraint firstItem="YXh-JT-BfT" firstAttribute="top" secondItem="JqI-9U-2Nm" secondAttribute="bottom" constant="8" id="s6s-93-rJh"/>
+                            <constraint firstItem="iMn-FT-qP3" firstAttribute="top" secondItem="0fT-ym-aHB" secondAttribute="top" id="xnB-fD-7D2"/>
                             <constraint firstItem="JqI-9U-2Nm" firstAttribute="top" secondItem="eSr-nQ-8Rt" secondAttribute="bottom" constant="24" id="xw3-7v-ZNy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r9P-J2-OPM"/>
@@ -195,7 +195,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iEo-XN-d9X">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iEo-XN-d9X">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Night Vale Story" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHb-Ak-amx">
