@@ -32,7 +32,13 @@
 		A3C7D00A24CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00524CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 */; };
 		A3C7D00D24CDB90700C1FB6A /* Chopin-Nocturneop.9No.2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00B24CDB90600C1FB6A /* Chopin-Nocturneop.9No.2.mp3 */; };
 		A3C7D01024CDB9B700C1FB6A /* Beethoven-FurElise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00F24CDB9B700C1FB6A /* Beethoven-FurElise.mp3 */; };
-		A3C7D01224CDC19D00C1FB6A /* Mozart-40-senfoni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01124CDC19D00C1FB6A /* Mozart-40-senfoni.mp3 */; };
+		A3C7D01424CE083200C1FB6A /* mozart-piano-Sonata.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01324CE083200C1FB6A /* mozart-piano-Sonata.mp3 */; };
+		A3C7D01724CE084200C1FB6A /* whitenoise-and-heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01524CE084100C1FB6A /* whitenoise-and-heartbeat.mp3 */; };
+		A3C7D01824CE084200C1FB6A /* whitenoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01624CE084200C1FB6A /* whitenoise.mp3 */; };
+		A3C7D01B24CE087100C1FB6A /* campfire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01A24CE087100C1FB6A /* campfire.mp3 */; };
+		A3C7D02024CE0B4C00C1FB6A /* kolicvacumm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */; };
+		A3C7D02424CE0FDD00C1FB6A /* dandini.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D02324CE0FDD00C1FB6A /* dandini.mp3 */; };
+		A3C7D02624CE104900C1FB6A /* womb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D02524CE104800C1FB6A /* womb.mp3 */; };
 		A3D39ABF24C59A9300C538A7 /* SliderCostumHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +70,13 @@
 		A3C7D00524CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Vivaldi-The-four-seasons-winter.mp3"; sourceTree = "<group>"; };
 		A3C7D00B24CDB90600C1FB6A /* Chopin-Nocturneop.9No.2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Chopin-Nocturneop.9No.2.mp3"; sourceTree = "<group>"; };
 		A3C7D00F24CDB9B700C1FB6A /* Beethoven-FurElise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beethoven-FurElise.mp3"; sourceTree = "<group>"; };
-		A3C7D01124CDC19D00C1FB6A /* Mozart-40-senfoni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Mozart-40-senfoni.mp3"; path = "../../../../../Downloads/Mozart-40-senfoni.mp3"; sourceTree = "<group>"; };
+		A3C7D01324CE083200C1FB6A /* mozart-piano-Sonata.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "mozart-piano-Sonata.mp3"; sourceTree = "<group>"; };
+		A3C7D01524CE084100C1FB6A /* whitenoise-and-heartbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whitenoise-and-heartbeat.mp3"; sourceTree = "<group>"; };
+		A3C7D01624CE084200C1FB6A /* whitenoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whitenoise.mp3; sourceTree = "<group>"; };
+		A3C7D01A24CE087100C1FB6A /* campfire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = campfire.mp3; sourceTree = "<group>"; };
+		A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kolicvacumm.mp3; sourceTree = "<group>"; };
+		A3C7D02324CE0FDD00C1FB6A /* dandini.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dandini.mp3; path = ../../../../../Downloads/dandini.mp3; sourceTree = "<group>"; };
+		A3C7D02524CE104800C1FB6A /* womb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = womb.mp3; sourceTree = "<group>"; };
 		A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCostumHeight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +94,7 @@
 		A300A03624B712B400CB563E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				A3C7D01C24CE0A2800C1FB6A /* categoryWomb */,
 				A3081A8F24BA1468005118B4 /* categoryLullaby1 */,
 				A3081A8E24BA1465005118B4 /* categoryLullaby2 */,
 				A3081A8D24BA1463005118B4 /* categoryMusicbox */,
@@ -91,6 +104,7 @@
 				A3081A9524BA147B005118B4 /* categoryBoy */,
 				A3081A9224BA1471005118B4 /* categoryGirl */,
 				A3081A9024BA146B005118B4 /* categoryIslamiclullaby */,
+				A3C7D01924CE085400C1FB6A /* categoryCampFire */,
 				A3081A9124BA146E005118B4 /* categoryHairdryer */,
 				A3081A8B24BA145D005118B4 /* categoryVacuumcleaner */,
 				A3081A8C24BA1460005118B4 /* categoryRain */,
@@ -137,6 +151,7 @@
 		A3081A8E24BA1465005118B4 /* categoryLullaby2 */ = {
 			isa = PBXGroup;
 			children = (
+				A3C7D02324CE0FDD00C1FB6A /* dandini.mp3 */,
 			);
 			path = categoryLullaby2;
 			sourceTree = "<group>";
@@ -174,6 +189,7 @@
 		A3081A9324BA1474005118B4 /* categoryColic */ = {
 			isa = PBXGroup;
 			children = (
+				A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */,
 			);
 			path = categoryColic;
 			sourceTree = "<group>";
@@ -184,8 +200,8 @@
 				A3C7D00F24CDB9B700C1FB6A /* Beethoven-FurElise.mp3 */,
 				A3C7D00B24CDB90600C1FB6A /* Chopin-Nocturneop.9No.2.mp3 */,
 				A3C7D00424CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 */,
-				A3C7D01124CDC19D00C1FB6A /* Mozart-40-senfoni.mp3 */,
 				A3C7D00524CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 */,
+				A3C7D01324CE083200C1FB6A /* mozart-piano-Sonata.mp3 */,
 			);
 			path = categoryClassicmusic;
 			sourceTree = "<group>";
@@ -256,6 +272,24 @@
 				A382C22124C45C7D00A40F76 /* Utilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A3C7D01924CE085400C1FB6A /* categoryCampFire */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7D01A24CE087100C1FB6A /* campfire.mp3 */,
+			);
+			path = categoryCampFire;
+			sourceTree = "<group>";
+		};
+		A3C7D01C24CE0A2800C1FB6A /* categoryWomb */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7D01524CE084100C1FB6A /* whitenoise-and-heartbeat.mp3 */,
+				A3C7D01624CE084200C1FB6A /* whitenoise.mp3 */,
+				A3C7D02524CE104800C1FB6A /* womb.mp3 */,
+			);
+			path = categoryWomb;
 			sourceTree = "<group>";
 		};
 		A3D39ABC24C59A4F00C538A7 /* ReuseableViews */ = {
@@ -332,25 +366,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C7D02424CE0FDD00C1FB6A /* dandini.mp3 in Resources */,
+				A3C7D02024CE0B4C00C1FB6A /* kolicvacumm.mp3 in Resources */,
 				A3C7CFFC24CDAFB200C1FB6A /* musicbox1.mp3 in Resources */,
 				A3C7D00024CDAFD100C1FB6A /* wave.mp3 in Resources */,
 				A3C7CFFE24CDAFC400C1FB6A /* watersound.mp3 in Resources */,
 				A33DDD5924B0861B00BEF2A9 /* LaunchScreen.storyboard in Resources */,
 				A3081A8924B9E3C8005118B4 /* birdSound.mp3 in Resources */,
-				A3C7D01224CDC19D00C1FB6A /* Mozart-40-senfoni.mp3 in Resources */,
 				A3081A9D24BA1C0E005118B4 /* birdSound4.mp3 in Resources */,
 				A3C7CFF824CDAF8F00C1FB6A /* hairdryer.mp3 in Resources */,
 				A3081A9F24BA1C0E005118B4 /* birdSound5.mp3 in Resources */,
+				A3C7D01824CE084200C1FB6A /* whitenoise.mp3 in Resources */,
 				A3C7CFFA24CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 in Resources */,
 				A33DDD6324B0890300BEF2A9 /* ItemCollectionViewCell.xib in Resources */,
 				A3081A9E24BA1C0E005118B4 /* birdSound3.mp3 in Resources */,
 				A3C7D00A24CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 in Resources */,
 				A3C7D00924CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 in Resources */,
+				A3C7D02624CE104900C1FB6A /* womb.mp3 in Resources */,
 				A3081A9924BA17B3005118B4 /* birdSound2.mp3 in Resources */,
 				A33DDD5624B0861B00BEF2A9 /* Assets.xcassets in Resources */,
 				A3C7D00D24CDB90700C1FB6A /* Chopin-Nocturneop.9No.2.mp3 in Resources */,
+				A3C7D01424CE083200C1FB6A /* mozart-piano-Sonata.mp3 in Resources */,
 				A3C7D01024CDB9B700C1FB6A /* Beethoven-FurElise.mp3 in Resources */,
+				A3C7D01B24CE087100C1FB6A /* campfire.mp3 in Resources */,
 				A33DDD5424B0861700BEF2A9 /* Main.storyboard in Resources */,
+				A3C7D01724CE084200C1FB6A /* whitenoise-and-heartbeat.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
