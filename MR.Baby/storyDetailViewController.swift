@@ -25,7 +25,6 @@ class storyDetailViewController: UIViewController {
     @IBOutlet weak var favorutiesButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
     @IBOutlet weak var backwardButton: UIButton!
-    
     @IBOutlet weak var slider: UISlider?
     @IBOutlet weak var overlayShadow: UIImageView?
     @IBOutlet weak var brandName: UILabel!
@@ -63,9 +62,10 @@ class storyDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setInterface()
-        audioPlayerConfigure()
         setTargets()
+        audioPlayerConfigure()
         sliderConfigure()
+
     }
     
     
@@ -110,10 +110,12 @@ class storyDetailViewController: UIViewController {
             position = position + 1
             audioPlayer?.stop()
             resetTimer()
+            
             audioPlayerConfigure()
         } else {
             position = 0
             audioPlayer?.stop()
+
             audioPlayerConfigure()
         }
     }
@@ -161,6 +163,7 @@ class storyDetailViewController: UIViewController {
     
     @objc func updateSlider() {
         slider?.value = Float(audioPlayer!.currentTime)
+
     }
     
     //    MARK: SetTimer
@@ -186,8 +189,8 @@ extension storyDetailViewController{
     //    MARK: Funcs are here
     
     func sliderConfigure(){
-        self.slider?.minimumValue = 0.0
-        self.slider!.maximumValue = Float(audioPlayer!.duration)
+//        self.slider?.minimumValue = 0.0
+//        self.slider!.maximumValue = Float(audioPlayer!.duration)
     }
     
     func startTimer() {
@@ -229,7 +232,7 @@ extension storyDetailViewController{
     
     
     func brandNameInterface(){
-        brandName.text = String("  ") + String("Mr.Baby sunar") + String("  ")
+        brandName.text = String("  ") + String("My Baby") + String("  ")
         brandName.backgroundColor = UIColor.white.withAlphaComponent(0.2)
         brandName.clipsToBounds = true
         brandName.layer.cornerRadius = 14.0
@@ -298,11 +301,14 @@ extension storyDetailViewController{
             guard let player = audioPlayer else {
                 return
             }
-            //            player.currentTime = 0
             player.play()
         } catch {
             print("error pccurred")
         }
+        self.slider?.minimumValue = 0.0
+        self.slider!.maximumValue = Float(audioPlayer!.duration)
+
+        
         
     }
     

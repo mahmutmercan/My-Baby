@@ -24,7 +24,6 @@ struct Item {
 //}
 
 
-
 class ViewController: UIViewController {
     
 //    IBOutlet ler
@@ -78,7 +77,6 @@ class ViewController: UIViewController {
         Song(title: "Wave", audioSubtitle: "Naturel", backgroundImageName: "categoryWave", duration: "07:06", audioName: "wawe", audioType: "mp3")]),
         Item(title: "Boy", audioCoverImage: "categoryBoy", audioPackageCount: "67", AudioPackageCoverImage: "categoryBoy", audioCategory: "Lullaby",songs: []),
         Item(title: "Girl", audioCoverImage: "categoryGirl", audioPackageCount: "67", AudioPackageCoverImage: "categoryGirl", audioCategory: "Lullaby",songs: [])
-        
         
                          ]
     
@@ -152,7 +150,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         }
 
         
-        
         return cell
     }
     
@@ -191,9 +188,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         navigationController?.popViewController(animated: true)
     }
 
-
-
-    
     
 }
 
