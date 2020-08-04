@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     var items: [Item] = [
         Item(title: "", audioCoverImage: "categories", audioPackageCount: "", AudioPackageCoverImage: "", audioCategory: "",songs: []),
         Item(title: "Lullaby 1", audioCoverImage: "categoryLullaby1", audioPackageCount: "1", AudioPackageCoverImage: "categoryLullaby1", audioCategory: "Lullaby 1",songs: [
-        Song(title: "Lullaby", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "15:00", audioName: "pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi", audioType: "mp3")]),
+        Song(title: "Lullaby", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "15:00", audioName: "pedagog_ninni", audioType: "mp3")]),
         Item(title: "Lullaby 2", audioCoverImage: "categoryLullaby2", audioPackageCount: "1", AudioPackageCoverImage: "categoryLullaby2", audioCategory: "Lullaby 2",songs: [
         Song(title: "Dandini", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "dandini", audioType: "mp3")]),
         Item(title: "Lullaby 3", audioCoverImage: "categoryLullaby3", audioPackageCount: "0", AudioPackageCoverImage: "categoryLullaby3", audioCategory: "", songs: []),
@@ -90,12 +90,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Do any additional setup after loading the view.
+        setupView()
         setupCollectionView()
     }
 
     override func  viewWillAppear(_ animated: Bool) {
+        setupView()
     }
     
     override func viewWillLayoutSubviews() {
@@ -103,7 +103,13 @@ class ViewController: UIViewController {
         setupCollectionViewItemSize()
     }
     
+    private func setupView(){
+        navigationController?.navigationBar.barStyle = .black
+        view.backgroundColor = .white
+    }
+    
     private func setupCollectionView() {
+        collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
         let nib = UINib(nibName: "ItemCollectionViewCell", bundle: nil)
@@ -114,7 +120,7 @@ class ViewController: UIViewController {
     private func setupCollectionViewItemSize() {
         if collectionViewFlowLayout == nil {
             let numberOfItemPerRow: CGFloat = 1
-            let linespacing: CGFloat = 16
+            let linespacing: CGFloat = 24
             let interItemSpacing: CGFloat = 5
             let width = (collectionView.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow
             let height = width
@@ -147,18 +153,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.isUserInteractionEnabled = false
             cell.audioPackageItemCountsLabel.text = nil
             cell.audioTitleLabel.text = nil
+            cell.backgroundColor = .red
 
         } else {
             cell.imageView.image = UIImage(named: items[indexPath.item].audioCoverImage)
             cell.audioPackageItemCountsLabel.text = String(items[indexPath.item].audioPackageCount + " Sounds")
-
-//            if [indexPath.item] == 0 {
-//                cell.audioPackageItemCountsLabel.text = String("Will Soon...")
-//
-//            } else {
-//                cell.audioPackageItemCountsLabel.text = String(items[indexPath.item].audioPackageCount + " Sounds")
-//
-//            }
             
             cell.audioTitleLabel.text = items[indexPath.item].title
 

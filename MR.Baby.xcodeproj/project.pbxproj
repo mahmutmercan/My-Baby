@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AFD906424D95FF600551004 /* dandini.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AFD906324D95FF600551004 /* dandini.mp3 */; };
 		A3081A8924B9E3C8005118B4 /* birdSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3081A8824B9E3C8005118B4 /* birdSound.mp3 */; };
 		A3081A9924BA17B3005118B4 /* birdSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3081A9824BA17B3005118B4 /* birdSound2.mp3 */; };
 		A3081A9D24BA1C0E005118B4 /* birdSound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3081A9A24BA1C0E005118B4 /* birdSound4.mp3 */; };
@@ -37,12 +38,12 @@
 		A3C7D01824CE084200C1FB6A /* whitenoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01624CE084200C1FB6A /* whitenoise.mp3 */; };
 		A3C7D01B24CE087100C1FB6A /* campfire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01A24CE087100C1FB6A /* campfire.mp3 */; };
 		A3C7D02024CE0B4C00C1FB6A /* kolicvacumm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */; };
-		A3C7D02424CE0FDD00C1FB6A /* dandini.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D02324CE0FDD00C1FB6A /* dandini.mp3 */; };
 		A3C7D02624CE104900C1FB6A /* womb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D02524CE104800C1FB6A /* womb.mp3 */; };
 		A3D39ABF24C59A9300C538A7 /* SliderCostumHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4AFD906324D95FF600551004 /* dandini.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dandini.mp3; sourceTree = "<group>"; };
 		A3081A8824B9E3C8005118B4 /* birdSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound.mp3; sourceTree = "<group>"; };
 		A3081A9824BA17B3005118B4 /* birdSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound2.mp3; sourceTree = "<group>"; };
 		A3081A9A24BA1C0E005118B4 /* birdSound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound4.mp3; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		A3C7D01624CE084200C1FB6A /* whitenoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whitenoise.mp3; sourceTree = "<group>"; };
 		A3C7D01A24CE087100C1FB6A /* campfire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = campfire.mp3; sourceTree = "<group>"; };
 		A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kolicvacumm.mp3; sourceTree = "<group>"; };
-		A3C7D02324CE0FDD00C1FB6A /* dandini.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dandini.mp3; path = ../../../../../Downloads/dandini.mp3; sourceTree = "<group>"; };
 		A3C7D02524CE104800C1FB6A /* womb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = womb.mp3; sourceTree = "<group>"; };
 		A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCostumHeight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,7 +151,7 @@
 		A3081A8E24BA1465005118B4 /* categoryLullaby2 */ = {
 			isa = PBXGroup;
 			children = (
-				A3C7D02324CE0FDD00C1FB6A /* dandini.mp3 */,
+				4AFD906324D95FF600551004 /* dandini.mp3 */,
 			);
 			path = categoryLullaby2;
 			sourceTree = "<group>";
@@ -366,12 +366,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3C7D02424CE0FDD00C1FB6A /* dandini.mp3 in Resources */,
 				A3C7D02024CE0B4C00C1FB6A /* kolicvacumm.mp3 in Resources */,
 				A3C7CFFC24CDAFB200C1FB6A /* musicbox1.mp3 in Resources */,
 				A3C7D00024CDAFD100C1FB6A /* wave.mp3 in Resources */,
 				A3C7CFFE24CDAFC400C1FB6A /* watersound.mp3 in Resources */,
 				A33DDD5924B0861B00BEF2A9 /* LaunchScreen.storyboard in Resources */,
+				4AFD906424D95FF600551004 /* dandini.mp3 in Resources */,
 				A3081A8924B9E3C8005118B4 /* birdSound.mp3 in Resources */,
 				A3081A9D24BA1C0E005118B4 /* birdSound4.mp3 in Resources */,
 				A3C7CFF824CDAF8F00C1FB6A /* hairdryer.mp3 in Resources */,
@@ -553,7 +553,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9B6AFN73DR;
+				DEVELOPMENT_TEAM = S4S9NLK24C;
 				INFOPLIST_FILE = MR.Baby/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -571,7 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9B6AFN73DR;
+				DEVELOPMENT_TEAM = S4S9NLK24C;
 				INFOPLIST_FILE = MR.Baby/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
