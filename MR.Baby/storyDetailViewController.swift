@@ -302,6 +302,7 @@ extension storyDetailViewController{
                 return
             }
             player.play()
+            player.volume = 0.5
         } catch {
             print("error pccurred")
         }
