@@ -19,8 +19,8 @@ struct Song {
 }
 
 class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
-
-//    @IBOutlet ler
+    
+    //    @IBOutlet ler
     @IBOutlet weak var storyListTitleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var categoriesLabel: UILabel!
@@ -31,25 +31,29 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     
     var imageName: String!
     
-//    Struck Gönderme
+    //    Struck Gönderme
     var chosenAudioTitle = ""
     var chosenAudioSubTitle = ""
     var chosenBackgroundImage = ""
     var chosenStoryDuration = ""
     var chosenAudioName = ""
     var chosenAudioType = ""
-//    var chosenNextAudioTitle = ""
+    //    var chosenNextAudioTitle = ""
     
-//    Struck Çekme
+    //    Struck Çekme
     var selectedCategoriesLabel = ""
     var selectedLandmarkName = ""
-//    var selectedCategory = ""
+    //    var selectedCategory = ""
     var selectedCategorySongs: [Song]! = []
     var myposition: Int = 0
     var toggleStatePlay = 1
     
     override func viewDidLoad() {
-    super.viewDidLoad()
+        super.viewDidLoad()
+        
+        slideBack()
+        
+        
         
         categoriesLabel.text = selectedCategoriesLabel
         storyListTitleLabel.text = selectedLandmarkName
@@ -58,11 +62,11 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         // Do any additional setup after loading the view.
         storyTableView.delegate = self
         storyTableView.dataSource = self
-
-//        configureSongs()
+        
+        //        configureSongs()
         setupImageView()
         backButonInitialUI()
-    
+        
     }
     
     private func setupImageView() {
@@ -75,15 +79,19 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         detailOverlayShadow?.image = UIImage(named: "overlayShadow")
         detailOverlayShadow?.contentMode = .scaleToFill
         detailOverlayShadow?.alpha = 0.3
-
+        
     }
     
-//    --------------------------------------------------------------------------------------
+    //    --------------------------------------------------------------------------------------
     
-    
+    func slideBack(){
+        let gestureSlideBack = UISwipeGestureRecognizer(target: self, action: #selector(self.backTapped))
+        gestureSlideBack.direction = .right
+        self.view.addGestureRecognizer(gestureSlideBack)
+    }
     
     @IBAction func playSoundsButtonTapped(_ sender: Any) {
-                
+        
         if chosenAudioTitle == "" {
             chosenAudioTitle = selectedCategorySongs[0].title
             chosenAudioName = selectedCategorySongs[0].audioName
@@ -91,20 +99,20 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
             chosenStoryDuration = selectedCategorySongs[0].duration
             chosenAudioType = selectedCategorySongs[0].audioType
             chosenAudioSubTitle = selectedCategorySongs[0].audioSubtitle
-                performSegue(withIdentifier: "toStoryDetailViewController", sender: Any?.self)
-
-
+            performSegue(withIdentifier: "toStoryDetailViewController", sender: Any?.self)
+            
+            
         } else {
             performSegue(withIdentifier: "toStoryDetailViewController", sender: Any?.self)
-
-
+            
+            
         }
-
-
+        
+        
     }
     
-//    --------------------------------------------------------------------------------------
-
+    //    --------------------------------------------------------------------------------------
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -121,16 +129,16 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         return 56
     }
     
-//    --------------------------------------------------------------------------------------
-
+    //    --------------------------------------------------------------------------------------
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return songs.count
+        //        return songs.count
         return selectedCategorySongs.count
     }
     
-//    --------------------------------------------------------------------------------------
-
+    //    --------------------------------------------------------------------------------------
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -141,14 +149,14 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         }
         mvc.songs = selectedCategorySongs
         mvc.position = position
-//        present(mvc, animated: true)
-//
-//        chosenAudioTitle = selectedCategorySongs[indexPath.row].title
-//        chosenAudioName = selectedCategorySongs[indexPath.row].audioName
-//        chosenBackgroundImage = selectedCategorySongs[indexPath.row].backgroundImageName
-//        chosenStoryDuration = selectedCategorySongs[indexPath.row].duration
-//        chosenAudioType = selectedCategorySongs[indexPath.row].audioType
-//        chosenAudioSubTitle = selectedCategorySongs[indexPath.row].audioSubtitle
+        //        present(mvc, animated: true)
+        //
+        //        chosenAudioTitle = selectedCategorySongs[indexPath.row].title
+        //        chosenAudioName = selectedCategorySongs[indexPath.row].audioName
+        //        chosenBackgroundImage = selectedCategorySongs[indexPath.row].backgroundImageName
+        //        chosenStoryDuration = selectedCategorySongs[indexPath.row].duration
+        //        chosenAudioType = selectedCategorySongs[indexPath.row].audioType
+        //        chosenAudioSubTitle = selectedCategorySongs[indexPath.row].audioSubtitle
         
         
         
@@ -157,8 +165,8 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     
-//    --------------------------------------------------------------------------------------
-
+    //    --------------------------------------------------------------------------------------
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStoryDetailViewController" {
@@ -167,29 +175,29 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
             destinationVC.songs = selectedCategorySongs
             destinationVC.position = myposition
             
-//            destinationVC.selectedAudioTitle = chosenAudioTitle
-//            destinationVC.selectedAudioName = chosenAudioName
-//            destinationVC.selectedBackgroundImage = chosenBackgroundImage
-//            destinationVC.selectedStoryDuration = chosenStoryDuration
-//            destinationVC.selectedAudioType = chosenAudioType
-//            destinationVC.selectedAudioSubtitle = chosenAudioSubTitle
-//            destinationVC.selectedCategorySongs1 = selectedCategorySongs
+            //            destinationVC.selectedAudioTitle = chosenAudioTitle
+            //            destinationVC.selectedAudioName = chosenAudioName
+            //            destinationVC.selectedBackgroundImage = chosenBackgroundImage
+            //            destinationVC.selectedStoryDuration = chosenStoryDuration
+            //            destinationVC.selectedAudioType = chosenAudioType
+            //            destinationVC.selectedAudioSubtitle = chosenAudioSubTitle
+            //            destinationVC.selectedCategorySongs1 = selectedCategorySongs
             
         }
     }
     
-
+    
     
     @IBAction func backTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
     func backButonInitialUI(){
-           backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-           backButton.tintColor = .black
-           backButton.alpha = 0.8
-           backButton.backgroundColor = .white
-           backButton.layer.cornerRadius = 8.0
-       }
+        backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        backButton.tintColor = .black
+        backButton.alpha = 0.8
+        backButton.backgroundColor = .white
+        backButton.layer.cornerRadius = 8.0
+    }
     
 }

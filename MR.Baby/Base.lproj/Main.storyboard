@@ -11,7 +11,7 @@
         <!--Categories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Categories" id="BYZ-38-t0r" customClass="ViewController" customModule="MR_Baby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Categories" id="BYZ-38-t0r" customClass="ViewController" customModule="MyBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
         <!--Image Viewer View Controller-->
         <scene sceneID="PMB-SV-ZF7">
             <objects>
-                <viewController id="reo-T4-hXv" customClass="ImageViewerViewController" customModule="MR_Baby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="reo-T4-hXv" customClass="ImageViewerViewController" customModule="MyBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RH2-3v-s4U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,7 +186,7 @@
         <!-- -->
         <scene sceneID="EQI-Oi-2em">
             <objects>
-                <viewController storyboardIdentifier="audioPlayer" id="yY0-wX-xkw" customClass="storyDetailViewController" customModule="MR_Baby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="audioPlayer" id="yY0-wX-xkw" customClass="storyDetailViewController" customModule="MyBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MbU-r5-31J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,7 +199,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Night Vale Story" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHb-Ak-amx">
-                                <rect key="frame" x="56" y="537" width="302" height="67"/>
+                                <rect key="frame" x="56" y="547" width="302" height="67"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -265,7 +265,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by mr_bedStories team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nID-ei-GSe">
-                                <rect key="frame" x="132" y="612" width="150" height="17"/>
+                                <rect key="frame" x="132" y="622" width="150" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="FcW-uk-XUj"/>
                                     <constraint firstAttribute="width" constant="150" id="qLy-QS-SdI"/>
@@ -275,7 +275,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="up0-Rx-bFA">
-                                <rect key="frame" x="32" y="654.5" width="48" height="21"/>
+                                <rect key="frame" x="24" y="664.5" width="48" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9by-m4-6sc"/>
                                     <constraint firstAttribute="width" constant="48" id="xyz-ne-9x3"/>
@@ -285,7 +285,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16:20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAK-PQ-bxi">
-                                <rect key="frame" x="334" y="654.5" width="48" height="21"/>
+                                <rect key="frame" x="342" y="664.5" width="48" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gdU-Et-rai"/>
                                     <constraint firstAttribute="width" constant="48" id="yBj-p0-ghV"/>
@@ -294,10 +294,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ql-nd-bF2" customClass="SliderCostumHeight" customModule="MR_Baby" customModuleProvider="target">
-                                <rect key="frame" x="85" y="661" width="244" height="17"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ql-nd-bF2" customClass="SliderCostumHeight" customModule="MyBaby" customModuleProvider="target">
+                                <rect key="frame" x="86" y="671" width="242" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="1XQ-6j-PIO"/>
                                     <constraint firstAttribute="height" constant="16" id="PTm-WO-ftN"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -323,7 +322,7 @@
                         <constraints>
                             <constraint firstItem="tHb-Ak-amx" firstAttribute="leading" secondItem="nPX-fO-rci" secondAttribute="leading" constant="56" id="0o0-eb-b8q"/>
                             <constraint firstItem="nPX-fO-rci" firstAttribute="trailing" secondItem="tHb-Ak-amx" secondAttribute="trailing" constant="56" id="2sr-yL-Hdg"/>
-                            <constraint firstItem="up0-Rx-bFA" firstAttribute="leading" secondItem="nPX-fO-rci" secondAttribute="leading" constant="32" id="5Qx-86-VaB"/>
+                            <constraint firstItem="up0-Rx-bFA" firstAttribute="leading" secondItem="nPX-fO-rci" secondAttribute="leading" constant="24" id="5Qx-86-VaB"/>
                             <constraint firstItem="9Ql-nd-bF2" firstAttribute="centerX" secondItem="dGQ-2D-Ee5" secondAttribute="centerX" id="6G0-zb-H2S"/>
                             <constraint firstItem="die-yK-fA0" firstAttribute="leading" secondItem="dGQ-2D-Ee5" secondAttribute="trailing" constant="32" id="7eL-BH-6uA"/>
                             <constraint firstItem="dGQ-2D-Ee5" firstAttribute="leading" secondItem="vrK-lB-jCx" secondAttribute="trailing" constant="32" id="C8X-Nw-xgF"/>
@@ -338,18 +337,20 @@
                             <constraint firstItem="iEo-XN-d9X" firstAttribute="top" secondItem="MbU-r5-31J" secondAttribute="top" id="U0b-F1-YJC"/>
                             <constraint firstItem="eI6-An-cGs" firstAttribute="leading" secondItem="nPX-fO-rci" secondAttribute="leading" constant="16" id="XPQ-cg-KQD"/>
                             <constraint firstItem="tHb-Ak-amx" firstAttribute="centerX" secondItem="nID-ei-GSe" secondAttribute="centerX" id="Xdv-ra-kOv"/>
+                            <constraint firstItem="9Ql-nd-bF2" firstAttribute="leading" secondItem="up0-Rx-bFA" secondAttribute="trailing" constant="16" id="aLP-pX-RBQ"/>
                             <constraint firstItem="up0-Rx-bFA" firstAttribute="centerY" secondItem="9Ql-nd-bF2" secondAttribute="centerY" constant="-4" id="agR-GR-2om"/>
-                            <constraint firstItem="nPX-fO-rci" firstAttribute="trailing" secondItem="RAK-PQ-bxi" secondAttribute="trailing" constant="32" id="dla-Fc-Vb2"/>
+                            <constraint firstItem="nPX-fO-rci" firstAttribute="trailing" secondItem="RAK-PQ-bxi" secondAttribute="trailing" constant="24" id="dla-Fc-Vb2"/>
                             <constraint firstItem="ESQ-mc-1Il" firstAttribute="top" secondItem="dGQ-2D-Ee5" secondAttribute="bottom" constant="42" id="fG4-bB-L0J"/>
                             <constraint firstItem="34I-dk-2DH" firstAttribute="centerY" secondItem="eI6-An-cGs" secondAttribute="centerY" id="glK-Fk-UMS"/>
                             <constraint firstItem="vrK-lB-jCx" firstAttribute="centerY" secondItem="dGQ-2D-Ee5" secondAttribute="centerY" id="hiF-RM-x7D"/>
                             <constraint firstItem="RAK-PQ-bxi" firstAttribute="centerY" secondItem="9Ql-nd-bF2" secondAttribute="centerY" constant="-4" id="lLZ-ud-Fqv"/>
+                            <constraint firstItem="RAK-PQ-bxi" firstAttribute="leading" secondItem="9Ql-nd-bF2" secondAttribute="trailing" constant="16" id="oOz-nF-KVc"/>
                             <constraint firstItem="ESQ-mc-1Il" firstAttribute="centerX" secondItem="MbU-r5-31J" secondAttribute="centerX" id="oTY-ym-yGC"/>
                             <constraint firstItem="9Ql-nd-bF2" firstAttribute="top" secondItem="nID-ei-GSe" secondAttribute="bottom" constant="32" id="ogR-3L-89c"/>
                             <constraint firstItem="nID-ei-GSe" firstAttribute="top" secondItem="tHb-Ak-amx" secondAttribute="bottom" constant="8" id="uwR-Fi-060"/>
                             <constraint firstItem="dGQ-2D-Ee5" firstAttribute="centerX" secondItem="MbU-r5-31J" secondAttribute="centerX" id="v9B-Zb-ebr"/>
                             <constraint firstItem="nPX-fO-rci" firstAttribute="trailing" secondItem="iEo-XN-d9X" secondAttribute="trailing" id="vt4-0Y-oeJ"/>
-                            <constraint firstItem="dGQ-2D-Ee5" firstAttribute="top" secondItem="9Ql-nd-bF2" secondAttribute="bottom" constant="42" id="xjd-JH-EfN"/>
+                            <constraint firstItem="dGQ-2D-Ee5" firstAttribute="top" secondItem="9Ql-nd-bF2" secondAttribute="bottom" constant="32" id="xjd-JH-EfN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nPX-fO-rci"/>
                     </view>

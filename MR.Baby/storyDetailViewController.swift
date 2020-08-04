@@ -61,6 +61,8 @@ class storyDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        slideBack()
+        
         setInterface()
         setTargets()
         audioPlayerConfigure()
@@ -82,6 +84,12 @@ class storyDetailViewController: UIViewController {
         if let player = audioPlayer {
             player.stop()
         }
+    }
+    
+    func slideBack(){
+        let gestureSlideBack = UISwipeGestureRecognizer(target: self, action: #selector(self.backButtonTapped))
+        gestureSlideBack.direction = .right
+        self.view.addGestureRecognizer(gestureSlideBack)
     }
     
     
