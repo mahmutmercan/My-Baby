@@ -25,7 +25,7 @@
 		A33DDD6724B0B3EC00BEF2A9 /* storyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */; };
 		A382C22224C45C7D00A40F76 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C22124C45C7D00A40F76 /* Utilities.swift */; };
 		A3C7CFF824CDAF8F00C1FB6A /* hairdryer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF724CDAF8F00C1FB6A /* hairdryer.mp3 */; };
-		A3C7CFFA24CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF924CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 */; };
+		A3C7CFFA24CDAF9E00C1FB6A /* pedagog_ninni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF924CDAF9E00C1FB6A /* pedagog_ninni.mp3 */; };
 		A3C7CFFC24CDAFB200C1FB6A /* musicbox1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFB24CDAFB200C1FB6A /* musicbox1.mp3 */; };
 		A3C7CFFE24CDAFC400C1FB6A /* watersound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFD24CDAFC400C1FB6A /* watersound.mp3 */; };
 		A3C7D00024CDAFD100C1FB6A /* wave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFF24CDAFD100C1FB6A /* wave.mp3 */; };
@@ -49,7 +49,7 @@
 		A3081A9A24BA1C0E005118B4 /* birdSound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound4.mp3; sourceTree = "<group>"; };
 		A3081A9B24BA1C0E005118B4 /* birdSound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound3.mp3; sourceTree = "<group>"; };
 		A3081A9C24BA1C0E005118B4 /* birdSound5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound5.mp3; sourceTree = "<group>"; };
-		A33DDD4924B0861700BEF2A9 /* MR.Baby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MR.Baby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33DDD4924B0861700BEF2A9 /* My Baby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Baby.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33DDD4C24B0861700BEF2A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A33DDD4E24B0861700BEF2A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A33DDD5024B0861700BEF2A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyDetailViewController.swift; sourceTree = "<group>"; };
 		A382C22124C45C7D00A40F76 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A3C7CFF724CDAF8F00C1FB6A /* hairdryer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hairdryer.mp3; sourceTree = "<group>"; };
-		A3C7CFF924CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3"; sourceTree = "<group>"; };
+		A3C7CFF924CDAF9E00C1FB6A /* pedagog_ninni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pedagog_ninni.mp3; sourceTree = "<group>"; };
 		A3C7CFFB24CDAFB200C1FB6A /* musicbox1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicbox1.mp3; sourceTree = "<group>"; };
 		A3C7CFFD24CDAFC400C1FB6A /* watersound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = watersound.mp3; sourceTree = "<group>"; };
 		A3C7CFFF24CDAFD100C1FB6A /* wave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wave.mp3; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		A3081A8F24BA1468005118B4 /* categoryLullaby1 */ = {
 			isa = PBXGroup;
 			children = (
-				A3C7CFF924CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 */,
+				A3C7CFF924CDAF9E00C1FB6A /* pedagog_ninni.mp3 */,
 			);
 			path = categoryLullaby1;
 			sourceTree = "<group>";
@@ -240,7 +240,7 @@
 		A33DDD4A24B0861700BEF2A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A33DDD4924B0861700BEF2A9 /* MR.Baby.app */,
+				A33DDD4924B0861700BEF2A9 /* My Baby.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,7 +325,7 @@
 			);
 			name = MR.Baby;
 			productName = MR.Baby;
-			productReference = A33DDD4924B0861700BEF2A9 /* MR.Baby.app */;
+			productReference = A33DDD4924B0861700BEF2A9 /* My Baby.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -377,7 +377,7 @@
 				A3C7CFF824CDAF8F00C1FB6A /* hairdryer.mp3 in Resources */,
 				A3081A9F24BA1C0E005118B4 /* birdSound5.mp3 in Resources */,
 				A3C7D01824CE084200C1FB6A /* whitenoise.mp3 in Resources */,
-				A3C7CFFA24CDAF9E00C1FB6A /* pedagoglarin-onerdigi-ninni-5-dakikada-uyutma-garantili-uyku-muzigi.mp3 in Resources */,
+				A3C7CFFA24CDAF9E00C1FB6A /* pedagog_ninni.mp3 in Resources */,
 				A33DDD6324B0890300BEF2A9 /* ItemCollectionViewCell.xib in Resources */,
 				A3081A9E24BA1C0E005118B4 /* birdSound3.mp3 in Resources */,
 				A3C7D00A24CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 in Resources */,
@@ -560,7 +560,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mahmutmercan.MR-Baby";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "My Baby";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -578,7 +578,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mahmutmercan.MR-Baby";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "My Baby";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
