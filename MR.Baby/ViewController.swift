@@ -120,7 +120,7 @@ class ViewController: UIViewController {
     private func setupCollectionViewItemSize() {
         if collectionViewFlowLayout == nil {
             let numberOfItemPerRow: CGFloat = 1
-            let linespacing: CGFloat = 24
+            let linespacing: CGFloat = 16
             let interItemSpacing: CGFloat = 5
             let width = (collectionView.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow
             let height = width
@@ -148,17 +148,21 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ItemCollectionViewCell
         
+        cell.clipsToBounds = true
+        cell.imageView.layer.cornerRadius  = 12.0
+        cell.imageView.clipsToBounds = true
+        
         if indexPath.item == 0 {
             cell.imageView.image = UIImage(named: items[indexPath.item].audioCoverImage)
             cell.isUserInteractionEnabled = false
             cell.audioPackageItemCountsLabel.text = nil
             cell.audioTitleLabel.text = nil
-            cell.backgroundColor = .red
+            cell.backgroundColor = .white
 
         } else {
+            cell.isUserInteractionEnabled = true
             cell.imageView.image = UIImage(named: items[indexPath.item].audioCoverImage)
             cell.audioPackageItemCountsLabel.text = String(items[indexPath.item].audioPackageCount + " Sounds")
-            
             cell.audioTitleLabel.text = items[indexPath.item].title
 
         }
@@ -169,16 +173,19 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let item = items[indexPath.item]
-        
-        chosenLandmarkName = String("Sounds")
-        chosenCategoriesLabel = items[indexPath.item].title
-        choosenCategory = items[indexPath.item].audioCategory
-        choosenSongs = items[indexPath.item].songs
-        
-        self.performSegue(withIdentifier: "viewImageSegueIdentifier", sender: item)
-        
-
+        if indexPath.item == 0 {
+            print("You selected 0 item")
+        } else {
+            let item = items[indexPath.item]
+            
+            chosenLandmarkName = String("Sounds")
+            chosenCategoriesLabel = items[indexPath.item].title
+            choosenCategory = items[indexPath.item].audioCategory
+            choosenSongs = items[indexPath.item].songs
+            
+            self.performSegue(withIdentifier: "viewImageSegueIdentifier", sender: item)
+        }
+    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

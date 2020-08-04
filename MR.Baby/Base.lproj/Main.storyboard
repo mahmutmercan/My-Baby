@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q1E-Vg-D9l">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="880"/>
+                                <rect key="frame" x="16" y="0.0" width="382" height="880"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mLK-e9-3vK">
                                     <size key="itemSize" width="50" height="50"/>
@@ -39,8 +39,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Q1E-Vg-D9l" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LSs-FH-24A"/>
-                            <constraint firstItem="Q1E-Vg-D9l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WX0-Kw-mFB"/>
+                            <constraint firstItem="Q1E-Vg-D9l" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="LSs-FH-24A"/>
+                            <constraint firstItem="Q1E-Vg-D9l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WX0-Kw-mFB"/>
                             <constraint firstItem="Q1E-Vg-D9l" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="k6T-7I-CxG"/>
                             <constraint firstAttribute="bottom" secondItem="Q1E-Vg-D9l" secondAttribute="bottom" constant="16" id="mA5-X0-Tx4"/>
                         </constraints>
@@ -134,12 +134,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSr-nQ-8Rt">
-                                <rect key="frame" x="36" y="220" width="240" height="64"/>
+                                <rect key="frame" x="28" y="220" width="240" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="6ld-VX-tl6"/>
                                     <constraint firstAttribute="width" constant="240" id="kDd-tT-BID"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -158,7 +158,7 @@
                             <constraint firstItem="iMn-FT-qP3" firstAttribute="bottom" secondItem="0fT-ym-aHB" secondAttribute="bottom" id="Vfb-Vx-4Hv"/>
                             <constraint firstItem="Ja4-hd-K0m" firstAttribute="top" secondItem="r9P-J2-OPM" secondAttribute="top" constant="8" id="ZmN-08-EcE"/>
                             <constraint firstItem="0fT-ym-aHB" firstAttribute="trailing" secondItem="r9P-J2-OPM" secondAttribute="trailing" id="cee-EE-Y5e"/>
-                            <constraint firstItem="eSr-nQ-8Rt" firstAttribute="leading" secondItem="RH2-3v-s4U" secondAttribute="leadingMargin" constant="16" id="e76-CN-2QR"/>
+                            <constraint firstItem="eSr-nQ-8Rt" firstAttribute="leading" secondItem="RH2-3v-s4U" secondAttribute="leadingMargin" constant="8" id="e76-CN-2QR"/>
                             <constraint firstItem="YXh-JT-BfT" firstAttribute="top" secondItem="Ylg-70-g0H" secondAttribute="bottom" constant="18" id="efj-06-UPA"/>
                             <constraint firstItem="YXh-JT-BfT" firstAttribute="leading" secondItem="r9P-J2-OPM" secondAttribute="leading" id="mcP-gx-fc0"/>
                             <constraint firstItem="iMn-FT-qP3" firstAttribute="trailing" secondItem="0fT-ym-aHB" secondAttribute="trailing" id="oyl-nz-ECU"/>
