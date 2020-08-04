@@ -49,7 +49,7 @@
 		A3081A9A24BA1C0E005118B4 /* birdSound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound4.mp3; sourceTree = "<group>"; };
 		A3081A9B24BA1C0E005118B4 /* birdSound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound3.mp3; sourceTree = "<group>"; };
 		A3081A9C24BA1C0E005118B4 /* birdSound5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound5.mp3; sourceTree = "<group>"; };
-		A33DDD4924B0861700BEF2A9 /* MR.Baby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MR.Baby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33DDD4924B0861700BEF2A9 /* MyBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33DDD4C24B0861700BEF2A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A33DDD4E24B0861700BEF2A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A33DDD5024B0861700BEF2A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 		A33DDD4A24B0861700BEF2A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A33DDD4924B0861700BEF2A9 /* MR.Baby.app */,
+				A33DDD4924B0861700BEF2A9 /* MyBaby.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,7 +325,7 @@
 			);
 			name = MR.Baby;
 			productName = MR.Baby;
-			productReference = A33DDD4924B0861700BEF2A9 /* MR.Baby.app */;
+			productReference = A33DDD4924B0861700BEF2A9 /* MyBaby.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -559,8 +559,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mahmutmercan.MR-Baby";
-				PRODUCT_NAME = MR.Baby;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mahmutmercan.My-Baby.Lullaby.sleep.womb.sound.kindergarden.relax";
+				PRODUCT_NAME = MyBaby;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -577,8 +577,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mahmutmercan.MR-Baby";
-				PRODUCT_NAME = MR.Baby;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mahmutmercan.My-Baby.Lullaby.sleep.womb.sound.kindergarden.relax";
+				PRODUCT_NAME = MyBaby;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
