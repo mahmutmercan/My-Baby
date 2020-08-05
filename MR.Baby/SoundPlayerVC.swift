@@ -60,6 +60,7 @@ class SoundPlayerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        audioPlayer?.stop()
         
         slideBack()
         
@@ -68,6 +69,10 @@ class SoundPlayerVC: UIViewController {
         audioPlayerConfigure()
         sliderConfigure()
 
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent // .default
     }
     
     
@@ -285,6 +290,7 @@ extension SoundPlayerVC{
     }
     
     func audioPlayerConfigure(){
+        
         resetTimer()
         startTimer()
         
@@ -299,6 +305,7 @@ extension SoundPlayerVC{
         
         
         do {
+            
             try AVAudioSession.sharedInstance().setMode(.default)
             try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
             
