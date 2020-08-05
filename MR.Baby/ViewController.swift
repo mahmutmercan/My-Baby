@@ -189,7 +189,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let item = sender as! Item
         if segue.identifier == viewImageSegueIdentifier{
 
-            if let vc = segue.destination as? ImageViewerViewController {
+            if let vc = segue.destination as? SoundsListDetailVC {
 
                 vc.imageName = item.AudioPackageCoverImage
                 vc.selectedLandmarkName = chosenLandmarkName

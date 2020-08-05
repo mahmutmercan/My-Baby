@@ -1,5 +1,5 @@
 //
-//  storyDetailViewController.swift
+//  SoundPlayerVC.swift
 //  MR.Baby
 //
 //  Created by İlker isa Mercan on 4.07.2020.
@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class storyDetailViewController: UIViewController {
+class SoundPlayerVC: UIViewController {
     
     public var position: Int = 0
     public var songs: [Song] = []
@@ -193,7 +193,7 @@ class storyDetailViewController: UIViewController {
 }
 
 
-extension storyDetailViewController{
+extension SoundPlayerVC{
     //    MARK: Funcs are here
     
     func sliderConfigure(){

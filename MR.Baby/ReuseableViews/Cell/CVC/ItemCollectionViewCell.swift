@@ -28,29 +28,29 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     
     func setupCell(){
-        
+        setupCellShadow()
+
         self.imageView.contentMode = .scaleToFill
         self.imageView.layer.cornerRadius =  12.0
         self.imageView.layer.masksToBounds = true
         self.imageView.clipsToBounds = true
         
-        self.coverImageOverlay.alpha = 0.3
+        self.coverImageOverlay.alpha = 0.5
         self.coverImageOverlay.contentMode = .scaleToFill
         self.coverImageOverlay.layer.cornerRadius =  12.0
         self.coverImageOverlay.layer.masksToBounds = true
         self.coverImageOverlay.clipsToBounds = true
         self.contentView.backgroundColor  = .clear
         
-        setupCellShadow()
     }
     
     func setupCellShadow(){
         
        self.layer.shadowColor = UIColor.black.cgColor
-       self.layer.shadowOffset = CGSize(width: 0, height: 2.0)
-       self.layer.shadowRadius = 1
-       self.layer.shadowOpacity = 0.4
-       self.layer.masksToBounds = true
+       self.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        self.layer.shadowRadius = 1
+       self.layer.shadowOpacity = 0.3
+       self.layer.masksToBounds = false
        
        self.layer.shouldRasterize = true
        self.layer.rasterizationScale = UIScreen.main.scale

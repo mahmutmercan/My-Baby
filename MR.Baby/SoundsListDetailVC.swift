@@ -1,5 +1,5 @@
 //
-//  ImageViewerViewController.swift
+//  SoundsListDetailVC.swift
 //  MR.Baby
 //
 //  Created by İlker isa Mercan on 4.07.2020.
@@ -18,7 +18,7 @@ struct Song {
     
 }
 
-class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     //    @IBOutlet ler
     @IBOutlet weak var storyListTitleLabel: UILabel!
@@ -99,11 +99,11 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
             chosenStoryDuration = selectedCategorySongs[0].duration
             chosenAudioType = selectedCategorySongs[0].audioType
             chosenAudioSubTitle = selectedCategorySongs[0].audioSubtitle
-            performSegue(withIdentifier: "toStoryDetailViewController", sender: Any?.self)
+            performSegue(withIdentifier: "toSoundPlayerVC", sender: Any?.self)
             
             
         } else {
-            performSegue(withIdentifier: "toStoryDetailViewController", sender: Any?.self)
+            performSegue(withIdentifier: "toSoundPlayerVC", sender: Any?.self)
             
             
         }
@@ -144,7 +144,7 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
         let position = indexPath.row
         myposition = position
-        guard let mvc = storyboard?.instantiateViewController(identifier: "audioPlayer") as? storyDetailViewController else {
+        guard let mvc = storyboard?.instantiateViewController(identifier: "SoundPlayerVC") as? SoundPlayerVC else {
             return
         }
         mvc.songs = selectedCategorySongs
@@ -161,7 +161,7 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
         
         
         
-        performSegue(withIdentifier: "toStoryDetailViewController", sender: nil)
+        performSegue(withIdentifier: "toSoundPlayerVC", sender: nil)
     }
     
     
@@ -169,8 +169,8 @@ class ImageViewerViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toStoryDetailViewController" {
-            let destinationVC = segue.destination as! storyDetailViewController
+        if segue.identifier == "toSoundPlayerVC" {
+            let destinationVC = segue.destination as! SoundPlayerVC
             
             destinationVC.songs = selectedCategorySongs
             destinationVC.position = myposition

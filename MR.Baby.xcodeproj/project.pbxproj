@@ -21,8 +21,8 @@
 		A33DDD5924B0861B00BEF2A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33DDD5724B0861B00BEF2A9 /* LaunchScreen.storyboard */; };
 		A33DDD6224B0890300BEF2A9 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6024B0890300BEF2A9 /* ItemCollectionViewCell.swift */; };
 		A33DDD6324B0890300BEF2A9 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33DDD6124B0890300BEF2A9 /* ItemCollectionViewCell.xib */; };
-		A33DDD6524B09CD700BEF2A9 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6424B09CD700BEF2A9 /* ImageViewerViewController.swift */; };
-		A33DDD6724B0B3EC00BEF2A9 /* storyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */; };
+		A33DDD6524B09CD700BEF2A9 /* SoundsListDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6424B09CD700BEF2A9 /* SoundsListDetailVC.swift */; };
+		A33DDD6724B0B3EC00BEF2A9 /* SoundPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6624B0B3EC00BEF2A9 /* SoundPlayerVC.swift */; };
 		A382C22224C45C7D00A40F76 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C22124C45C7D00A40F76 /* Utilities.swift */; };
 		A3C7CFF824CDAF8F00C1FB6A /* hairdryer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF724CDAF8F00C1FB6A /* hairdryer.mp3 */; };
 		A3C7CFFA24CDAF9E00C1FB6A /* pedagog_ninni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF924CDAF9E00C1FB6A /* pedagog_ninni.mp3 */; };
@@ -59,8 +59,8 @@
 		A33DDD5A24B0861B00BEF2A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33DDD6024B0890300BEF2A9 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A33DDD6124B0890300BEF2A9 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
-		A33DDD6424B09CD700BEF2A9 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
-		A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyDetailViewController.swift; sourceTree = "<group>"; };
+		A33DDD6424B09CD700BEF2A9 /* SoundsListDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsListDetailVC.swift; sourceTree = "<group>"; };
+		A33DDD6624B0B3EC00BEF2A9 /* SoundPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayerVC.swift; sourceTree = "<group>"; };
 		A382C22124C45C7D00A40F76 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A3C7CFF724CDAF8F00C1FB6A /* hairdryer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hairdryer.mp3; sourceTree = "<group>"; };
 		A3C7CFF924CDAF9E00C1FB6A /* pedagog_ninni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pedagog_ninni.mp3; sourceTree = "<group>"; };
@@ -91,6 +91,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A240D6D24DA968B00EE516A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4A240D6F24DA969C00EE516A /* TVC */,
+				4A240D6E24DA969700EE516A /* CVC */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4A240D6E24DA969700EE516A /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				A33DDD6024B0890300BEF2A9 /* ItemCollectionViewCell.swift */,
+				A33DDD6124B0890300BEF2A9 /* ItemCollectionViewCell.xib */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		4A240D6F24DA969C00EE516A /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
 		A300A03624B712B400CB563E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,18 +273,16 @@
 		A33DDD4B24B0861700BEF2A9 /* MR.Baby */ = {
 			isa = PBXGroup;
 			children = (
-				A3D39ABC24C59A4F00C538A7 /* ReuseableViews */,
 				A33DDD4C24B0861700BEF2A9 /* AppDelegate.swift */,
 				A33DDD4E24B0861700BEF2A9 /* SceneDelegate.swift */,
 				A33DDD5224B0861700BEF2A9 /* Main.storyboard */,
-				A33DDD5524B0861B00BEF2A9 /* Assets.xcassets */,
 				A33DDD5724B0861B00BEF2A9 /* LaunchScreen.storyboard */,
 				A33DDD5A24B0861B00BEF2A9 /* Info.plist */,
 				A33DDD5024B0861700BEF2A9 /* ViewController.swift */,
-				A33DDD6024B0890300BEF2A9 /* ItemCollectionViewCell.swift */,
-				A33DDD6124B0890300BEF2A9 /* ItemCollectionViewCell.xib */,
-				A33DDD6424B09CD700BEF2A9 /* ImageViewerViewController.swift */,
-				A33DDD6624B0B3EC00BEF2A9 /* storyDetailViewController.swift */,
+				A33DDD6424B09CD700BEF2A9 /* SoundsListDetailVC.swift */,
+				A33DDD6624B0B3EC00BEF2A9 /* SoundPlayerVC.swift */,
+				A33DDD5524B0861B00BEF2A9 /* Assets.xcassets */,
+				A3D39ABC24C59A4F00C538A7 /* ReuseableViews */,
 				A382C22024C45C6800A40F76 /* Utilities */,
 				A300A03624B712B400CB563E /* Sounds */,
 			);
@@ -295,6 +318,7 @@
 		A3D39ABC24C59A4F00C538A7 /* ReuseableViews */ = {
 			isa = PBXGroup;
 			children = (
+				4A240D6D24DA968B00EE516A /* Cell */,
 				A3D39ABD24C59A6400C538A7 /* Views */,
 			);
 			path = ReuseableViews;
@@ -402,12 +426,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33DDD5124B0861700BEF2A9 /* ViewController.swift in Sources */,
-				A33DDD6724B0B3EC00BEF2A9 /* storyDetailViewController.swift in Sources */,
+				A33DDD6724B0B3EC00BEF2A9 /* SoundPlayerVC.swift in Sources */,
 				A3D39ABF24C59A9300C538A7 /* SliderCostumHeight.swift in Sources */,
 				A382C22224C45C7D00A40F76 /* Utilities.swift in Sources */,
 				A33DDD6224B0890300BEF2A9 /* ItemCollectionViewCell.swift in Sources */,
 				A33DDD4D24B0861700BEF2A9 /* AppDelegate.swift in Sources */,
-				A33DDD6524B09CD700BEF2A9 /* ImageViewerViewController.swift in Sources */,
+				A33DDD6524B09CD700BEF2A9 /* SoundsListDetailVC.swift in Sources */,
 				A33DDD4F24B0861700BEF2A9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,7 +583,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mahmutmercan.My-Baby.Lullaby.sleep.womb.sound.kindergarden.relax";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mahmutmercan.MyBaby.Lullaby.sleep.womb.sound.kindergarden.relax;
 				PRODUCT_NAME = MyBaby;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -577,7 +601,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mahmutmercan.My-Baby.Lullaby.sleep.womb.sound.kindergarden.relax";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mahmutmercan.MyBaby.Lullaby.sleep.womb.sound.kindergarden.relax;
 				PRODUCT_NAME = MyBaby;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
-        <!--Image Viewer View Controller-->
+        <!--Sounds List DetailVC-->
         <scene sceneID="PMB-SV-ZF7">
             <objects>
-                <viewController id="reo-T4-hXv" customClass="ImageViewerViewController" customModule="MyBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="reo-T4-hXv" customClass="SoundsListDetailVC" customModule="MyBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RH2-3v-s4U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,7 @@
                         <outlet property="imageView" destination="0fT-ym-aHB" id="WWf-8R-V83"/>
                         <outlet property="storyListTitleLabel" destination="JqI-9U-2Nm" id="EIk-Ns-EMZ"/>
                         <outlet property="storyTableView" destination="YXh-JT-BfT" id="5JX-tA-8nj"/>
-                        <segue destination="yY0-wX-xkw" kind="show" identifier="toStoryDetailViewController" id="unV-Bf-uM5"/>
+                        <segue destination="yY0-wX-xkw" kind="show" identifier="toSoundPlayerVC" id="unV-Bf-uM5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAf-MF-vCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -186,7 +186,7 @@
         <!-- -->
         <scene sceneID="EQI-Oi-2em">
             <objects>
-                <viewController storyboardIdentifier="audioPlayer" id="yY0-wX-xkw" customClass="storyDetailViewController" customModule="MyBaby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SoundPlayerVC" id="yY0-wX-xkw" customClass="SoundPlayerVC" customModule="MyBaby" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MbU-r5-31J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
