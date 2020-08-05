@@ -9,7 +9,7 @@
 import UIKit
 
 class ItemCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var audioTitleLabel: UILabel!
@@ -20,22 +20,40 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.cornerRadius = 16.0
         
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 16.0
-
         setupCell()
+        
     }
+    
+    
     
     func setupCell(){
         
-        imageView.layer.cornerRadius = 12.0
-        imageView.clipsToBounds = true
-        coverImageOverlay.alpha = 0.3
-        coverImageOverlay.contentMode = .scaleToFill
-        coverImageOverlay.layer.cornerRadius = 12.0
-//        coverImageOverlay.isHidden = true
+        self.imageView.contentMode = .scaleToFill
+        self.imageView.layer.cornerRadius =  12.0
+        self.imageView.layer.masksToBounds = true
+        self.imageView.clipsToBounds = true
+        
+        self.coverImageOverlay.alpha = 0.3
+        self.coverImageOverlay.contentMode = .scaleToFill
+        self.coverImageOverlay.layer.cornerRadius =  12.0
+        self.coverImageOverlay.layer.masksToBounds = true
+        self.coverImageOverlay.clipsToBounds = true
+        self.contentView.backgroundColor  = .clear
+        
+        setupCellShadow()
     }
-
+    
+    func setupCellShadow(){
+        
+       self.layer.shadowColor = UIColor.black.cgColor
+       self.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+       self.layer.shadowRadius = 1
+       self.layer.shadowOpacity = 0.4
+       self.layer.masksToBounds = true
+       
+       self.layer.shouldRasterize = true
+       self.layer.rasterizationScale = UIScreen.main.scale
+    }
+    
 }

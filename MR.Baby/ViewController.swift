@@ -122,12 +122,14 @@ class ViewController: UIViewController {
             let numberOfItemPerRow: CGFloat = 1
             let linespacing: CGFloat = 16
             let interItemSpacing: CGFloat = 5
-            let width = (collectionView.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow
-            let height = width
+            let itemW = (view.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow - 32
+//            let itemW = view.frame.width - 32
+
+            let itemH = itemW
             
             collectionViewFlowLayout = UICollectionViewFlowLayout()
             
-            collectionViewFlowLayout.itemSize = CGSize(width: width, height: height)
+            collectionViewFlowLayout.itemSize = CGSize(width: itemW, height: itemH)
             collectionViewFlowLayout.sectionInset = UIEdgeInsets.zero
             collectionViewFlowLayout.scrollDirection = .vertical
             collectionViewFlowLayout.minimumLineSpacing = linespacing
@@ -148,26 +150,21 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ItemCollectionViewCell
         
-        cell.clipsToBounds = true
-        cell.imageView.layer.cornerRadius  = 12.0
-        cell.imageView.clipsToBounds = true
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: 12.0).cgPath
         
         if indexPath.item == 0 {
             cell.imageView.image = UIImage(named: items[indexPath.item].audioCoverImage)
             cell.isUserInteractionEnabled = false
             cell.audioPackageItemCountsLabel.text = nil
             cell.audioTitleLabel.text = nil
-            cell.backgroundColor = .white
 
         } else {
             cell.isUserInteractionEnabled = true
             cell.imageView.image = UIImage(named: items[indexPath.item].audioCoverImage)
             cell.audioPackageItemCountsLabel.text = String(items[indexPath.item].audioPackageCount + " Sounds")
             cell.audioTitleLabel.text = items[indexPath.item].title
-
         }
 
-        
         return cell
     }
     
@@ -197,7 +194,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
                 vc.imageName = item.AudioPackageCoverImage
                 vc.selectedLandmarkName = chosenLandmarkName
                 vc.selectedCategoriesLabel = chosenCategoriesLabel
-//                vc.selectedCategory = choosenCategory
                 vc.selectedCategorySongs = choosenSongs
 
             }
