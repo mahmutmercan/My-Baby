@@ -38,85 +38,81 @@ class ViewController: UIViewController {
     
     var items: [Item] = [
         Item(title: "", audioCoverImage: "categories", audioPackageCount: "", AudioPackageCoverImage: "", audioCategory: "",songs: []),
-<<<<<<< HEAD
-        Item(title: "Lullaby 1", audioCoverImage: "categoryLullaby1", audioPackageCount: "1", AudioPackageCoverImage: "categoryLullaby1", audioCategory: "Lullaby 1",songs: [
-            Song(title: "Lullaby", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "15:00", audioName: "pedagog_ninni", audioType: "mp3")]),
-        Item(title: "Lullaby 2", audioCoverImage: "categoryLullaby2", audioPackageCount: "1", AudioPackageCoverImage: "categoryLullaby2", audioCategory: "Lullaby 2",songs: [
-            Song(title: "Dandini", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "dandini", audioType: "mp3")]),
-        Item(title: "Lullaby 3", audioCoverImage: "categoryLullaby3", audioPackageCount: "0", AudioPackageCoverImage: "categoryLullaby3", audioCategory: "", songs: []),
-=======
+        
         Item(title: "Lullaby 1", audioCoverImage: "categoryLullaby1", audioPackageCount: "2", AudioPackageCoverImage: "categoryLullaby1", audioCategory: "Lullaby 1",songs: [
         Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "15:00", audioName: "PedagogNinni1", audioType: "mp3"),
         Song(title: "Lullaby 2", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "29:10", audioName: "SleepLullaby1", audioType: "mp3"),]),
+        
         Item(title: "Lullaby 2", audioCoverImage: "categoryLullaby2", audioPackageCount: "2", AudioPackageCoverImage: "categoryLullaby2", audioCategory: "Lullaby 2",songs: [
         Song(title: "Dandini", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "DandiniNinni", audioType: "mp3"),
         Song(title: "Sleep Song", audioSubtitle: "", backgroundImageName: "lullaby2Detail", duration: "21:35", audioName: "SleepLullaby2", audioType: "mp3"),]),
+        
         Item(title: "Lullaby 3", audioCoverImage: "categoryLullaby3", audioPackageCount: "3", AudioPackageCoverImage: "categoryLullaby3", audioCategory: "", songs: [
         Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "18:44", audioName: "Lullaby3-Song1", audioType: "mp3"),
         Song(title: "Lullaby 2", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "38:03", audioName: "Lullaby3-Song2", audioType: "mp3"),
         Song(title: "Lullaby 3", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "21:35", audioName: "Lullaby3-Song3", audioType: "mp3"),]),
->>>>>>> b86715a1b755239ba8fe438f3962ad939a92ca9f
+
         Item(title: "Colic Music", audioCoverImage: "categoryColic", audioPackageCount: "1", AudioPackageCoverImage: "categoryColic", audioCategory: "Lullaby",songs: [
             Song(title: "Colic", audioSubtitle: "", backgroundImageName: "categoryColic", duration: "10:00", audioName: "kolicvacumm", audioType: "mp3")]),
+        
         Item(title: "Womb", audioCoverImage: "categoryWhomb", audioPackageCount: "3", AudioPackageCoverImage: "categoryWhomb", audioCategory: "", songs: [
-<<<<<<< HEAD
             Song(title: "Womb", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "15:59", audioName: "womb", audioType: "mp3"),
             Song(title: "White Noise", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "09:15", audioName: "whitenoise", audioType: "mp3"),
             Song(title: "White Noise and Heartbeat", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "08:34", audioName: "whitenoise-and-heartbeat", audioType: "mp3"),]),
-=======
-            Song(title: "Womb", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "15:59", audioName: "womb1", audioType: "mp3"),
-        Song(title: "White Noise", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "09:15", audioName: "whitenoise2", audioType: "mp3"),
-        Song(title: "White Noise and Heartbeat", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "08:34", audioName: "whitenoise1", audioType: "mp3"),]),
->>>>>>> b86715a1b755239ba8fe438f3962ad939a92ca9f
+        
+        Item(title: "Classic Music", audioCoverImage: "categoryClassicmusic", audioPackageCount: "5", AudioPackageCoverImage: "categoryClassicmusic", audioCategory: "Lullaby",songs: [
+                   Song(title: "Für Elise", audioSubtitle: "Beethoven", backgroundImageName: "classicalmusicDetail1", duration: "02:47", audioName: "Beethoven-FurElise", audioType: "mp3"),
+                   Song(title: "Nocturne op.9 No.2", audioSubtitle: "Chopin", backgroundImageName: "classicalmusicDetail2", duration: "04:09", audioName: "Chopin-Nocturneop.9No.2", audioType: "mp3"),
+                   Song(title: "Peer gynt morning mood", audioSubtitle: "Edvard Grieg", backgroundImageName: "classicalmusicDetail3", duration: "03:52", audioName: "EdvardGrieg-Peer-gynt-morning-mood", audioType: "mp3"),
+                   Song(title: "The Four Seasons Winter", audioSubtitle: "Vivaldi", backgroundImageName: "classicalmusicDetail2", duration: "01:38", audioName: "Vivaldi-The-four-seasons-winter", audioType: "mp3"),
+                   Song(title: "Piano Sonata", audioSubtitle: "Mozart", backgroundImageName: "classicalmusicDetail1", duration: "01:26", audioName: "mozart-piano-Sonata", audioType: "mp3")]),
+               
         Item(title: "Music Box", audioCoverImage: "categoryMusicbox", audioPackageCount: "1", AudioPackageCoverImage: "categoryMusicbox", audioCategory: "Lullaby",songs: [
             Song(title: "Music Box", audioSubtitle: "", backgroundImageName: "categoryMusicbox", duration: "02:50", audioName: "musicbox1", audioType: "mp3")]),
-        Item(title: "Classic Music", audioCoverImage: "categoryClassicmusic", audioPackageCount: "5", AudioPackageCoverImage: "categoryClassicmusic", audioCategory: "Lullaby",songs: [
-            Song(title: "Für Elise", audioSubtitle: "Beethoven", backgroundImageName: "classicalmusicDetail1", duration: "02:47", audioName: "Beethoven-FurElise", audioType: "mp3"),
-            Song(title: "Nocturne op.9 No.2", audioSubtitle: "Chopin", backgroundImageName: "classicalmusicDetail2", duration: "04:09", audioName: "Chopin-Nocturneop.9No.2", audioType: "mp3"),
-            Song(title: "Peer gynt morning mood", audioSubtitle: "Edvard Grieg", backgroundImageName: "classicalmusicDetail3", duration: "03:52", audioName: "EdvardGrieg-Peer-gynt-morning-mood", audioType: "mp3"),
-            Song(title: "The Four Seasons Winter", audioSubtitle: "Vivaldi", backgroundImageName: "classicalmusicDetail2", duration: "01:38", audioName: "Vivaldi-The-four-seasons-winter", audioType: "mp3"),
-            Song(title: "Piano Sonata", audioSubtitle: "Mozart", backgroundImageName: "classicalmusicDetail1", duration: "01:26", audioName: "mozart-piano-Sonata", audioType: "mp3")]),
+        
+       
         Item(title: "Hair Dryer", audioCoverImage: "categoryHairdryer", audioPackageCount: "1", AudioPackageCoverImage: "categoryHairdryer", audioCategory: "Lullaby",songs: [
-<<<<<<< HEAD
+
             Song(title: "Hair Dryer", audioSubtitle: "", backgroundImageName: "hairdrierDetail", duration: "03:09", audioName: "hairdryer", audioType: "mp3")]),
+   
+
         Item(title: "Vacuum Cleaner", audioCoverImage: "categoryVacuumcleaner", audioPackageCount: "1", AudioPackageCoverImage: "categoryVacuumcleaner", audioCategory: "Lullaby",songs: [
-            Song(title: "Vacuum(Colic)", audioSubtitle: "", backgroundImageName: "categoryVacuumcleaner", duration: "10:00", audioName: "kolicvacumm", audioType: "mp3")]),
-=======
-        Song(title: "Hair Dryer", audioSubtitle: "", backgroundImageName: "hairdrierDetail", duration: "03:09", audioName: "hairdryer1", audioType: "mp3")]),
-        Item(title: "Vacuum Cleaner", audioCoverImage: "categoryVacuumcleaner", audioPackageCount: "1", AudioPackageCoverImage: "categoryVacuumcleaner", audioCategory: "Lullaby",songs: [
-        Song(title: "Vacuum(Colic)", audioSubtitle: "", backgroundImageName: "categoryVacuumcleaner", duration: "10:00", audioName: "kolicvacumm1", audioType: "mp3")]),
->>>>>>> b86715a1b755239ba8fe438f3962ad939a92ca9f
-        Item(title: "Lullaby Islamic", audioCoverImage: "categoryIslamiclullaby", audioPackageCount: "0", AudioPackageCoverImage: "categoryIslamiclullaby", audioCategory: "Lullaby",songs: []),
-        Item(title: "Happy Birthday", audioCoverImage: "categoryHappyBirthday", audioPackageCount: "0", AudioPackageCoverImage: "categoryHappyBirthday", audioCategory: "", songs: []),
+        Song(title: "Vacuum(Colic)", audioSubtitle: "", backgroundImageName: "categoryVacuumcleaner", duration: "10:00", audioName: "kolicvacumm", audioType: "mp3")]),
+        
+        //Item(title: "Lullaby Islamic", audioCoverImage: "categoryIslamiclullaby", audioPackageCount: "0", AudioPackageCoverImage: "categoryIslamiclullaby", audioCategory: "Lullaby",songs: []),
+        
+        Item(title: "Happy Birthday", audioCoverImage: "categoryHappyBirthday", audioPackageCount: "1", AudioPackageCoverImage: "categoryHappyBirthday", audioCategory: "", songs: [
+        Song(title: "Happy Birthday", audioSubtitle: "", backgroundImageName: "categoryHappyBirthday", duration: "01:04", audioName: "happybirthday", audioType: "mp3")]),
+        
         Item(title: "Bird Songs", audioCoverImage: "birdSongs", audioPackageCount: "5", AudioPackageCoverImage: "categoryBird", audioCategory: "Lullaby",songs: [
             Song(title: "BirdSound 01", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"),
             Song(title: "BirdSound 02", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail2", duration: "02:28", audioName: "birdSound2", audioType: "mp3"),
             Song(title: "BirdSound 03", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail3", duration: "05:19", audioName: "birdSound3", audioType: "mp3"),
             Song(title: "BirdSound 04", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail4", duration: "04:14", audioName: "birdSound4", audioType: "mp3"),
             Song(title: "BirdSound 05", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail5", duration: "05:05", audioName: "birdSound5", audioType: "mp3")]),
+        
         Item(title: "Camp Fire", audioCoverImage: "categoryCampFire", audioPackageCount: "1", AudioPackageCoverImage: "categoryCampFire", audioCategory: "Lullaby", songs: [
             Song(title: "Camp Fire", audioSubtitle: "", backgroundImageName: "campfireDetail", duration: "02:46", audioName: "campfire1", audioType: "mp3")]),
-        Item(title: "Rain", audioCoverImage: "categoryRain", audioPackageCount: "1", AudioPackageCoverImage: "categoryRain", audioCategory: "Lullaby",songs: []),
+        
+        //Item(title: "Rain", audioCoverImage: "categoryRain", audioPackageCount: "1", AudioPackageCoverImage: "categoryRain", audioCategory: "Lullaby",songs: []),
+        
         Item(title: "Water", audioCoverImage: "categoryWater", audioPackageCount: "1", AudioPackageCoverImage: "categoryWater", audioCategory: "Lullaby",songs: [
-<<<<<<< HEAD
             Song(title: "Water Sound", audioSubtitle: "Naturel", backgroundImageName: "watersoundDetail1", duration: "05:00", audioName: "watersound", audioType: "mp3")]),
+        
         Item(title: "Wave", audioCoverImage: "categoryWave", audioPackageCount: "1", AudioPackageCoverImage: "categoryWave", audioCategory: "Lullaby",songs: [
             Song(title: "Wave", audioSubtitle: "Naturel", backgroundImageName: "categoryWave", duration: "07:06", audioName: "wawe", audioType: "mp3")]),
-        Item(title: "Boy", audioCoverImage: "categoryBoy", audioPackageCount: "0", AudioPackageCoverImage: "categoryBoy", audioCategory: "Lullaby",songs: []),
-        Item(title: "Girl", audioCoverImage: "categoryGirl", audioPackageCount: "0", AudioPackageCoverImage: "categoryGirl", audioCategory: "Lullaby",songs: [])
-=======
-        Song(title: "Water Sound", audioSubtitle: "Naturel", backgroundImageName: "watersoundDetail1", duration: "05:00", audioName: "watersound1", audioType: "mp3")]),
-        Item(title: "Wave", audioCoverImage: "categoryWave", audioPackageCount: "1", AudioPackageCoverImage: "categoryWave", audioCategory: "Lullaby",songs: [
-        Song(title: "Wave", audioSubtitle: "Naturel", backgroundImageName: "categoryWave", duration: "07:06", audioName: "wawe1", audioType: "mp3")]),
+        
+        
+       
         Item(title: "Boy", audioCoverImage: "categoryBoy", audioPackageCount: "2", AudioPackageCoverImage: "categoryBoy", audioCategory: "Lullaby",songs: [
         Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "29:10", audioName: "SleepBoy1", audioType: "mp3"),
-        Song(title: "Song 1", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "19:00", audioName: "SleepBoy2", audioType: "mp3"),]),
+        Song(title: "Song 1", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "19:00", audioName: "SleepBoy2", audioType: "mp3")]),
+        
         Item(title: "Girl", audioCoverImage: "categoryGirl", audioPackageCount: "2", AudioPackageCoverImage: "categoryGirl", audioCategory: "Lullaby",songs: [
             Song(title: "Sleep Girl 1", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl1", audioType: "mp3"),
             Song(title: "Sleep Girl 2", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "15:11", audioName: "SleepGirl2", audioType: "mp3")])
->>>>>>> b86715a1b755239ba8fe438f3962ad939a92ca9f
         
-                         ]
+          ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
