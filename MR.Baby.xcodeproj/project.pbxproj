@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AFD906424D95FF600551004 /* dandini.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AFD906324D95FF600551004 /* dandini.mp3 */; };
+		4AFD906424D95FF600551004 /* DandiniNinni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AFD906324D95FF600551004 /* DandiniNinni.mp3 */; };
 		A3081A8924B9E3C8005118B4 /* birdSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3081A8824B9E3C8005118B4 /* birdSound.mp3 */; };
 		A3081A9924BA17B3005118B4 /* birdSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3081A9824BA17B3005118B4 /* birdSound2.mp3 */; };
 		A3081A9D24BA1C0E005118B4 /* birdSound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3081A9A24BA1C0E005118B4 /* birdSound4.mp3 */; };
@@ -23,27 +23,36 @@
 		A33DDD6324B0890300BEF2A9 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33DDD6124B0890300BEF2A9 /* ItemCollectionViewCell.xib */; };
 		A33DDD6524B09CD700BEF2A9 /* SoundsListDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6424B09CD700BEF2A9 /* SoundsListDetailVC.swift */; };
 		A33DDD6724B0B3EC00BEF2A9 /* SoundPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD6624B0B3EC00BEF2A9 /* SoundPlayerVC.swift */; };
+		A33FFD8824E009A90097E454 /* SleepLullaby1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33FFD8724E009A90097E454 /* SleepLullaby1.mp3 */; };
+		A33FFD8A24E00B240097E454 /* SleepLullaby2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33FFD8924E00B230097E454 /* SleepLullaby2.mp3 */; };
+		A33FFD8F24E00C2D0097E454 /* Lullaby3-Song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33FFD8C24E00C2B0097E454 /* Lullaby3-Song1.mp3 */; };
+		A33FFD9024E00C2D0097E454 /* Lullaby3-Song2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33FFD8D24E00C2C0097E454 /* Lullaby3-Song2.mp3 */; };
+		A33FFD9124E00C2D0097E454 /* Lullaby3-Song3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33FFD8E24E00C2D0097E454 /* Lullaby3-Song3.mp3 */; };
+		A33FFD9424E010060097E454 /* SleepBoy2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33FFD9224E010050097E454 /* SleepBoy2.mp3 */; };
+		A33FFD9524E010060097E454 /* SleepBoy1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33FFD9324E010060097E454 /* SleepBoy1.mp3 */; };
+		A33FFD9824E013950097E454 /* SleepGirl2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33FFD9624E013950097E454 /* SleepGirl2.mp3 */; };
+		A33FFD9924E013950097E454 /* SleepGirl1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A33FFD9724E013950097E454 /* SleepGirl1.mp3 */; };
 		A382C22224C45C7D00A40F76 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382C22124C45C7D00A40F76 /* Utilities.swift */; };
-		A3C7CFF824CDAF8F00C1FB6A /* hairdryer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF724CDAF8F00C1FB6A /* hairdryer.mp3 */; };
-		A3C7CFFA24CDAF9E00C1FB6A /* pedagog_ninni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF924CDAF9E00C1FB6A /* pedagog_ninni.mp3 */; };
+		A3C7CFF824CDAF8F00C1FB6A /* hairdryer1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF724CDAF8F00C1FB6A /* hairdryer1.mp3 */; };
+		A3C7CFFA24CDAF9E00C1FB6A /* PedagogNinni1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFF924CDAF9E00C1FB6A /* PedagogNinni1.mp3 */; };
 		A3C7CFFC24CDAFB200C1FB6A /* musicbox1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFB24CDAFB200C1FB6A /* musicbox1.mp3 */; };
-		A3C7CFFE24CDAFC400C1FB6A /* watersound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFD24CDAFC400C1FB6A /* watersound.mp3 */; };
-		A3C7D00024CDAFD100C1FB6A /* wave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFF24CDAFD100C1FB6A /* wave.mp3 */; };
+		A3C7CFFE24CDAFC400C1FB6A /* watersound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFD24CDAFC400C1FB6A /* watersound1.mp3 */; };
+		A3C7D00024CDAFD100C1FB6A /* wave1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7CFFF24CDAFD100C1FB6A /* wave1.mp3 */; };
 		A3C7D00924CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00424CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 */; };
 		A3C7D00A24CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00524CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 */; };
 		A3C7D00D24CDB90700C1FB6A /* Chopin-Nocturneop.9No.2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00B24CDB90600C1FB6A /* Chopin-Nocturneop.9No.2.mp3 */; };
 		A3C7D01024CDB9B700C1FB6A /* Beethoven-FurElise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D00F24CDB9B700C1FB6A /* Beethoven-FurElise.mp3 */; };
 		A3C7D01424CE083200C1FB6A /* mozart-piano-Sonata.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01324CE083200C1FB6A /* mozart-piano-Sonata.mp3 */; };
-		A3C7D01724CE084200C1FB6A /* whitenoise-and-heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01524CE084100C1FB6A /* whitenoise-and-heartbeat.mp3 */; };
-		A3C7D01824CE084200C1FB6A /* whitenoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01624CE084200C1FB6A /* whitenoise.mp3 */; };
-		A3C7D01B24CE087100C1FB6A /* campfire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01A24CE087100C1FB6A /* campfire.mp3 */; };
-		A3C7D02024CE0B4C00C1FB6A /* kolicvacumm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */; };
-		A3C7D02624CE104900C1FB6A /* womb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D02524CE104800C1FB6A /* womb.mp3 */; };
+		A3C7D01724CE084200C1FB6A /* whitenoise1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01524CE084100C1FB6A /* whitenoise1.mp3 */; };
+		A3C7D01824CE084200C1FB6A /* whitenoise2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01624CE084200C1FB6A /* whitenoise2.mp3 */; };
+		A3C7D01B24CE087100C1FB6A /* campfire1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01A24CE087100C1FB6A /* campfire1.mp3 */; };
+		A3C7D02024CE0B4C00C1FB6A /* kolicvacumm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm1.mp3 */; };
+		A3C7D02624CE104900C1FB6A /* womb1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D02524CE104800C1FB6A /* womb1.mp3 */; };
 		A3D39ABF24C59A9300C538A7 /* SliderCostumHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4AFD906324D95FF600551004 /* dandini.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dandini.mp3; sourceTree = "<group>"; };
+		4AFD906324D95FF600551004 /* DandiniNinni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DandiniNinni.mp3; sourceTree = "<group>"; };
 		A3081A8824B9E3C8005118B4 /* birdSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound.mp3; sourceTree = "<group>"; };
 		A3081A9824BA17B3005118B4 /* birdSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound2.mp3; sourceTree = "<group>"; };
 		A3081A9A24BA1C0E005118B4 /* birdSound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound4.mp3; sourceTree = "<group>"; };
@@ -61,22 +70,31 @@
 		A33DDD6124B0890300BEF2A9 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		A33DDD6424B09CD700BEF2A9 /* SoundsListDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsListDetailVC.swift; sourceTree = "<group>"; };
 		A33DDD6624B0B3EC00BEF2A9 /* SoundPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayerVC.swift; sourceTree = "<group>"; };
+		A33FFD8724E009A90097E454 /* SleepLullaby1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SleepLullaby1.mp3; sourceTree = "<group>"; };
+		A33FFD8924E00B230097E454 /* SleepLullaby2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SleepLullaby2.mp3; sourceTree = "<group>"; };
+		A33FFD8C24E00C2B0097E454 /* Lullaby3-Song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lullaby3-Song1.mp3"; sourceTree = "<group>"; };
+		A33FFD8D24E00C2C0097E454 /* Lullaby3-Song2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lullaby3-Song2.mp3"; sourceTree = "<group>"; };
+		A33FFD8E24E00C2D0097E454 /* Lullaby3-Song3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lullaby3-Song3.mp3"; sourceTree = "<group>"; };
+		A33FFD9224E010050097E454 /* SleepBoy2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SleepBoy2.mp3; sourceTree = "<group>"; };
+		A33FFD9324E010060097E454 /* SleepBoy1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SleepBoy1.mp3; sourceTree = "<group>"; };
+		A33FFD9624E013950097E454 /* SleepGirl2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SleepGirl2.mp3; sourceTree = "<group>"; };
+		A33FFD9724E013950097E454 /* SleepGirl1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SleepGirl1.mp3; sourceTree = "<group>"; };
 		A382C22124C45C7D00A40F76 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		A3C7CFF724CDAF8F00C1FB6A /* hairdryer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hairdryer.mp3; sourceTree = "<group>"; };
-		A3C7CFF924CDAF9E00C1FB6A /* pedagog_ninni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pedagog_ninni.mp3; sourceTree = "<group>"; };
+		A3C7CFF724CDAF8F00C1FB6A /* hairdryer1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hairdryer1.mp3; sourceTree = "<group>"; };
+		A3C7CFF924CDAF9E00C1FB6A /* PedagogNinni1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PedagogNinni1.mp3; sourceTree = "<group>"; };
 		A3C7CFFB24CDAFB200C1FB6A /* musicbox1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicbox1.mp3; sourceTree = "<group>"; };
-		A3C7CFFD24CDAFC400C1FB6A /* watersound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = watersound.mp3; sourceTree = "<group>"; };
-		A3C7CFFF24CDAFD100C1FB6A /* wave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wave.mp3; sourceTree = "<group>"; };
+		A3C7CFFD24CDAFC400C1FB6A /* watersound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = watersound1.mp3; sourceTree = "<group>"; };
+		A3C7CFFF24CDAFD100C1FB6A /* wave1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wave1.mp3; sourceTree = "<group>"; };
 		A3C7D00424CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "EdvardGrieg-Peer-gynt-morning-mood.mp3"; sourceTree = "<group>"; };
 		A3C7D00524CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Vivaldi-The-four-seasons-winter.mp3"; sourceTree = "<group>"; };
 		A3C7D00B24CDB90600C1FB6A /* Chopin-Nocturneop.9No.2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Chopin-Nocturneop.9No.2.mp3"; sourceTree = "<group>"; };
 		A3C7D00F24CDB9B700C1FB6A /* Beethoven-FurElise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beethoven-FurElise.mp3"; sourceTree = "<group>"; };
 		A3C7D01324CE083200C1FB6A /* mozart-piano-Sonata.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "mozart-piano-Sonata.mp3"; sourceTree = "<group>"; };
-		A3C7D01524CE084100C1FB6A /* whitenoise-and-heartbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whitenoise-and-heartbeat.mp3"; sourceTree = "<group>"; };
-		A3C7D01624CE084200C1FB6A /* whitenoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whitenoise.mp3; sourceTree = "<group>"; };
-		A3C7D01A24CE087100C1FB6A /* campfire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = campfire.mp3; sourceTree = "<group>"; };
-		A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kolicvacumm.mp3; sourceTree = "<group>"; };
-		A3C7D02524CE104800C1FB6A /* womb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = womb.mp3; sourceTree = "<group>"; };
+		A3C7D01524CE084100C1FB6A /* whitenoise1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whitenoise1.mp3; sourceTree = "<group>"; };
+		A3C7D01624CE084200C1FB6A /* whitenoise2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whitenoise2.mp3; sourceTree = "<group>"; };
+		A3C7D01A24CE087100C1FB6A /* campfire1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = campfire1.mp3; sourceTree = "<group>"; };
+		A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kolicvacumm1.mp3; sourceTree = "<group>"; };
+		A3C7D02524CE104800C1FB6A /* womb1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = womb1.mp3; sourceTree = "<group>"; };
 		A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCostumHeight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +140,7 @@
 				A3C7D01C24CE0A2800C1FB6A /* categoryWomb */,
 				A3081A8F24BA1468005118B4 /* categoryLullaby1 */,
 				A3081A8E24BA1465005118B4 /* categoryLullaby2 */,
+				A33FFD8B24E00C0E0097E454 /* categoryLullaby3 */,
 				A3081A8D24BA1463005118B4 /* categoryMusicbox */,
 				A3081A9424BA1477005118B4 /* categoryClassicmusic */,
 				A3081A9324BA1474005118B4 /* categoryColic */,
@@ -176,7 +195,8 @@
 		A3081A8E24BA1465005118B4 /* categoryLullaby2 */ = {
 			isa = PBXGroup;
 			children = (
-				4AFD906324D95FF600551004 /* dandini.mp3 */,
+				A33FFD8924E00B230097E454 /* SleepLullaby2.mp3 */,
+				4AFD906324D95FF600551004 /* DandiniNinni.mp3 */,
 			);
 			path = categoryLullaby2;
 			sourceTree = "<group>";
@@ -184,7 +204,8 @@
 		A3081A8F24BA1468005118B4 /* categoryLullaby1 */ = {
 			isa = PBXGroup;
 			children = (
-				A3C7CFF924CDAF9E00C1FB6A /* pedagog_ninni.mp3 */,
+				A33FFD8724E009A90097E454 /* SleepLullaby1.mp3 */,
+				A3C7CFF924CDAF9E00C1FB6A /* PedagogNinni1.mp3 */,
 			);
 			path = categoryLullaby1;
 			sourceTree = "<group>";
@@ -199,7 +220,7 @@
 		A3081A9124BA146E005118B4 /* categoryHairdryer */ = {
 			isa = PBXGroup;
 			children = (
-				A3C7CFF724CDAF8F00C1FB6A /* hairdryer.mp3 */,
+				A3C7CFF724CDAF8F00C1FB6A /* hairdryer1.mp3 */,
 			);
 			path = categoryHairdryer;
 			sourceTree = "<group>";
@@ -207,6 +228,8 @@
 		A3081A9224BA1471005118B4 /* categoryGirl */ = {
 			isa = PBXGroup;
 			children = (
+				A33FFD9724E013950097E454 /* SleepGirl1.mp3 */,
+				A33FFD9624E013950097E454 /* SleepGirl2.mp3 */,
 			);
 			path = categoryGirl;
 			sourceTree = "<group>";
@@ -214,7 +237,7 @@
 		A3081A9324BA1474005118B4 /* categoryColic */ = {
 			isa = PBXGroup;
 			children = (
-				A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */,
+				A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm1.mp3 */,
 			);
 			path = categoryColic;
 			sourceTree = "<group>";
@@ -234,6 +257,8 @@
 		A3081A9524BA147B005118B4 /* categoryBoy */ = {
 			isa = PBXGroup;
 			children = (
+				A33FFD9324E010060097E454 /* SleepBoy1.mp3 */,
+				A33FFD9224E010050097E454 /* SleepBoy2.mp3 */,
 			);
 			path = categoryBoy;
 			sourceTree = "<group>";
@@ -241,7 +266,7 @@
 		A3081A9624BA14E1005118B4 /* categoryWave */ = {
 			isa = PBXGroup;
 			children = (
-				A3C7CFFF24CDAFD100C1FB6A /* wave.mp3 */,
+				A3C7CFFF24CDAFD100C1FB6A /* wave1.mp3 */,
 			);
 			path = categoryWave;
 			sourceTree = "<group>";
@@ -249,7 +274,7 @@
 		A3081A9724BA14E5005118B4 /* categoryWater */ = {
 			isa = PBXGroup;
 			children = (
-				A3C7CFFD24CDAFC400C1FB6A /* watersound.mp3 */,
+				A3C7CFFD24CDAFC400C1FB6A /* watersound1.mp3 */,
 			);
 			path = categoryWater;
 			sourceTree = "<group>";
@@ -289,6 +314,16 @@
 			path = MR.Baby;
 			sourceTree = "<group>";
 		};
+		A33FFD8B24E00C0E0097E454 /* categoryLullaby3 */ = {
+			isa = PBXGroup;
+			children = (
+				A33FFD8C24E00C2B0097E454 /* Lullaby3-Song1.mp3 */,
+				A33FFD8D24E00C2C0097E454 /* Lullaby3-Song2.mp3 */,
+				A33FFD8E24E00C2D0097E454 /* Lullaby3-Song3.mp3 */,
+			);
+			path = categoryLullaby3;
+			sourceTree = "<group>";
+		};
 		A382C22024C45C6800A40F76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,7 +335,7 @@
 		A3C7D01924CE085400C1FB6A /* categoryCampFire */ = {
 			isa = PBXGroup;
 			children = (
-				A3C7D01A24CE087100C1FB6A /* campfire.mp3 */,
+				A3C7D01A24CE087100C1FB6A /* campfire1.mp3 */,
 			);
 			path = categoryCampFire;
 			sourceTree = "<group>";
@@ -308,9 +343,9 @@
 		A3C7D01C24CE0A2800C1FB6A /* categoryWomb */ = {
 			isa = PBXGroup;
 			children = (
-				A3C7D01524CE084100C1FB6A /* whitenoise-and-heartbeat.mp3 */,
-				A3C7D01624CE084200C1FB6A /* whitenoise.mp3 */,
-				A3C7D02524CE104800C1FB6A /* womb.mp3 */,
+				A3C7D01524CE084100C1FB6A /* whitenoise1.mp3 */,
+				A3C7D01624CE084200C1FB6A /* whitenoise2.mp3 */,
+				A3C7D02524CE104800C1FB6A /* womb1.mp3 */,
 			);
 			path = categoryWomb;
 			sourceTree = "<group>";
@@ -390,31 +425,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3C7D02024CE0B4C00C1FB6A /* kolicvacumm.mp3 in Resources */,
+				A33FFD9524E010060097E454 /* SleepBoy1.mp3 in Resources */,
+				A3C7D02024CE0B4C00C1FB6A /* kolicvacumm1.mp3 in Resources */,
 				A3C7CFFC24CDAFB200C1FB6A /* musicbox1.mp3 in Resources */,
-				A3C7D00024CDAFD100C1FB6A /* wave.mp3 in Resources */,
-				A3C7CFFE24CDAFC400C1FB6A /* watersound.mp3 in Resources */,
+				A3C7D00024CDAFD100C1FB6A /* wave1.mp3 in Resources */,
+				A3C7CFFE24CDAFC400C1FB6A /* watersound1.mp3 in Resources */,
 				A33DDD5924B0861B00BEF2A9 /* LaunchScreen.storyboard in Resources */,
-				4AFD906424D95FF600551004 /* dandini.mp3 in Resources */,
+				4AFD906424D95FF600551004 /* DandiniNinni.mp3 in Resources */,
+				A33FFD8F24E00C2D0097E454 /* Lullaby3-Song1.mp3 in Resources */,
 				A3081A8924B9E3C8005118B4 /* birdSound.mp3 in Resources */,
 				A3081A9D24BA1C0E005118B4 /* birdSound4.mp3 in Resources */,
-				A3C7CFF824CDAF8F00C1FB6A /* hairdryer.mp3 in Resources */,
+				A33FFD8824E009A90097E454 /* SleepLullaby1.mp3 in Resources */,
+				A3C7CFF824CDAF8F00C1FB6A /* hairdryer1.mp3 in Resources */,
 				A3081A9F24BA1C0E005118B4 /* birdSound5.mp3 in Resources */,
-				A3C7D01824CE084200C1FB6A /* whitenoise.mp3 in Resources */,
-				A3C7CFFA24CDAF9E00C1FB6A /* pedagog_ninni.mp3 in Resources */,
+				A33FFD9124E00C2D0097E454 /* Lullaby3-Song3.mp3 in Resources */,
+				A3C7D01824CE084200C1FB6A /* whitenoise2.mp3 in Resources */,
+				A3C7CFFA24CDAF9E00C1FB6A /* PedagogNinni1.mp3 in Resources */,
 				A33DDD6324B0890300BEF2A9 /* ItemCollectionViewCell.xib in Resources */,
 				A3081A9E24BA1C0E005118B4 /* birdSound3.mp3 in Resources */,
+				A33FFD9924E013950097E454 /* SleepGirl1.mp3 in Resources */,
 				A3C7D00A24CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 in Resources */,
 				A3C7D00924CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 in Resources */,
-				A3C7D02624CE104900C1FB6A /* womb.mp3 in Resources */,
+				A33FFD9824E013950097E454 /* SleepGirl2.mp3 in Resources */,
+				A33FFD8A24E00B240097E454 /* SleepLullaby2.mp3 in Resources */,
+				A3C7D02624CE104900C1FB6A /* womb1.mp3 in Resources */,
+				A33FFD9024E00C2D0097E454 /* Lullaby3-Song2.mp3 in Resources */,
 				A3081A9924BA17B3005118B4 /* birdSound2.mp3 in Resources */,
 				A33DDD5624B0861B00BEF2A9 /* Assets.xcassets in Resources */,
 				A3C7D00D24CDB90700C1FB6A /* Chopin-Nocturneop.9No.2.mp3 in Resources */,
 				A3C7D01424CE083200C1FB6A /* mozart-piano-Sonata.mp3 in Resources */,
 				A3C7D01024CDB9B700C1FB6A /* Beethoven-FurElise.mp3 in Resources */,
-				A3C7D01B24CE087100C1FB6A /* campfire.mp3 in Resources */,
+				A3C7D01B24CE087100C1FB6A /* campfire1.mp3 in Resources */,
 				A33DDD5424B0861700BEF2A9 /* Main.storyboard in Resources */,
-				A3C7D01724CE084200C1FB6A /* whitenoise-and-heartbeat.mp3 in Resources */,
+				A3C7D01724CE084200C1FB6A /* whitenoise1.mp3 in Resources */,
+				A33FFD9424E010060097E454 /* SleepBoy2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
