@@ -142,6 +142,7 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
         let position = indexPath.row
         myposition = position
         guard let mvc = storyboard?.instantiateViewController(identifier: "SoundPlayerVC") as? SoundPlayerVC else {
@@ -149,18 +150,7 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
         }
         mvc.songs = selectedCategorySongs
         mvc.position = position
-        //        present(mvc, animated: true)
-        //
-        //        chosenAudioTitle = selectedCategorySongs[indexPath.row].title
-        //        chosenAudioName = selectedCategorySongs[indexPath.row].audioName
-        //        chosenBackgroundImage = selectedCategorySongs[indexPath.row].backgroundImageName
-        //        chosenStoryDuration = selectedCategorySongs[indexPath.row].duration
-        //        chosenAudioType = selectedCategorySongs[indexPath.row].audioType
-        //        chosenAudioSubTitle = selectedCategorySongs[indexPath.row].audioSubtitle
-        
-        
-        
-        
+  
         performSegue(withIdentifier: "toSoundPlayerVC", sender: nil)
     }
     
@@ -174,14 +164,6 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
             
             destinationVC.songs = selectedCategorySongs
             destinationVC.position = myposition
-            
-            //            destinationVC.selectedAudioTitle = chosenAudioTitle
-            //            destinationVC.selectedAudioName = chosenAudioName
-            //            destinationVC.selectedBackgroundImage = chosenBackgroundImage
-            //            destinationVC.selectedStoryDuration = chosenStoryDuration
-            //            destinationVC.selectedAudioType = chosenAudioType
-            //            destinationVC.selectedAudioSubtitle = chosenAudioSubTitle
-            //            destinationVC.selectedCategorySongs1 = selectedCategorySongs
             
         }
     }
@@ -199,5 +181,6 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
         backButton.backgroundColor = .white
         backButton.layer.cornerRadius = 8.0
     }
+
     
 }
