@@ -63,6 +63,23 @@ class ViewController: UIViewController {
             Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "01:40", audioName: "catLullaby3_item3", audioType: "mp3"),
             Song(title: "Lullaby 2", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "38:03", audioName: "catLullaby3_item4", audioType: "mp3"),
             Song(title: "Lullaby 3", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "21:35", audioName: "catLullaby3_item5", audioType: "mp3")]),
+        
+        Item(title: "Boy", audioCoverImage: "categoryBoy", audioPackageCount: "2", AudioPackageCoverImage: "categoryBoy", audioCategory: "Lullaby",songs: [
+            Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "29:10", audioName: "SleepBoy1", audioType: "mp3"),
+            Song(title: "Song 1", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "19:00", audioName: "SleepBoy2", audioType: "mp3"),
+            Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "03:06", audioName: "SleepBoy3", audioType: "mp3"),
+            Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "03:21", audioName: "SleepBoy4", audioType: "mp3"),
+            Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "03:25", audioName: "SleepBoy5", audioType: "mp3"),
+            Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "01:51", audioName: "SleepBoy6", audioType: "mp3")]),
+        
+        Item(title: "Girl", audioCoverImage: "categoryGirl", audioPackageCount: "2", AudioPackageCoverImage: "categoryGirl", audioCategory: "Lullaby",songs: [
+            Song(title: "Sleep Girl 1", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl1", audioType: "mp3"),
+            Song(title: "Sleep Girl 2", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "15:11", audioName: "SleepGirl2", audioType: "mp3"),
+            Song(title: "Sleep Girl 3", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl3", audioType: "mp3"),
+            Song(title: "Sleep Girl 4", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl4", audioType: "mp3"),
+            Song(title: "Sleep Girl 5", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl5", audioType: "mp3"),
+            Song(title: "Sleep Girl 6", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl6", audioType: "mp3")]),
+        
 
         Item(title: "Colic Music", audioCoverImage: "categoryColic", audioPackageCount: "1", AudioPackageCoverImage: "categoryColic", audioCategory: "Lullaby",songs: [
             Song(title: "Colic", audioSubtitle: "", backgroundImageName: "categoryColic", duration: "10:00", audioName: "kolicvacumm", audioType: "mp3")]),
@@ -125,21 +142,7 @@ class ViewController: UIViewController {
         
         
        
-        Item(title: "Boy", audioCoverImage: "categoryBoy", audioPackageCount: "2", AudioPackageCoverImage: "categoryBoy", audioCategory: "Lullaby",songs: [
-            Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "29:10", audioName: "SleepBoy1", audioType: "mp3"),
-            Song(title: "Song 1", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "19:00", audioName: "SleepBoy2", audioType: "mp3"),
-            Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "03:06", audioName: "SleepBoy3", audioType: "mp3"),
-            Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "03:21", audioName: "SleepBoy4", audioType: "mp3"),
-            Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "03:25", audioName: "SleepBoy5", audioType: "mp3"),
-            Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "01:51", audioName: "SleepBoy6", audioType: "mp3")]),
         
-        Item(title: "Girl", audioCoverImage: "categoryGirl", audioPackageCount: "2", AudioPackageCoverImage: "categoryGirl", audioCategory: "Lullaby",songs: [
-            Song(title: "Sleep Girl 1", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl1", audioType: "mp3"),
-            Song(title: "Sleep Girl 2", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "15:11", audioName: "SleepGirl2", audioType: "mp3"),
-            Song(title: "Sleep Girl 3", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl3", audioType: "mp3"),
-            Song(title: "Sleep Girl 4", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl4", audioType: "mp3"),
-            Song(title: "Sleep Girl 5", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl5", audioType: "mp3"),
-            Song(title: "Sleep Girl 6", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl6", audioType: "mp3")])
         
           ]
     
