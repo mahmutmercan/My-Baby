@@ -118,7 +118,7 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoryListCell", for: indexPath)
         
-        cell.textLabel?.text = selectedCategorySongs[indexPath.item].title
+        cell.textLabel?.text = String(selectedCategoriesLabel) + " " + String(indexPath.row + 1)
         cell.detailTextLabel?.text = selectedCategorySongs[indexPath.item].duration
         
         cell.detailTextLabel?.textColor = UIColor.darkGray
