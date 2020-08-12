@@ -79,7 +79,7 @@
 		A3C7D01824CE084200C1FB6A /* whitenoise2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01624CE084200C1FB6A /* whitenoise2.mp3 */; };
 		A3C7D01B24CE087100C1FB6A /* campfire1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01A24CE087100C1FB6A /* campfire1.mp3 */; };
 		A3C7D02024CE0B4C00C1FB6A /* kolicvacumm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */; };
-		A3C7D02624CE104900C1FB6A /* womb1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D02524CE104800C1FB6A /* womb1.mp3 */; };
+		A3C7D02624CE104900C1FB6A /* womb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D02524CE104800C1FB6A /* womb.mp3 */; };
 		A3D39ABF24C59A9300C538A7 /* SliderCostumHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */; };
 /* End PBXBuildFile section */
 
@@ -158,7 +158,7 @@
 		A3C7D01624CE084200C1FB6A /* whitenoise2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whitenoise2.mp3; sourceTree = "<group>"; };
 		A3C7D01A24CE087100C1FB6A /* campfire1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = campfire1.mp3; sourceTree = "<group>"; };
 		A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kolicvacumm.mp3; sourceTree = "<group>"; };
-		A3C7D02524CE104800C1FB6A /* womb1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = womb1.mp3; sourceTree = "<group>"; };
+		A3C7D02524CE104800C1FB6A /* womb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = womb.mp3; sourceTree = "<group>"; };
 		A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCostumHeight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,9 +212,9 @@
 			children = (
 				4AD3E0C424E13D7600AB327E /* categoryHappyBirthday */,
 				A3C7D01C24CE0A2800C1FB6A /* categoryWomb */,
-				A3081A8F24BA1468005118B4 /* categoryLullaby1 */,
-				A3081A8E24BA1465005118B4 /* categoryLullaby2 */,
-				A33FFD8B24E00C0E0097E454 /* categoryLullaby3 */,
+				A3081A8F24BA1468005118B4 /* categoryLullaby */,
+				A3081A8E24BA1465005118B4 /* categorySweetDream */,
+				A33FFD8B24E00C0E0097E454 /* categoryMoonSongs */,
 				A3081A8D24BA1463005118B4 /* categoryMusicbox */,
 				A3081A9424BA1477005118B4 /* categoryClassicmusic */,
 				A3081A9324BA1474005118B4 /* categoryColic */,
@@ -275,7 +275,7 @@
 			path = categoryMusicbox;
 			sourceTree = "<group>";
 		};
-		A3081A8E24BA1465005118B4 /* categoryLullaby2 */ = {
+		A3081A8E24BA1465005118B4 /* categorySweetDream */ = {
 			isa = PBXGroup;
 			children = (
 				4AD3E0FA24E2B0AB00AB327E /* catLullaby2_item0.mp3 */,
@@ -285,10 +285,10 @@
 				A33FFD8924E00B230097E454 /* catLullaby2_item4.mp3 */,
 				4AFD906324D95FF600551004 /* catLullaby2_item5.mp3 */,
 			);
-			path = categoryLullaby2;
+			path = categorySweetDream;
 			sourceTree = "<group>";
 		};
-		A3081A8F24BA1468005118B4 /* categoryLullaby1 */ = {
+		A3081A8F24BA1468005118B4 /* categoryLullaby */ = {
 			isa = PBXGroup;
 			children = (
 				4AD3E0ED24E2AF2E00AB327E /* SleepLullaby3.mp3 */,
@@ -299,7 +299,7 @@
 				A33FFD8724E009A90097E454 /* SleepLullaby1.mp3 */,
 				A3C7CFF924CDAF9E00C1FB6A /* SleepLullaby2.mp3 */,
 			);
-			path = categoryLullaby1;
+			path = categoryLullaby;
 			sourceTree = "<group>";
 		};
 		A3081A9024BA146B005118B4 /* categoryIslamiclullaby */ = {
@@ -415,7 +415,7 @@
 			path = MR.Baby;
 			sourceTree = "<group>";
 		};
-		A33FFD8B24E00C0E0097E454 /* categoryLullaby3 */ = {
+		A33FFD8B24E00C0E0097E454 /* categoryMoonSongs */ = {
 			isa = PBXGroup;
 			children = (
 				4AD3E10024E2B2A500AB327E /* catLullaby3_item0.mp3 */,
@@ -425,7 +425,7 @@
 				A33FFD8D24E00C2C0097E454 /* catLullaby3_item4.mp3 */,
 				A33FFD8E24E00C2D0097E454 /* catLullaby3_item5.mp3 */,
 			);
-			path = categoryLullaby3;
+			path = categoryMoonSongs;
 			sourceTree = "<group>";
 		};
 		A382C22024C45C6800A40F76 /* Utilities */ = {
@@ -449,7 +449,7 @@
 			children = (
 				A3C7D01524CE084100C1FB6A /* whitenoise1.mp3 */,
 				A3C7D01624CE084200C1FB6A /* whitenoise2.mp3 */,
-				A3C7D02524CE104800C1FB6A /* womb1.mp3 */,
+				A3C7D02524CE104800C1FB6A /* womb.mp3 */,
 			);
 			path = categoryWomb;
 			sourceTree = "<group>";
@@ -576,7 +576,7 @@
 				4AD3E0D724E2AB7000AB327E /* music_box_3.mp3 in Resources */,
 				A33FFD9824E013950097E454 /* SleepGirl2.mp3 in Resources */,
 				A33FFD8A24E00B240097E454 /* catLullaby2_item4.mp3 in Resources */,
-				A3C7D02624CE104900C1FB6A /* womb1.mp3 in Resources */,
+				A3C7D02624CE104900C1FB6A /* womb.mp3 in Resources */,
 				A33FFD9024E00C2D0097E454 /* catLullaby3_item4.mp3 in Resources */,
 				A3081A9924BA17B3005118B4 /* birdSound2.mp3 in Resources */,
 				4AD3E0DA24E2AB7000AB327E /* music_box_1.mp3 in Resources */,

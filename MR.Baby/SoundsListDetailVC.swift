@@ -148,6 +148,7 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
         guard let mvc = storyboard?.instantiateViewController(identifier: "SoundPlayerVC") as? SoundPlayerVC else {
             return
         }
+        
         mvc.songs = selectedCategorySongs
         mvc.position = position
   

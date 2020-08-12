@@ -175,7 +175,7 @@ class SoundPlayerVC: UIViewController {
     }
     
     @objc func updateSlider() {
-        slider?.value = Float(audioPlayer!.currentTime)
+        slider?.value = Float(audioPlayer!.currentTime )
 
     }
     
@@ -202,8 +202,8 @@ extension SoundPlayerVC{
     //    MARK: Funcs are here
     
     func sliderConfigure(){
-//        self.slider?.minimumValue = 0.0
-//        self.slider!.maximumValue = Float(audioPlayer!.duration)
+        self.slider?.minimumValue = 0.0
+        self.slider!.maximumValue = Float(audioPlayer!.duration)
     }
     
     func startTimer() {

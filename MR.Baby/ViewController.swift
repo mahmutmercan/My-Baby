@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     var items: [Item] = [
         Item(title: "", audioCoverImage: "categories", audioPackageCount: "", AudioPackageCoverImage: "", audioCategory: "",songs: []),
         
-        Item(title: "Lullaby", audioCoverImage: "categoryLullaby1", audioPackageCount: "2", AudioPackageCoverImage: "categoryLullaby1", audioCategory: "Lullaby 1",songs: [
+        Item(title: "Lullaby", audioCoverImage: "categoryLullaby", audioPackageCount: "2", AudioPackageCoverImage: "categoryLullaby", audioCategory: "Lullaby 1",songs: [
             Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "03:17", audioName: "SleepLullaby3", audioType: "mp3"),
             Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "01:20", audioName: "SleepLullaby4", audioType: "mp3"),
             Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "02:15", audioName: "SleepLullaby5", audioType: "mp3"),
@@ -49,20 +49,20 @@ class ViewController: UIViewController {
             Song(title: "Lullaby 2", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "15:00", audioName: "SleepLullaby2", audioType: "mp3"),]),
         
         Item(title: "Sweet Dream", audioCoverImage: "categoryLullaby2", audioPackageCount: "2", AudioPackageCoverImage: "categoryLullaby2", audioCategory: "Lullaby 2",songs: [
-            Song(title: "Dandini", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "02:51", audioName: "catLullaby2_item0", audioType: "mp3"),
-            Song(title: "Dandini", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "03:27", audioName: "catLullaby2_item1", audioType: "mp3"),
-            Song(title: "Dandini", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item2", audioType: "mp3"),
-            Song(title: "Dandini", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "01:12", audioName: "catLullaby2_item3", audioType: "mp3"),
-            Song(title: "Sleep Song", audioSubtitle: "", backgroundImageName: "lullaby2Detail", duration: "21:35", audioName: "catLullaby2_item4", audioType: "mp3"),
-            Song(title: "Dandini", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item5", audioType: "mp3")]),
+            Song(title: "Sweet Dream 1", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "02:51", audioName: "catLullaby2_item0", audioType: "mp3"),
+            Song(title: "Sweet Dream 2", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "03:27", audioName: "catLullaby2_item1", audioType: "mp3"),
+            Song(title: "Sweet Dream 3", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item2", audioType: "mp3"),
+            Song(title: "Sweet Dream 4", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "01:12", audioName: "catLullaby2_item3", audioType: "mp3"),
+            Song(title: "Sweet Dream 5", audioSubtitle: "", backgroundImageName: "lullaby2Detail", duration: "21:35", audioName: "catLullaby2_item4", audioType: "mp3"),
+            Song(title: "Sweet Dream 6", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item5", audioType: "mp3")]),
         
         Item(title: "Moon Songs", audioCoverImage: "categoryLullaby3", audioPackageCount: "3", AudioPackageCoverImage: "categoryLullaby3", audioCategory: "", songs: [
-            Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "00:54", audioName: "catLullaby3_item0", audioType: "mp3"),
-            Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "02:22", audioName: "catLullaby3_item1", audioType: "mp3"),
-            Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "18:44", audioName: "catLullaby3_item2", audioType: "wav"),
-            Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "01:40", audioName: "catLullaby3_item3", audioType: "mp3"),
-            Song(title: "Lullaby 2", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "38:03", audioName: "catLullaby3_item4", audioType: "mp3"),
-            Song(title: "Lullaby 3", audioSubtitle: "", backgroundImageName: "lullaby3Detail", duration: "21:35", audioName: "catLullaby3_item5", audioType: "mp3")]),
+            Song(title: "Moon Songs 1", audioSubtitle: "", backgroundImageName: "moonSong", duration: "00:54", audioName: "catLullaby3_item0", audioType: "mp3"),
+            Song(title: "Moon Songs 2", audioSubtitle: "", backgroundImageName: "moonSong", duration: "02:22", audioName: "catLullaby3_item1", audioType: "mp3"),
+            Song(title: "Moon Songs 3", audioSubtitle: "", backgroundImageName: "moonSong", duration: "18:44", audioName: "catLullaby3_item2", audioType: "wav"),
+            Song(title: "Moon Songs 4", audioSubtitle: "", backgroundImageName: "moonSong", duration: "01:40", audioName: "catLullaby3_item3", audioType: "mp3"),
+            Song(title: "Moon Songs 5", audioSubtitle: "", backgroundImageName: "moonSong", duration: "38:03", audioName: "catLullaby3_item4", audioType: "mp3"),
+            Song(title: "Moon Songs 7", audioSubtitle: "", backgroundImageName: "moonSong", duration: "21:35", audioName: "catLullaby3_item5", audioType: "mp3")]),
         
         Item(title: "Boy", audioCoverImage: "categoryBoy", audioPackageCount: "2", AudioPackageCoverImage: "categoryBoy", audioCategory: "Lullaby",songs: [
             Song(title: "Sleep", audioSubtitle: "", backgroundImageName: "boyDetail", duration: "29:10", audioName: "SleepBoy1", audioType: "mp3"),
@@ -109,7 +109,7 @@ class ViewController: UIViewController {
        
         Item(title: "Hair Dryer", audioCoverImage: "categoryHairdryer", audioPackageCount: "1", AudioPackageCoverImage: "categoryHairdryer", audioCategory: "Lullaby",songs: [
 
-            Song(title: "Hair Dryer", audioSubtitle: "", backgroundImageName: "hairdrierDetail", duration: "03:09", audioName: "hairdryer", audioType: "mp3")]),
+            Song(title: "Hair Dryer", audioSubtitle: "", backgroundImageName: "hairdrierDetail", duration: "03:09", audioName: "hairdryer1", audioType: "mp3")]),
    
 
         Item(title: "Vacuum Cleaner", audioCoverImage: "categoryVacuumcleaner", audioPackageCount: "1", AudioPackageCoverImage: "categoryVacuumcleaner", audioCategory: "Lullaby",songs: [
@@ -135,10 +135,10 @@ class ViewController: UIViewController {
         //Item(title: "Rain", audioCoverImage: "categoryRain", audioPackageCount: "1", AudioPackageCoverImage: "categoryRain", audioCategory: "Lullaby",songs: []),
         
         Item(title: "Water", audioCoverImage: "categoryWater", audioPackageCount: "1", AudioPackageCoverImage: "categoryWater", audioCategory: "Lullaby",songs: [
-            Song(title: "Water Sound", audioSubtitle: "Naturel", backgroundImageName: "watersoundDetail1", duration: "05:00", audioName: "watersound", audioType: "mp3")]),
+            Song(title: "Water Sound", audioSubtitle: "Naturel", backgroundImageName: "watersoundDetail1", duration: "05:00", audioName: "watersound1", audioType: "mp3")]),
         
         Item(title: "Wave", audioCoverImage: "categoryWave", audioPackageCount: "1", AudioPackageCoverImage: "categoryWave", audioCategory: "Lullaby",songs: [
-            Song(title: "Wave", audioSubtitle: "Naturel", backgroundImageName: "categoryWave", duration: "07:06", audioName: "wawe", audioType: "mp3")]),
+            Song(title: "Wave", audioSubtitle: "Naturel", backgroundImageName: "categoryWave", duration: "07:06", audioName: "wave1", audioType: "mp3")]),
         
         
        
@@ -269,7 +269,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func showCategoriesAlert(){
         //Mahmut buradaki metinleri düzenleyin
-        let alert = UIAlertController(title: String(NSLocalizedString("Category_Alert_Title", comment: "")), message: "Lütfen aşağıdakilerden tekini seçip dinlemeye başla.", preferredStyle: .alert)
+        let alert = UIAlertController(title: String(NSLocalizedString("Merhaba", comment: "")), message: "Lütfen aşağıdaki kategorilere gözat.", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
