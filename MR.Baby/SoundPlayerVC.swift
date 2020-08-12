@@ -62,7 +62,7 @@ class SoundPlayerVC: UIViewController {
         super.viewDidLoad()
         audioPlayer?.stop()
         
-        slideBack()
+//        slideBack()
         
         setInterface()
         setTargets()
