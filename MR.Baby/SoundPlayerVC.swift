@@ -68,7 +68,6 @@ class SoundPlayerVC: UIViewController {
         setTargets()
         audioPlayerConfigure()
         sliderConfigure()
-
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -86,6 +85,13 @@ class SoundPlayerVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        if let player = audioPlayer {
+            player.stop()
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         if let player = audioPlayer {
             player.stop()
         }
