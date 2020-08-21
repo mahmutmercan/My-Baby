@@ -112,8 +112,8 @@ class ViewController: UIViewController {
         
         Item(title: "Womb", audioCoverImage: "categoryWhomb", audioPackageCount: "3", AudioPackageCoverImage: "categoryWhomb", audioCategory: "", songs: [
             Song(title: "Womb", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "15:59", audioName: "womb", audioType: "mp3"),
-            Song(title: "White Noise", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "09:15", audioName: "whitenoise", audioType: "mp3"),
-            Song(title: "White Noise and Heartbeat", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "08:34", audioName: "whitenoise-and-heartbeat", audioType: "mp3"),]),
+            Song(title: "White Noise", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "09:15", audioName: "whitenoise1", audioType: "mp3"),
+            Song(title: "White Noise and Heartbeat", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "08:34", audioName: "whitenoise2", audioType: "mp3"),]),
         
         
         Item(title: "Colic Music", audioCoverImage: "categoryColic", audioPackageCount: "1", AudioPackageCoverImage: "categoryColic", audioCategory: "Lullaby",songs: [
@@ -144,14 +144,11 @@ class ViewController: UIViewController {
         Item(title: "Wave", audioCoverImage: "categoryWave", audioPackageCount: "1", AudioPackageCoverImage: "categoryWave", audioCategory: "Lullaby",songs: [
             Song(title: "Wave", audioSubtitle: "Naturel", backgroundImageName: "categoryWave", duration: "07:06", audioName: "wave1", audioType: "mp3")]),
         
-        
-       
-        
-        
-          ]
+        ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Singleton.sharedInstance.stop()
         
         setupView()
         setupCollectionView()

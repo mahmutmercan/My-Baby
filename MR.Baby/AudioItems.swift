@@ -8,7 +8,30 @@
 
 import Foundation
 
-class AudioItems {
-    // MARK: buraya ses dosyaları gelecek
+class AudioItems: NSObject {
+    var title: String?
+    var audioCoverImage: String?
+    var audioPackageCount: String?
+    var audioCategory: String?
     
+    
+    init(title: String, audioCoverImage: String, audioPackageCount: String, audioCategory: String) {
+        self.title = title
+        self.audioPackageCount = audioPackageCount
+        self.audioCoverImage = audioCoverImage
+        self.audioCategory = audioCategory
+    }
 }
+
+var exampleAudioItems: [AudioItems] = [AudioItems(title: "audio Title", audioCoverImage: "cover Image", audioPackageCount: "25", audioCategory: "Sample") ]
+
+
+
+class AudioItemSong: NSObject {
+    var title: String?
+    
+    init(title: String) {
+        self.title = title
+    }
+}
+

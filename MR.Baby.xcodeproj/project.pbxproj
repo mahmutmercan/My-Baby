@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A556EFD24EFA68400271D94 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A556EFC24EFA68400271D94 /* Singleton.swift */; };
 		4AD3E0C624E13D8A00AB327E /* happybirthday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AD3E0C524E13D8A00AB327E /* happybirthday.mp3 */; };
 		4AD3E0C824E13E7600AB327E /* AudioItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3E0C724E13E7600AB327E /* AudioItems.swift */; };
 		4AD3E0CB24E2A9C900AB327E /* birdSound6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AD3E0C924E2A9C800AB327E /* birdSound6.mp3 */; };
@@ -84,6 +85,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A556EFC24EFA68400271D94 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		4AD3E0C524E13D8A00AB327E /* happybirthday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = happybirthday.mp3; sourceTree = "<group>"; };
 		4AD3E0C724E13E7600AB327E /* AudioItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItems.swift; sourceTree = "<group>"; };
 		4AD3E0C924E2A9C800AB327E /* birdSound6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound6.mp3; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				A382C22124C45C7D00A40F76 /* Utilities.swift */,
+				4A556EFC24EFA68400271D94 /* Singleton.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				A33DDD5124B0861700BEF2A9 /* ViewController.swift in Sources */,
 				A33DDD6724B0B3EC00BEF2A9 /* SoundPlayerVC.swift in Sources */,
 				A3D39ABF24C59A9300C538A7 /* SliderCostumHeight.swift in Sources */,
+				4A556EFD24EFA68400271D94 /* Singleton.swift in Sources */,
 				4AD3E0C824E13E7600AB327E /* AudioItems.swift in Sources */,
 				A382C22224C45C7D00A40F76 /* Utilities.swift in Sources */,
 				A33DDD6224B0890300BEF2A9 /* ItemCollectionViewCell.swift in Sources */,

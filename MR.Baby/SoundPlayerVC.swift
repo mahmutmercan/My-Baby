@@ -89,13 +89,7 @@ class SoundPlayerVC: UIViewController {
             player.stop()
         }
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        if let player = audioPlayer {
-            player.stop()
-        }
-    }
+ 
     
     func slideBack(){
         let gestureSlideBack = UISwipeGestureRecognizer(target: self, action: #selector(self.backButtonTapped))
@@ -166,6 +160,8 @@ class SoundPlayerVC: UIViewController {
     
     
     @IBAction func backButtonTapped(_ sender: Any) {
+        audioPlayer?.stop()
+        resetTimer()
         self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
