@@ -46,6 +46,7 @@
 		A3081A9D24BA1C0E005118B4 /* birdSound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3081A9A24BA1C0E005118B4 /* birdSound4.mp3 */; };
 		A3081A9E24BA1C0E005118B4 /* birdSound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3081A9B24BA1C0E005118B4 /* birdSound3.mp3 */; };
 		A3081A9F24BA1C0E005118B4 /* birdSound5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3081A9C24BA1C0E005118B4 /* birdSound5.mp3 */; };
+		A3131F2724F7B9C800089DA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3131F2624F7B9C800089DA2 /* GoogleService-Info.plist */; };
 		A33DDD4D24B0861700BEF2A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD4C24B0861700BEF2A9 /* AppDelegate.swift */; };
 		A33DDD4F24B0861700BEF2A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD4E24B0861700BEF2A9 /* SceneDelegate.swift */; };
 		A33DDD5124B0861700BEF2A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD5024B0861700BEF2A9 /* ViewController.swift */; };
@@ -124,6 +125,7 @@
 		A3081A9A24BA1C0E005118B4 /* birdSound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound4.mp3; sourceTree = "<group>"; };
 		A3081A9B24BA1C0E005118B4 /* birdSound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound3.mp3; sourceTree = "<group>"; };
 		A3081A9C24BA1C0E005118B4 /* birdSound5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birdSound5.mp3; sourceTree = "<group>"; };
+		A3131F2624F7B9C800089DA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A33DDD4924B0861700BEF2A9 /* MyBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33DDD4C24B0861700BEF2A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A33DDD4E24B0861700BEF2A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 				A33DDD5224B0861700BEF2A9 /* Main.storyboard */,
 				A33DDD5724B0861B00BEF2A9 /* LaunchScreen.storyboard */,
 				A33DDD5A24B0861B00BEF2A9 /* Info.plist */,
+				A3131F2624F7B9C800089DA2 /* GoogleService-Info.plist */,
 				A33DDD5024B0861700BEF2A9 /* ViewController.swift */,
 				A33DDD6424B09CD700BEF2A9 /* SoundsListDetailVC.swift */,
 				A33DDD6624B0B3EC00BEF2A9 /* SoundPlayerVC.swift */,
@@ -573,6 +576,7 @@
 				A3C7D00A24CDB47B00C1FB6A /* Vivaldi-The-four-seasons-winter.mp3 in Resources */,
 				4AD3E0F224E2AF3100AB327E /* SleepLullaby3.mp3 in Resources */,
 				A3C7D00924CDB47B00C1FB6A /* EdvardGrieg-Peer-gynt-morning-mood.mp3 in Resources */,
+				A3131F2724F7B9C800089DA2 /* GoogleService-Info.plist in Resources */,
 				4AD3E0DB24E2AB7000AB327E /* music_box_4.mp3 in Resources */,
 				4AD3E0E124E2ACE400AB327E /* SleepBoy5.mp3 in Resources */,
 				4AD3E0EC24E2ADC600AB327E /* SleepGirl6.mp3 in Resources */,
@@ -761,7 +765,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 9B6AFN73DR;
 				INFOPLIST_FILE = MR.Baby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -769,7 +773,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahmutmercan.MyBaby.Lullaby.sleep.womb.sound.kindergarden.relax;
 				PRODUCT_NAME = MyBaby;
 				SWIFT_VERSION = 5.0;
@@ -782,7 +786,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 9B6AFN73DR;
 				INFOPLIST_FILE = MR.Baby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -790,7 +794,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahmutmercan.MyBaby.Lullaby.sleep.womb.sound.kindergarden.relax;
 				PRODUCT_NAME = MyBaby;
 				SWIFT_VERSION = 5.0;

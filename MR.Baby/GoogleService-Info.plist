@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>150706525991-r7vaglsebqpd80vbgdemldbm8jndudaf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.150706525991-r7vaglsebqpd80vbgdemldbm8jndudaf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAnk9W3OAXZciHej923dV8fwWrKIsNpFs0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>150706525991</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mahmutmercan.MyBaby.Lullaby.sleep.womb.sound.kindergarden.relax</string>
+	<key>PROJECT_ID</key>
+	<string>mybaby-9fca3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mybaby-9fca3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:150706525991:ios:7b51f18f8a280c02193b02</string>
+	<key>DATABASE_URL</key>
+	<string>https://mybaby-9fca3.firebaseio.com</string>
+</dict>
+</plist>
