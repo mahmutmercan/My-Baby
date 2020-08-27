@@ -146,13 +146,21 @@ class SoundPlayerVC: UIViewController {
         
         if toggleStateFavorites == 1 {
             toggleStateFavorites = 2
-            favorutiesButton.setImage(UIImage(systemName: "heart.fill"), for: UIControl.State.normal)
+            if #available(iOS 13.0, *) {
+                favorutiesButton.setImage(UIImage(systemName: "heart.fill"), for: UIControl.State.normal)
+            } else {
+                // Fallback on earlier versions
+            }
             
             
             
         } else {
             toggleStateFavorites = 1
-            favorutiesButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+            if #available(iOS 13.0, *) {
+                favorutiesButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+            } else {
+                // Fallback on earlier versions
+            }
             
         }
         
@@ -260,7 +268,11 @@ extension SoundPlayerVC{
     }
     
     func backButonInitialUI(){
-        backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        if #available(iOS 13.0, *) {
+            backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        } else {
+            // Fallback on earlier versions
+        }
         backButton.tintColor = .black
         backButton.alpha = 0.8
         backButton.backgroundColor = .white
@@ -268,7 +280,11 @@ extension SoundPlayerVC{
     }
     
     func favoriteButonInitialUI(){
-        favorutiesButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+        if #available(iOS 13.0, *) {
+            favorutiesButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+        } else {
+            // Fallback on earlier versions
+        }
         favorutiesButton.tintColor = .red
         favorutiesButton.alpha = 0.8
         favorutiesButton.backgroundColor = .white
@@ -332,8 +348,16 @@ extension SoundPlayerVC{
     
     func sliderInterface(){
         slider?.maximumTrackTintColor = UIColor.white.withAlphaComponent(0.6)
-        slider?.minimumTrackTintColor = UIColor(named: "costumMatGreen")
-        slider?.thumbTintColor = UIColor(named: "costumGreen")
+        if #available(iOS 11.0, *) {
+            slider?.minimumTrackTintColor = UIColor(named: "costumMatGreen")
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 11.0, *) {
+            slider?.thumbTintColor = UIColor(named: "costumGreen")
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
 }

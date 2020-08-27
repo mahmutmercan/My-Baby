@@ -146,12 +146,16 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
         
         let position = indexPath.row
         myposition = position
-        guard let mvc = storyboard?.instantiateViewController(identifier: "SoundPlayerVC") as? SoundPlayerVC else {
-            return
+        if #available(iOS 13.0, *) {
+            guard let mvc = storyboard?.instantiateViewController(identifier: "SoundPlayerVC") as? SoundPlayerVC else {
+                return
+            }
+        } else {
+            // Fallback on earlier versions
         }
         
-        mvc.songs = selectedCategorySongs
-        mvc.position = position
+//        mvc.songs = selectedCategorySongs
+//        mvc.position = position
   
         performSegue(withIdentifier: "toSoundPlayerVC", sender: nil)
     }
@@ -177,7 +181,11 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.popViewController(animated: true)
     }
     func backButonInitialUI(){
-        backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        if #available(iOS 13.0, *) {
+            backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        } else {
+            // Fallback on earlier versions
+        }
         backButton.tintColor = .black
         backButton.alpha = 0.8
         backButton.backgroundColor = .white
