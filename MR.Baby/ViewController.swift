@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 struct Item {
     var title: String
@@ -48,19 +49,19 @@ class ViewController: UIViewController {
         Song(title: "Sweet Dream 6", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item5", audioType: "mp3")]),
         
         Item(title: "Lullaby", audioCoverImage: "categoryLullaby", audioPackageCount: "2", AudioPackageCoverImage: "categoryLullaby", audioCategory: "Lullaby 1",songs: [
-            Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "03:17", audioName: "SleepLullaby1", audioType: "mp3"),
-            Song(title: "Lullaby 2", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "01:20", audioName: "SleepLullaby2", audioType: "mp3"),
-            Song(title: "Lullaby 3", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "02:15", audioName: "SleepLullaby3", audioType: "mp3"),
-            Song(title: "Lullaby 4", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "01:16", audioName: "SleepLullaby4", audioType: "mp3"),
-            Song(title: "Lullaby 5", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "01:15", audioName: "SleepLullaby5", audioType: "wav"),
-            Song(title: "Lullaby 6", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "29:10", audioName: "SleepLullaby6", audioType: "mp3"),
-            Song(title: "Lullaby 7", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "15:00", audioName: "SleepLullaby7", audioType: "mp3"),]),
+            Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "29:10", audioName: "SleepLullaby1", audioType: "mp3"),
+            Song(title: "Lullaby 2", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "15:00", audioName: "SleepLullaby2", audioType: "mp3"),
+            Song(title: "Lullaby 3", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "03:16", audioName: "SleepLullaby3", audioType: "mp3"),
+            Song(title: "Lullaby 4", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "01:20", audioName: "SleepLullaby4", audioType: "mp3"),
+            Song(title: "Lullaby 5", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "02:15", audioName: "SleepLullaby5", audioType: "wav"),
+            Song(title: "Lullaby 6", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "01:16", audioName: "SleepLullaby6", audioType: "mp3"),
+            Song(title: "Lullaby 7", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "01:15", audioName: "SleepLullaby7", audioType: "mp3"),]),
         
         Item(title: "Moon Songs", audioCoverImage: "categoryLullaby3", audioPackageCount: "3", AudioPackageCoverImage: "categoryLullaby3", audioCategory: "Lullaby", songs: [
             Song(title: "Moon Songs 1", audioSubtitle: "", backgroundImageName: "moonSong", duration: "00:54", audioName: "catLullaby3_item0", audioType: "mp3"),
             Song(title: "Moon Songs 2", audioSubtitle: "", backgroundImageName: "moonSong", duration: "02:22", audioName: "catLullaby3_item1", audioType: "mp3"),
-            Song(title: "Moon Songs 3", audioSubtitle: "", backgroundImageName: "moonSong", duration: "18:44", audioName: "catLullaby3_item2", audioType: "wav"),
-            Song(title: "Moon Songs 4", audioSubtitle: "", backgroundImageName: "moonSong", duration: "01:40", audioName: "catLullaby3_item3", audioType: "mp3"),
+            Song(title: "Moon Songs 3", audioSubtitle: "", backgroundImageName: "moonSong", duration: "01:40", audioName: "catLullaby3_item2", audioType: "wav"),
+            Song(title: "Moon Songs 4", audioSubtitle: "", backgroundImageName: "moonSong", duration: "18:44", audioName: "catLullaby3_item3", audioType: "mp3"),
             Song(title: "Moon Songs 5", audioSubtitle: "", backgroundImageName: "moonSong", duration: "38:03", audioName: "catLullaby3_item4", audioType: "mp3"),
             Song(title: "Moon Songs 7", audioSubtitle: "", backgroundImageName: "moonSong", duration: "21:35", audioName: "catLullaby3_item5", audioType: "mp3")]),
         

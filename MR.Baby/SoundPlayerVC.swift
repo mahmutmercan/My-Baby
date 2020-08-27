@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import FirebaseAnalytics
 
 class SoundPlayerVC: UIViewController {
     
@@ -143,7 +144,11 @@ class SoundPlayerVC: UIViewController {
         }
     }
     @IBAction func favoritesButtonClicked(_ sender: Any) {
-        
+        let song = songs[position]
+        Analytics.logEvent("FirstListenedSound", parameters: [
+                                     "soundName": song.title as String
+        ])
+
         if toggleStateFavorites == 1 {
             toggleStateFavorites = 2
             if #available(iOS 13.0, *) {
@@ -280,6 +285,7 @@ extension SoundPlayerVC{
     }
     
     func favoriteButonInitialUI(){
+        
         if #available(iOS 13.0, *) {
             favorutiesButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
         } else {
