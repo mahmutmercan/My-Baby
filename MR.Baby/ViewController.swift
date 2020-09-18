@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseAnalytics
+//import FirebaseAnalytics
 
 struct Item {
     var title: String
@@ -271,7 +271,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func showCategoriesAlert(){
         //Mahmut buradaki metinleri düzenleyin
-        let alert = UIAlertController(title: String(NSLocalizedString("Merhaba", comment: "")), message: "Lütfen aşağıdaki kategorilere gözat.", preferredStyle: .alert)
+        let alert = UIAlertController(title: String(NSLocalizedString("Hello", comment: "")), message: "Pls Check the categories.", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
