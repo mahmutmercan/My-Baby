@@ -48,7 +48,6 @@
 		A3081A9F24BA1C0E005118B4 /* birdSound5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3081A9C24BA1C0E005118B4 /* birdSound5.mp3 */; };
 		A3131F2724F7B9C800089DA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3131F2624F7B9C800089DA2 /* GoogleService-Info.plist */; };
 		A33DDD4D24B0861700BEF2A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD4C24B0861700BEF2A9 /* AppDelegate.swift */; };
-		A33DDD4F24B0861700BEF2A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD4E24B0861700BEF2A9 /* SceneDelegate.swift */; };
 		A33DDD5124B0861700BEF2A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33DDD5024B0861700BEF2A9 /* ViewController.swift */; };
 		A33DDD5424B0861700BEF2A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33DDD5224B0861700BEF2A9 /* Main.storyboard */; };
 		A33DDD5624B0861B00BEF2A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33DDD5524B0861B00BEF2A9 /* Assets.xcassets */; };
@@ -128,7 +127,6 @@
 		A3131F2624F7B9C800089DA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A33DDD4924B0861700BEF2A9 /* MyBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33DDD4C24B0861700BEF2A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A33DDD4E24B0861700BEF2A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A33DDD5024B0861700BEF2A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A33DDD5324B0861700BEF2A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A33DDD5524B0861B00BEF2A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -411,7 +409,6 @@
 			isa = PBXGroup;
 			children = (
 				A33DDD4C24B0861700BEF2A9 /* AppDelegate.swift */,
-				A33DDD4E24B0861700BEF2A9 /* SceneDelegate.swift */,
 				A33DDD5224B0861700BEF2A9 /* Main.storyboard */,
 				A33DDD5724B0861B00BEF2A9 /* LaunchScreen.storyboard */,
 				A33DDD5A24B0861B00BEF2A9 /* Info.plist */,
@@ -628,7 +625,6 @@
 				A33DDD6224B0890300BEF2A9 /* ItemCollectionViewCell.swift in Sources */,
 				A33DDD4D24B0861700BEF2A9 /* AppDelegate.swift in Sources */,
 				A33DDD6524B09CD700BEF2A9 /* SoundsListDetailVC.swift in Sources */,
-				A33DDD4F24B0861700BEF2A9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,7 +772,7 @@
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 9B6AFN73DR;
 				INFOPLIST_FILE = MR.Baby/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -797,7 +793,7 @@
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 9B6AFN73DR;
 				INFOPLIST_FILE = MR.Baby/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
