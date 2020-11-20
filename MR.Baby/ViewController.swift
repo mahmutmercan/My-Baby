@@ -274,7 +274,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let alert = UIAlertController(title: String(NSLocalizedString("Hello", comment: "")), message: "Pls Check the categories.", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
         self.present(alert, animated: true)
     }
 
