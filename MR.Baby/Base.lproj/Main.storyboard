@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kVJ-KG-5dE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -51,12 +51,12 @@
                     <navigationItem key="navigationItem" title="Mr.Baby" id="tx5-En-nHo"/>
                     <connections>
                         <outlet property="collectionView" destination="Q1E-Vg-D9l" id="JvU-Ty-hDA"/>
-                        <segue destination="reo-T4-hXv" kind="show" identifier="viewImageSegueIdentifier" id="ssJ-fc-2aY"/>
+                        <segue destination="reo-T4-hXv" kind="presentation" identifier="viewImageSegueIdentifier" modalPresentationStyle="fullScreen" id="ssJ-fc-2aY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="126.5625"/>
         </scene>
         <!--Sounds List DetailVC-->
         <scene sceneID="PMB-SV-ZF7">
@@ -178,12 +178,12 @@
                         <outlet property="imageView" destination="0fT-ym-aHB" id="WWf-8R-V83"/>
                         <outlet property="storyListTitleLabel" destination="JqI-9U-2Nm" id="EIk-Ns-EMZ"/>
                         <outlet property="storyTableView" destination="YXh-JT-BfT" id="5JX-tA-8nj"/>
-                        <segue destination="yY0-wX-xkw" kind="show" identifier="toSoundPlayerVC" id="unV-Bf-uM5"/>
+                        <segue destination="yY0-wX-xkw" kind="presentation" identifier="toSoundPlayerVC" modalPresentationStyle="fullScreen" id="unV-Bf-uM5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAf-MF-vCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1805.7971014492755" y="126.5625"/>
+            <point key="canvasLocation" x="2715.9420289855075" y="126.5625"/>
         </scene>
         <!-- -->
         <scene sceneID="EQI-Oi-2em">
@@ -377,28 +377,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAI-yM-cfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2537.68115942029" y="126.5625"/>
+            <point key="canvasLocation" x="3447.826086956522" y="126.5625"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Nec-Ia-kCC">
+        <scene sceneID="38D-Xb-OVG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kVJ-KG-5dE" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wWy-67-g5t" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="atq-ib-ghP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TJd-5j-CAJ">
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cAQ-ax-MeQ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wee-3x-QG2"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2MU-V8-i1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrj-vQ-CRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
     </scenes>
     <resources>

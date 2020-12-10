@@ -26,11 +26,9 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var categoriesLabel: UILabel!
     @IBOutlet weak var storyTableView: UITableView!
     @IBOutlet weak var backButton: UIButton!
-    
     @IBOutlet weak var detailOverlayShadow: UIImageView!
     
     var imageName: String!
-    
     //    Struck Gönderme
     var chosenAudioTitle = ""
     var chosenAudioSubTitle = ""
@@ -38,8 +36,6 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
     var chosenStoryDuration = ""
     var chosenAudioName = ""
     var chosenAudioType = ""
-    //    var chosenNextAudioTitle = ""
-    
     //    Struck Çekme
     var selectedCategoriesLabel = ""
     var selectedLandmarkName = ""
@@ -51,20 +47,12 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         Singleton.sharedInstance.stop()
-        
         slideBack()
-        
-        
-        
         categoriesLabel.text = selectedCategoriesLabel
         storyListTitleLabel.text = selectedLandmarkName
-        
-        
         // Do any additional setup after loading the view.
         storyTableView.delegate = self
         storyTableView.dataSource = self
-        
-        //        configureSongs()
         setupImageView()
         backButonInitialUI()
         
@@ -72,18 +60,13 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
     
     private func setupImageView() {
         guard let name = imageName else { return }
-        
         if let image = UIImage(named: name) {
             imageView.image = image
         }
-        
         detailOverlayShadow?.image = UIImage(named: "overlayShadow")
         detailOverlayShadow?.contentMode = .scaleToFill
         detailOverlayShadow?.alpha = 0.3
-        
     }
-    
-    //    --------------------------------------------------------------------------------------
     
     func slideBack(){
         let gestureSlideBack = UISwipeGestureRecognizer(target: self, action: #selector(self.backTapped))
@@ -92,7 +75,6 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func playSoundsButtonTapped(_ sender: Any) {
-        
         if chosenAudioTitle == "" {
             chosenAudioTitle = selectedCategorySongs[0].title
             chosenAudioName = selectedCategorySongs[0].audioName
@@ -101,27 +83,15 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
             chosenAudioType = selectedCategorySongs[0].audioType
             chosenAudioSubTitle = selectedCategorySongs[0].audioSubtitle
             performSegue(withIdentifier: "toSoundPlayerVC", sender: Any?.self)
-            
-            
         } else {
             performSegue(withIdentifier: "toSoundPlayerVC", sender: Any?.self)
-            
-            
         }
-        
-        
     }
     
-    //    --------------------------------------------------------------------------------------
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoryListCell", for: indexPath)
-        
         cell.textLabel?.text = String(selectedCategoriesLabel) + " " + String(indexPath.row + 1)
         cell.detailTextLabel?.text = selectedCategorySongs[indexPath.item].duration
-        
         cell.detailTextLabel?.textColor = UIColor.darkGray
         return cell
     }
@@ -130,20 +100,12 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
         return 56
     }
     
-    //    --------------------------------------------------------------------------------------
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return songs.count
         return selectedCategorySongs.count
     }
     
-    //    --------------------------------------------------------------------------------------
-    
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
         let position = indexPath.row
         myposition = position
         if #available(iOS 13.0, *) {
@@ -153,28 +115,16 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             // Fallback on earlier versions
         }
-        
-//        mvc.songs = selectedCategorySongs
-//        mvc.position = position
-  
         performSegue(withIdentifier: "toSoundPlayerVC", sender: nil)
     }
-    
-    
-    //    --------------------------------------------------------------------------------------
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSoundPlayerVC" {
             let destinationVC = segue.destination as! SoundPlayerVC
-            
             destinationVC.songs = selectedCategorySongs
             destinationVC.position = myposition
-            
         }
     }
-    
-    
     
     @IBAction func backTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -191,6 +141,4 @@ class SoundsListDetailVC: UIViewController, UITableViewDelegate, UITableViewData
         backButton.backgroundColor = .white
         backButton.layer.cornerRadius = 8.0
     }
-
-    
 }

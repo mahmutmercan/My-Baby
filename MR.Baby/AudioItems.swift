@@ -14,7 +14,6 @@ class AudioItems: NSObject {
     var audioPackageCount: String?
     var audioCategory: String?
     
-    
     init(title: String, audioCoverImage: String, audioPackageCount: String, audioCategory: String) {
         self.title = title
         self.audioPackageCount = audioPackageCount
@@ -24,8 +23,6 @@ class AudioItems: NSObject {
 }
 
 var exampleAudioItems: [AudioItems] = [AudioItems(title: "audio Title", audioCoverImage: "cover Image", audioPackageCount: "25", audioCategory: "Sample") ]
-
-
 
 class AudioItemSong: NSObject {
     var title: String?

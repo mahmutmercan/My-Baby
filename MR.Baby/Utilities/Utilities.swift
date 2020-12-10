@@ -14,7 +14,6 @@ func getTimeFromSeconds(seconds sec: Int) -> String {
        formatter.allowedUnits = [.hour, .minute, .second]
        formatter.unitsStyle = .positional
        formatter.zeroFormattingBehavior = .pad
-       
        let formattedString = formatter.string(from: TimeInterval(sec)) ?? "00:00"
        return formattedString
 }
@@ -24,7 +23,6 @@ func getTimeFromMinutes(minutes min: Int) -> String {
     formatter.allowedUnits = [.minute, .second]
     formatter.unitsStyle = .positional
     formatter.zeroFormattingBehavior = .pad
-    
     let formattedString = formatter.string(from: TimeInterval(min)) ?? "00:00"
     return formattedString
 }

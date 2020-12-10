@@ -14,7 +14,6 @@ class SoundPlayerVC: UIViewController {
     
     public var position: Int = 0
     public var songs: [Song] = []
-    
     //    IBOutler ler
     @IBOutlet weak var audioTitleLabel: UILabel?
     @IBOutlet weak var storyDetailSubtitleLabel: UILabel?
@@ -29,9 +28,6 @@ class SoundPlayerVC: UIViewController {
     @IBOutlet weak var slider: UISlider?
     @IBOutlet weak var overlayShadow: UIImageView?
     @IBOutlet weak var brandName: UILabel!
-    
-    
-    
     //    Struck Çekme
     var selectedAudioTitle = ""
     var selectedAudioSubtitle = ""
@@ -41,16 +37,12 @@ class SoundPlayerVC: UIViewController {
     var selectedAudioType = ""
     var selectedCategorySongs1: [Song]! = []
     
-    
     var nextAudioTitle = ""
-    
     //    Simge Çevirme
     var audioPlayer: AVAudioPlayer?
     var toggleState = 1
     var toggleStateFavorites = 1
     var toggleStateForward = 1
-    
-    
     
     //    MARK: Timer vars
     var audioTimer: Timer?
@@ -58,13 +50,9 @@ class SoundPlayerVC: UIViewController {
     var timeLabel: String?
     var minutesLabel: String?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         audioPlayer?.stop()
-        
-//        slideBack()
-        
         setInterface()
         setTargets()
         audioPlayerConfigure()
@@ -74,7 +62,6 @@ class SoundPlayerVC: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent // .default
     }
-    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -90,7 +77,6 @@ class SoundPlayerVC: UIViewController {
             player.stop()
         }
     }
- 
     
     func slideBack(){
         let gestureSlideBack = UISwipeGestureRecognizer(target: self, action: #selector(self.backButtonTapped))
@@ -98,23 +84,17 @@ class SoundPlayerVC: UIViewController {
         self.view.addGestureRecognizer(gestureSlideBack)
     }
     
-    
-    
-    
     @IBAction func playStopButtonClicked(_ sender: UIButton) {
         if audioPlayer?.isPlaying == true {
             audioPlayer?.pause()
             playPauseButton.setImage(UIImage(named: "play_button_Icon"),
                                      for: UIControl.State.normal)
             audioTimer?.invalidate()
-            
         } else {
             audioPlayer?.play()
             playPauseButton.setImage(UIImage(named: "pause_button_Icon"),
                                      for: UIControl.State.normal)
-            
         }
-        
     }
     
     
@@ -124,17 +104,13 @@ class SoundPlayerVC: UIViewController {
             position = position + 1
             audioPlayer?.stop()
             resetTimer()
-            
             audioPlayerConfigure()
         } else {
             position = 0
             audioPlayer?.stop()
-
             audioPlayerConfigure()
         }
     }
-    
-    
     
     @IBAction func backwardButtonClicked(_ sender: Any) {
         if position > 0 {
@@ -157,8 +133,6 @@ class SoundPlayerVC: UIViewController {
                 // Fallback on earlier versions
             }
             
-            
-            
         } else {
             toggleStateFavorites = 1
             if #available(iOS 13.0, *) {
@@ -166,11 +140,8 @@ class SoundPlayerVC: UIViewController {
             } else {
                 // Fallback on earlier versions
             }
-            
         }
-        
     }
-    
     
     @IBAction func backButtonTapped(_ sender: Any) {
         audioPlayer?.stop()
@@ -191,14 +162,11 @@ class SoundPlayerVC: UIViewController {
     
     @objc func updateSlider() {
         slider?.value = Float(audioPlayer!.currentTime )
-
     }
-    
     //    MARK: SetTimer
     
     @objc func timerController() {
         audioTime += 1
-        
         timeLabel = String(getTimeFromSeconds(seconds: audioTime))
         minutesLabel = String(getTimeFromMinutes(minutes: audioTime))
         timeStartLabel?.text = String(minutesLabel ?? "")
@@ -206,12 +174,8 @@ class SoundPlayerVC: UIViewController {
         if timeStartLabel?.text == timeEndLabel?.text {
             forwardButtonClicked(self)
         }
-        
     }
-    
-    
 }
-
 
 extension SoundPlayerVC{
     //    MARK: Funcs are here
@@ -227,12 +191,10 @@ extension SoundPlayerVC{
                                           selector: #selector(timerController),
                                           userInfo: nil, repeats: true)
         var updateSliderTimer: Timer?
-        
         updateSliderTimer = Timer.scheduledTimer(timeInterval: 0.1,
                                                  target: self,
                                                  selector: #selector(updateSlider),
                                                  userInfo: nil, repeats: true)
-        
     }
     
     func resetTimer(){
@@ -240,24 +202,18 @@ extension SoundPlayerVC{
         audioTimer = nil
         audioTime = 0
     }
-    
     //    MARK: SetInterface
     
     func setInterface(){
         setHeaderInterface()
         sliderInterface()
         brandNameInterface()
-         
         backwardButton.tintColor = UIColor.white
         forwardButton.tintColor = UIColor.white
-        
-        
         overlayShadow?.image = UIImage(named: "overlayShadow")
         overlayShadow?.contentMode = .scaleToFill
         overlayShadow?.alpha = 0.5
-        
     }
-    
     
     func brandNameInterface(){
         brandName.text = String("  ") + String("My Baby") + String("  ")
@@ -285,7 +241,6 @@ extension SoundPlayerVC{
     }
     
     func favoriteButonInitialUI(){
-        
         if #available(iOS 13.0, *) {
             favorutiesButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
         } else {
@@ -314,25 +269,17 @@ extension SoundPlayerVC{
     }
     
     func audioPlayerConfigure(){
-        
         resetTimer()
         startTimer()
-        
-        
         let song = songs[position]
         let urlString = Bundle.main.path(forResource: song.audioName, ofType: song.audioType)
-        
         audioTitleLabel?.text = song.title
         storyDetailSubtitleLabel?.text = song.audioSubtitle
         audioBackgroundImage?.image = UIImage(named: "\(song.backgroundImageName)")
         timeEndLabel?.text = song.duration
-        
-        
         do {
-            
             try AVAudioSession.sharedInstance().setMode(.default)
             try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            
             guard let urlString = urlString else {
                 return
             }
@@ -347,9 +294,6 @@ extension SoundPlayerVC{
         }
         self.slider?.minimumValue = 0.0
         self.slider!.maximumValue = Float(audioPlayer!.duration)
-
-        
-        
     }
     
     func sliderInterface(){
@@ -365,6 +309,4 @@ extension SoundPlayerVC{
             // Fallback on earlier versions
         }
     }
-    
 }
-

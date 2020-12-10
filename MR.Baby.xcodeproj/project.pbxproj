@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C61D77726FD0367514FC394 /* Pods_MR_Baby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBF72FE59FFAB4BAA0D65E3 /* Pods_MR_Baby.framework */; };
 		4A556EFD24EFA68400271D94 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A556EFC24EFA68400271D94 /* Singleton.swift */; };
 		4AD3E0C624E13D8A00AB327E /* happybirthday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AD3E0C524E13D8A00AB327E /* happybirthday.mp3 */; };
 		4AD3E0C824E13E7600AB327E /* AudioItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3E0C724E13E7600AB327E /* AudioItems.swift */; };
@@ -85,6 +86,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2623EF1A6A3AB641B7F987C1 /* Pods-MR.Baby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MR.Baby.debug.xcconfig"; path = "Target Support Files/Pods-MR.Baby/Pods-MR.Baby.debug.xcconfig"; sourceTree = "<group>"; };
+		3086EEFF074CCE6D218AC354 /* Pods-MR.Baby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MR.Baby.release.xcconfig"; path = "Target Support Files/Pods-MR.Baby/Pods-MR.Baby.release.xcconfig"; sourceTree = "<group>"; };
 		4A556EFC24EFA68400271D94 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		4AD3E0C524E13D8A00AB327E /* happybirthday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = happybirthday.mp3; sourceTree = "<group>"; };
 		4AD3E0C724E13E7600AB327E /* AudioItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItems.swift; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		A3C7D01F24CE0B4C00C1FB6A /* kolicvacumm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kolicvacumm.mp3; sourceTree = "<group>"; };
 		A3C7D02524CE104800C1FB6A /* womb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = womb.mp3; sourceTree = "<group>"; };
 		A3D39ABE24C59A9300C538A7 /* SliderCostumHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCostumHeight.swift; sourceTree = "<group>"; };
+		DEBF72FE59FFAB4BAA0D65E3 /* Pods_MR_Baby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MR_Baby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C61D77726FD0367514FC394 /* Pods_MR_Baby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +183,8 @@
 		48C6F9D5E1BB5CBF56EF72D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				2623EF1A6A3AB641B7F987C1 /* Pods-MR.Baby.debug.xcconfig */,
+				3086EEFF074CCE6D218AC354 /* Pods-MR.Baby.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -214,6 +221,14 @@
 				4AD3E0CD24E2A9EF00AB327E /* happybirthday1.wav */,
 			);
 			path = categoryHappyBirthday;
+			sourceTree = "<group>";
+		};
+		539148DED35B2FEF89357DA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF72FE59FFAB4BAA0D65E3 /* Pods_MR_Baby.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A300A03624B712B400CB563E /* Sounds */ = {
@@ -394,6 +409,7 @@
 				A33DDD4B24B0861700BEF2A9 /* MR.Baby */,
 				A33DDD4A24B0861700BEF2A9 /* Products */,
 				48C6F9D5E1BB5CBF56EF72D1 /* Pods */,
+				539148DED35B2FEF89357DA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -489,9 +505,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A33DDD5D24B0861B00BEF2A9 /* Build configuration list for PBXNativeTarget "MR.Baby" */;
 			buildPhases = (
+				DEB1464889DD7848F6FEB2E4 /* [CP] Check Pods Manifest.lock */,
 				A33DDD4524B0861700BEF2A9 /* Sources */,
 				A33DDD4624B0861700BEF2A9 /* Frameworks */,
 				A33DDD4724B0861700BEF2A9 /* Resources */,
+				EDAC8A9BF8923BE96C0DF39F /* [CP] Embed Pods Frameworks */,
+				85A5D05D2580AE4700CB6C1C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -610,6 +629,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85A5D05D2580AE4700CB6C1C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		DEB1464889DD7848F6FEB2E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MR.Baby-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDAC8A9BF8923BE96C0DF39F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MR.Baby/Pods-MR.Baby-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MR.Baby/Pods-MR.Baby-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MR.Baby/Pods-MR.Baby-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A33DDD4524B0861700BEF2A9 /* Sources */ = {
@@ -766,10 +846,12 @@
 		};
 		A33DDD5E24B0861B00BEF2A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2623EF1A6A3AB641B7F987C1 /* Pods-MR.Baby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9B6AFN73DR;
 				INFOPLIST_FILE = MR.Baby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -777,7 +859,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahmutmercan.MyBaby.Lullaby.sleep.womb.sound.kindergarden.relax;
 				PRODUCT_NAME = MyBaby;
 				SWIFT_VERSION = 5.0;
@@ -787,10 +869,12 @@
 		};
 		A33DDD5F24B0861B00BEF2A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3086EEFF074CCE6D218AC354 /* Pods-MR.Baby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9B6AFN73DR;
 				INFOPLIST_FILE = MR.Baby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -798,7 +882,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahmutmercan.MyBaby.Lullaby.sleep.womb.sound.kindergarden.relax;
 				PRODUCT_NAME = MyBaby;
 				SWIFT_VERSION = 5.0;

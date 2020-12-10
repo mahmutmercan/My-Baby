@@ -7,7 +7,8 @@
 //
 
 import UIKit
-//import FirebaseAnalytics
+import FirebaseAnalytics
+import FirebaseCrashlytics
 
 struct Item {
     var title: String
@@ -17,7 +18,6 @@ struct Item {
     var audioCategory: String
     var songs: [Song]
 }
-
 
 class ViewController: UIViewController {
     
@@ -36,17 +36,16 @@ class ViewController: UIViewController {
     let cellIdentifier = "ItemCollectionViewCell"
     let viewImageSegueIdentifier = "viewImageSegueIdentifier"
 
-    
     var items: [Item] = [
         Item(title: "", audioCoverImage: "categories", audioPackageCount: "", AudioPackageCoverImage: "", audioCategory: "",songs: []),
         
         Item(title: "Sweet Dream", audioCoverImage: "categoryLullaby2", audioPackageCount: "2", AudioPackageCoverImage: "categoryLullaby2", audioCategory: "Lullaby 2",songs: [
-        Song(title: "Sweet Dream 1", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "02:51", audioName: "catLullaby2_item0", audioType: "mp3"),
-        Song(title: "Sweet Dream 2", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "03:27", audioName: "catLullaby2_item1", audioType: "mp3"),
-        Song(title: "Sweet Dream 3", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item2", audioType: "mp3"),
-        Song(title: "Sweet Dream 4", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "01:12", audioName: "catLullaby2_item3", audioType: "mp3"),
-        Song(title: "Sweet Dream 5", audioSubtitle: "", backgroundImageName: "lullaby2Detail", duration: "21:35", audioName: "catLullaby2_item4", audioType: "mp3"),
-        Song(title: "Sweet Dream 6", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item5", audioType: "mp3")]),
+            Song(title: "Sweet Dream 1", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "02:51", audioName: "catLullaby2_item0", audioType: "mp3"),
+            Song(title: "Sweet Dream 2", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "03:27", audioName: "catLullaby2_item1", audioType: "mp3"),
+            Song(title: "Sweet Dream 3", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item2", audioType: "mp3"),
+            Song(title: "Sweet Dream 4", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "01:12", audioName: "catLullaby2_item3", audioType: "mp3"),
+            Song(title: "Sweet Dream 5", audioSubtitle: "", backgroundImageName: "lullaby2Detail", duration: "21:35", audioName: "catLullaby2_item4", audioType: "mp3"),
+            Song(title: "Sweet Dream 6", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item5", audioType: "mp3")]),
         
         Item(title: "Lullaby", audioCoverImage: "categoryLullaby", audioPackageCount: "2", AudioPackageCoverImage: "categoryLullaby", audioCategory: "Lullaby 1",songs: [
             Song(title: "Lullaby 1", audioSubtitle: "", backgroundImageName: "lullaby1Detail", duration: "29:10", audioName: "SleepLullaby1", audioType: "mp3"),
@@ -81,13 +80,12 @@ class ViewController: UIViewController {
             Song(title: "Sleep Girl 5", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl5", audioType: "mp3"),
             Song(title: "Sleep Girl 6", audioSubtitle: "", backgroundImageName: "girlDetail", duration: "29:10", audioName: "SleepGirl6", audioType: "mp3")]),
         
-        
         Item(title: "Classic Music", audioCoverImage: "categoryClassicmusic", audioPackageCount: "5", AudioPackageCoverImage: "categoryClassicmusic", audioCategory: "Lullaby",songs: [
-                   Song(title: "Für Elise", audioSubtitle: "Beethoven", backgroundImageName: "classicalmusicDetail1", duration: "02:47", audioName: "Beethoven-FurElise", audioType: "mp3"),
-                   Song(title: "Nocturne op.9 No.2", audioSubtitle: "Chopin", backgroundImageName: "classicalmusicDetail2", duration: "04:09", audioName: "Chopin-Nocturneop.9No.2", audioType: "mp3"),
-                   Song(title: "Peer gynt morning mood", audioSubtitle: "Edvard Grieg", backgroundImageName: "classicalmusicDetail3", duration: "03:52", audioName: "EdvardGrieg-Peer-gynt-morning-mood", audioType: "mp3"),
-                   Song(title: "The Four Seasons Winter", audioSubtitle: "Vivaldi", backgroundImageName: "classicalmusicDetail2", duration: "01:38", audioName: "Vivaldi-The-four-seasons-winter", audioType: "mp3"),
-                   Song(title: "Piano Sonata", audioSubtitle: "Mozart", backgroundImageName: "classicalmusicDetail1", duration: "01:26", audioName: "mozart-piano-Sonata", audioType: "mp3")]),
+            Song(title: "Für Elise", audioSubtitle: "Beethoven", backgroundImageName: "classicalmusicDetail1", duration: "02:47", audioName: "Beethoven-FurElise", audioType: "mp3"),
+            Song(title: "Nocturne op.9 No.2", audioSubtitle: "Chopin", backgroundImageName: "classicalmusicDetail2", duration: "04:09", audioName: "Chopin-Nocturneop.9No.2", audioType: "mp3"),
+            Song(title: "Peer gynt morning mood", audioSubtitle: "Edvard Grieg", backgroundImageName: "classicalmusicDetail3", duration: "03:52", audioName: "EdvardGrieg-Peer-gynt-morning-mood", audioType: "mp3"),
+            Song(title: "The Four Seasons Winter", audioSubtitle: "Vivaldi", backgroundImageName: "classicalmusicDetail2", duration: "01:38", audioName: "Vivaldi-The-four-seasons-winter", audioType: "mp3"),
+            Song(title: "Piano Sonata", audioSubtitle: "Mozart", backgroundImageName: "classicalmusicDetail1", duration: "01:26", audioName: "mozart-piano-Sonata", audioType: "mp3")]),
                
         Item(title: "Music Box", audioCoverImage: "categoryMusicbox", audioPackageCount: "1", AudioPackageCoverImage: "categoryMusicbox", audioCategory: "Lullaby",songs: [
             Song(title: "Music Box", audioSubtitle: "", backgroundImageName: "categoryMusicbox", duration: "02:50", audioName: "music_box_0", audioType: "mp3"),
@@ -99,7 +97,6 @@ class ViewController: UIViewController {
             Song(title: "Music Box", audioSubtitle: "", backgroundImageName: "categoryMusicbox", duration: "01:20", audioName: "music_box_6", audioType: "mp3"),
             Song(title: "Music Box", audioSubtitle: "", backgroundImageName: "categoryMusicbox", duration: "00:28", audioName: "music_box_7", audioType: "wav")]),
         
-        
         Item(title: "Bird Songs", audioCoverImage: "birdSongs", audioPackageCount: "5", AudioPackageCoverImage: "categoryBird", audioCategory: "Lullaby",songs: [
             Song(title: "BirdSound 01", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail1", duration: "05:30", audioName: "birdSound", audioType: "mp3"),
             Song(title: "BirdSound 02", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail2", duration: "02:28", audioName: "birdSound2", audioType: "mp3"),
@@ -109,30 +106,24 @@ class ViewController: UIViewController {
             Song(title: "BirdSound 06", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail4", duration: "00:36", audioName: "birdSound4", audioType: "mp3"),
             Song(title: "BirdSound 07", audioSubtitle: "Story Of Birds", backgroundImageName: "birdDetail4", duration: "01:05", audioName: "birdSound4", audioType: "mp3")]),
         
-      
-        
         Item(title: "Womb", audioCoverImage: "categoryWhomb", audioPackageCount: "3", AudioPackageCoverImage: "categoryWhomb", audioCategory: "", songs: [
             Song(title: "Womb", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "15:59", audioName: "womb", audioType: "mp3"),
             Song(title: "White Noise", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "09:15", audioName: "whitenoise1", audioType: "mp3"),
             Song(title: "White Noise and Heartbeat", audioSubtitle: "", backgroundImageName: "wombDetail", duration: "08:34", audioName: "whitenoise2", audioType: "mp3"),]),
         
-        
         Item(title: "Colic Music", audioCoverImage: "categoryColic", audioPackageCount: "1", AudioPackageCoverImage: "categoryColic", audioCategory: "Lullaby",songs: [
-                  Song(title: "Colic", audioSubtitle: "", backgroundImageName: "categoryColic", duration: "10:00", audioName: "kolicvacumm", audioType: "mp3")]),
+            Song(title: "Colic", audioSubtitle: "", backgroundImageName: "categoryColic", duration: "10:00", audioName: "kolicvacumm", audioType: "mp3")]),
        
         Item(title: "Hair Dryer", audioCoverImage: "categoryHairdryer", audioPackageCount: "1", AudioPackageCoverImage: "categoryHairdryer", audioCategory: "Lullaby",songs: [
-
             Song(title: "Hair Dryer", audioSubtitle: "", backgroundImageName: "hairdrierDetail", duration: "03:09", audioName: "hairdryer1", audioType: "mp3")]),
    
-
         Item(title: "Vacuum Cleaner", audioCoverImage: "categoryVacuumcleaner", audioPackageCount: "1", AudioPackageCoverImage: "categoryVacuumcleaner", audioCategory: "Lullaby",songs: [
-        Song(title: "Vacuum(Colic)", audioSubtitle: "", backgroundImageName: "categoryVacuumcleaner", duration: "10:00", audioName: "kolicvacumm", audioType: "mp3")]),
+            Song(title: "Vacuum(Colic)", audioSubtitle: "", backgroundImageName: "categoryVacuumcleaner", duration: "10:00", audioName: "kolicvacumm", audioType: "mp3")]),
         
         //Item(title: "Lullaby Islamic", audioCoverImage: "categoryIslamiclullaby", audioPackageCount: "0", AudioPackageCoverImage: "categoryIslamiclullaby", audioCategory: "Lullaby",songs: []),
         
         Item(title: "Happy Birthday", audioCoverImage: "categoryHappyBirthday", audioPackageCount: "1", AudioPackageCoverImage: "categoryHappyBirthday", audioCategory: "", songs: [
-        Song(title: "Happy Birthday", audioSubtitle: "", backgroundImageName: "categoryHappyBirthday", duration: "01:04", audioName: "happybirthday", audioType: "mp3")]),
-        
+            Song(title: "Happy Birthday", audioSubtitle: "", backgroundImageName: "categoryHappyBirthday", duration: "01:04", audioName: "happybirthday", audioType: "mp3")]),
         
         Item(title: "Camp Fire", audioCoverImage: "categoryCampFire", audioPackageCount: "1", AudioPackageCoverImage: "categoryCampFire", audioCategory: "Lullaby", songs: [
             Song(title: "Camp Fire", audioSubtitle: "", backgroundImageName: "campfireDetail", duration: "02:46", audioName: "campfire1", audioType: "mp3")]),
@@ -144,17 +135,16 @@ class ViewController: UIViewController {
         
         Item(title: "Wave", audioCoverImage: "categoryWave", audioPackageCount: "1", AudioPackageCoverImage: "categoryWave", audioCategory: "Lullaby",songs: [
             Song(title: "Wave", audioSubtitle: "Naturel", backgroundImageName: "categoryWave", duration: "07:06", audioName: "wave1", audioType: "mp3")]),
-        
         ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Singleton.sharedInstance.stop()
-        
         setupView()
         setupCollectionView()
+        Crashlytics.crashlytics().log("view loaded")
     }
-
+    
     override func  viewWillAppear(_ animated: Bool) {
         setupView()
     }
@@ -175,7 +165,6 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         let nib = UINib(nibName: "ItemCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
-        
     }
     
     private func setupCollectionViewItemSize() {
@@ -184,28 +173,21 @@ class ViewController: UIViewController {
             let linespacing: CGFloat = 16
             let interItemSpacing: CGFloat = 5
             let itemW = (view.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow - 32
-//            let itemW = view.frame.width - 32
-
             let itemH = itemW
             
             collectionViewFlowLayout = UICollectionViewFlowLayout()
-            
             collectionViewFlowLayout.itemSize = CGSize(width: itemW, height: itemH)
             collectionViewFlowLayout.sectionInset = UIEdgeInsets.zero
             collectionViewFlowLayout.scrollDirection = .vertical
             collectionViewFlowLayout.minimumLineSpacing = linespacing
             collectionViewFlowLayout.minimumInteritemSpacing = interItemSpacing
-            
             collectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
         }
     }
-
-
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return items.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -219,14 +201,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.isUserInteractionEnabled = true
             cell.audioPackageItemCountsLabel.text = nil
             cell.audioTitleLabel.text = nil
-
         } else {
             cell.isUserInteractionEnabled = true
             cell.imageView.image = UIImage(named: items[indexPath.item].audioCoverImage)
             cell.audioPackageItemCountsLabel.text = String(items[indexPath.item].songs.count) + " Sounds"
             cell.audioTitleLabel.text = items[indexPath.item].title
         }
-
         return cell
     }
     
@@ -237,28 +217,22 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             print("You selected 0 item")
         } else {
             let item = items[indexPath.item]
-            
             chosenLandmarkName = String("Sounds")
             chosenCategoriesLabel = items[indexPath.item].title
             choosenCategory = items[indexPath.item].audioCategory
             choosenSongs = items[indexPath.item].songs
-            
             self.performSegue(withIdentifier: "viewImageSegueIdentifier", sender: item)
         }
-    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let item = sender as! Item
         if segue.identifier == viewImageSegueIdentifier{
-
             if let vc = segue.destination as? SoundsListDetailVC {
-
                 vc.imageName = item.AudioPackageCoverImage
                 vc.selectedLandmarkName = chosenLandmarkName
                 vc.selectedCategoriesLabel = chosenCategoriesLabel
                 vc.selectedCategorySongs = choosenSongs
-
             }
         }
     }
@@ -268,15 +242,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         navigationController?.popViewController(animated: true)
     }
     
-    
     func showCategoriesAlert(){
-        //Mahmut buradaki metinleri düzenleyin
         let alert = UIAlertController(title: String(NSLocalizedString("Hello", comment: "")), message: "Pls Check the categories.", preferredStyle: .alert)
-
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
-
-    
 }
-
