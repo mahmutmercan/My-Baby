@@ -42,8 +42,8 @@ class ViewController: UIViewController {
         Item(title: "Sweet Dream", audioCoverImage: "categoryLullaby2", audioPackageCount: "2", AudioPackageCoverImage: "categoryLullaby2", audioCategory: "Lullaby 2",songs: [
             Song(title: "Sweet Dream 1", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "02:51", audioName: "catLullaby2_item0", audioType: "mp3"),
             Song(title: "Sweet Dream 2", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "03:27", audioName: "catLullaby2_item1", audioType: "mp3"),
-            Song(title: "Sweet Dream 3", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item2", audioType: "mp3"),
-            Song(title: "Sweet Dream 4", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "01:12", audioName: "catLullaby2_item3", audioType: "mp3"),
+            Song(title: "Sweet Dream 3", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "01:12", audioName: "catLullaby2_item2", audioType: "mp3"),
+            Song(title: "Sweet Dream 4", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "02:49", audioName: "catLullaby2_item3", audioType: "mp3"),
             Song(title: "Sweet Dream 5", audioSubtitle: "", backgroundImageName: "lullaby2Detail", duration: "21:35", audioName: "catLullaby2_item4", audioType: "mp3"),
             Song(title: "Sweet Dream 6", audioSubtitle: "Anonim", backgroundImageName: "lullaby2Detail", duration: "08:24", audioName: "catLullaby2_item5", audioType: "mp3")]),
         
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
         Singleton.sharedInstance.stop()
         setupView()
         setupCollectionView()
-        Crashlytics.crashlytics().log("view loaded")
+        
     }
     
     override func  viewWillAppear(_ animated: Bool) {

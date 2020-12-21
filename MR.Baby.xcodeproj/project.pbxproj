@@ -510,7 +510,7 @@
 				A33DDD4624B0861700BEF2A9 /* Frameworks */,
 				A33DDD4724B0861700BEF2A9 /* Resources */,
 				EDAC8A9BF8923BE96C0DF39F /* [CP] Embed Pods Frameworks */,
-				85A5D05D2580AE4700CB6C1C /* ShellScript */,
+				85DD91A6258395BF0002388A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -631,7 +631,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		85A5D05D2580AE4700CB6C1C /* ShellScript */ = {
+		85DD91A6258395BF0002388A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -639,8 +639,6 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
-				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
 			outputFileListPaths = (
 			);

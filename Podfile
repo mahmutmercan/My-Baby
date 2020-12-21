@@ -6,15 +6,9 @@ target 'MR.Baby' do
   use_frameworks!
 
   # Pods for MR.Baby
-
-
-pod 'SnapKit', '~> 4.0.0'
 pod 'Firebase/Crashlytics'
-pod 'Firebase/Firestore'
 pod 'Firebase/Analytics'
+pod 'SnapKit', '~> 4.0.0'
 pod 'Firebase/Storage' 
-
-
-
 
 end
