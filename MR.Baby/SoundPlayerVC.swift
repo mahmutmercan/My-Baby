@@ -4,10 +4,13 @@
 //
 //  Created by İlker isa Mercan on 4.07.2020.
 //  Copyright © 2020 Mahmut Mercan. All rights reserved.
-//
+
 
 import UIKit
 import AVFoundation
+import Firebase
+import FirebaseStorage
+
 //import FirebaseAnalytics
 
 class SoundPlayerVC: UIViewController {

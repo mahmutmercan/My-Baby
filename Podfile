@@ -9,6 +9,7 @@ target 'MR.Baby' do
 pod 'Firebase/Crashlytics'
 pod 'Firebase/Analytics'
 pod 'SnapKit', '~> 4.0.0'
+pod 'Firebase/Firestore' 
 pod 'Firebase/Storage' 
 
 end
